@@ -1,0 +1,7 @@
+{
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "navigationBarTitleText": "设置",
+  "usingComponents": {
+    "http": "/common/vmeitime-http/interface"
+  }
+}

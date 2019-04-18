@@ -1,0 +1,96 @@
+<div class="layui-form layui-form-pane my-view" method="post" action="./express-platform/edit"
+      enctype="application/x-www-form-urlencoded" xmlns:th="http://www.thymeleaf.org">
+    <input type="hidden" id="categoryId" th:value="${model.getCategoryId()}">
+    <div class="layui-form-item">
+        <label class="layui-form-label">ICON图标</label>
+        <div class="layui-input-block">
+            <button type="button" class="layui-btn" id="icon">上传图片</button>
+            <div class="layui-upload-list">
+                <img style="width: 200px;" class="layui-upload-img" id="image" th:src="${model.getImage()}">
+                <input type="hidden" id="imageUrl" th:value="${model.getImage()}">
+                <p id="imageDesc"></p>
+            </div>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">父类目</label>
+        <div class="layui-input-block">
+            <select lay-verify="" id="parentId">
+                <option value=""></option>
+                <option selected th:if="${item.getCategoryId().equals(model.getParentId())}" th:each="item:${categorys}" th:value="${item.getCategoryId()}" th:text="${item.getText()}"></option>
+                <option if="${!item.getCategoryId().equals(model.getParentId())}" th:each="item:${categorys}" th:value="${item.getCategoryId()}" th:text="${item.getText()}"></option>
+            </select>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">名称</label>
+        <div class="layui-input-block">
+            <input type="text" id="text" autocomplete="off"
+                 class="layui-input" th:value='${model.getText()}'>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <button lay-submit lay-filter="my-form" class="layui-btn layui-btn-warm layui-row layui-col-xs12" id="save">保存</button>
+    </div>
+</div>
+
+<script>
+    layui.use(['form','upload'], function(){
+        var form = layui.form;
+        form.render();
+
+        var $ = layui.jquery
+            ,upload = layui.upload;
+
+        //普通图片上传
+        var uploadInst = upload.render({
+            elem: '#icon'
+            ,url: '/management/file/cosUpload'
+            ,before: function(obj){
+                //预读本地文件示例，不支持ie8
+                obj.preview(function(index, file, result){
+                    $('#image').attr('src', result); //图片链接（base64）
+                });
+            }
+            ,done: function(res){
+                //如果上传失败
+                if(res.code != 200){
+                    return layer.msg('上传失败');
+                }
+                //上传成功
+                $("#imageUrl").val(res.msg);
+            }
+            ,error: function(){
+                //演示失败状态，并实现重传
+                var demoText = $('#imageDesc');
+                demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-xs demo-reload">重试</a>');
+                demoText.find('.demo-reload').on('click', function(){
+                    uploadInst.upload();
+                });
+            }
+        });
+    });
+    $(function () {
+        $("#save").click(function () {
+            $.post("./editProfile", {
+                "image": $("#imageUrl").val(),
+                "categoryId": $("#categoryId").val(),
+                "text": $("#text").val(),
+                "parentId": $("#parentId").val(),
+            }, function (data) {
+                if(data == null || data.code == null || data.code != 200) {
+                    if(data.code == 300){
+                        layer.msg(data.msg);
+                        return;
+                    }else{
+                        layer.msg("编辑失败");
+                        return;
+                    }
+                }
+                layer.msg("编辑成功");
+                tableIndex.reload();
+                layer.closeAll();
+            });
+        })
+    })
+</script>

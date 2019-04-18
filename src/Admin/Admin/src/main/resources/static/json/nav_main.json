@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "text": "欢迎回来",
+      "icon": "&#xe66a;",
+      "subset":[
+        {
+          "text": "控制台",
+          "icon": "&#xe68e;",
+          "href": "/management/index"
+        }
+      ]
+    }, {
+      "text": "运营管理",
+      "icon": "&#xe620;",
+      "subset": [
+        {
+          "text": "用户列表",
+          "icon": "&#xe63c;",
+          "href": "/management/member/index"
+        },
+        {
+          "text": "视频管理",
+          "icon": "&#xe63c;",
+          "href": "/management/product/index"
+        },
+        {
+          "text": "视频发布",
+          "icon": "&#xe63c;",
+          "href": "/management/product/publish"
+        },
+        {
+          "text": "分类管理",
+          "icon": "&#xe63c;",
+          "href": "/management/category/index"
+        },
+        {
+          "text": "付费记录",
+          "icon": "&#xe63c;",
+          "href": "/management/order/index"
+        },
+        {
+          "text": "代理管理",
+          "icon": "&#xe63c;",
+          "href": "/management/agent/index"
+        }
+      ]
+    },{
+      "text": "财务模块",
+      "icon": "&#xe65e;",
+      "subset": [
+        {
+          "text": "人工充值",
+          "icon": "&#xe63c;",
+          "href": "/management/finance/recharge"
+        }, {
+          "text": "交易清单",
+          "icon": "&#xe63c;",
+          "href": "/management/finance/pay"
+        }, {
+          "text": "会计账簿",
+          "icon": "&#xe63c;",
+          "href": "/management/finance/accounts"
+        }, {
+          "text": "提现审批",
+          "icon": "&#xe63c;",
+          "href": "/management/withdraw/index"
+        }
+      ]
+    }, {
+      "text": "系统配置",
+      "icon": "&#xe620;",
+      "subset": [
+        {
+          "text": "网站设置",
+          "icon": "&#xe63c;",
+          "href": "/management/config/index"
+        }
+      ]
+    }
+  ]
+}

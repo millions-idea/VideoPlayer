@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "我的收藏",
+  "usingComponents": {
+    "grace-loading": "/graceUI/components/graceLoading",
+    "stack-empty": "/components/stack-empty/stack-empty",
+    "mht-loader": "/components/mht-loader/mht-loader"
+  }
+}

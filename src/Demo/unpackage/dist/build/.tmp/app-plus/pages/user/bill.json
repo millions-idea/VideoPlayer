@@ -1,0 +1,9 @@
+{
+  "navigationStyle": "custom",
+  "titleNView": false,
+  "usingComponents": {
+    "grace-loading": "/graceUI/components/graceLoading",
+    "stack-empty": "/components/stack-empty/stack-empty",
+    "uni-nav-bar": "/components/uni-nav-bar/uni-nav-bar"
+  }
+}

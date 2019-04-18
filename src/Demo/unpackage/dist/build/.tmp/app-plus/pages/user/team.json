@@ -1,0 +1,10 @@
+{
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "navigationBarTitleText": "我的团队",
+  "usingComponents": {
+    "grace-loading": "/graceUI/components/graceLoading",
+    "stack-empty": "/components/stack-empty/stack-empty",
+    "uni-nav-bar": "/components/uni-nav-bar/uni-nav-bar",
+    "m-search": "/components/mehaotian-search/mehaotian-search"
+  }
+}

@@ -1,0 +1,2 @@
+"user_id"	"account"	"password"	"add_date"	"edit_date"	"is_delete"
+"1"	"admin"	"a66abb5684c45962d887564f08346e8d"	"2019/3/7 14:51:13"	""	"0"

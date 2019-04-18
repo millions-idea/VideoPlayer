@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "navigationBarTitleText": "",
+  "usingComponents": {
+    "mht-loader": "/components/mht-loader/mht-loader",
+    "grace-safey-number-keyboard": "/graceUI/components/graceSafeyNumberKeyboard"
+  }
+}

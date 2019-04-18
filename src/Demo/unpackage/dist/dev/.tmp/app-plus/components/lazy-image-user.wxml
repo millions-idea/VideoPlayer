@@ -1,0 +1,1 @@
+<view class="lazy-image data-v-26e08f7a" bind:__l="__l"><image class="real-image data-v-26e08f7a" src="{{realSrc}}" mode="widthFix" data-event-opts="{{[['load',[['onLoaded',['$event']]]]]}}" bindload="__e"></image><view class="{{['data-v-26e08f7a',loaded?'loaded':'']}}"><image src="{{placeholdSrc}}" mode="widthFix" class="data-v-26e08f7a"></image></view></view>

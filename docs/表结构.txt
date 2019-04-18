@@ -1,0 +1,122 @@
+CREATE TABLE `tb_users` (
+  `user_id` bigint(64) NOT NULL AUTO_INCREMENT,
+  `account` varchar(64) DEFAULT NULL COMMENT '用户初始绑定账号(可以是手机号可以是微信openId)',
+  `open_id` varchar(64) DEFAULT NULL COMMENT '微信用户openId',
+  `open_token` varchar(512) DEFAULT NULL COMMENT '微信验证令牌',
+  `phone` varchar(11) DEFAULT NULL COMMENT '手机号(用户名)',
+  `password` varchar(32) NOT NULL COMMENT '密码',
+  `photo` varchar(255) DEFAULT NULL COMMENT '头像',
+  `nick_name` varchar(18) DEFAULT NULL COMMENT '昵称(默认=用户编码)',
+  `add_date` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '注册时间',
+  `edit_date` datetime DEFAULT NULL COMMENT '最后一次编辑时间',
+  `is_delete` int(11) DEFAULT NULL COMMENT '是否删除(黑名单)',
+  `remark` varchar(255) DEFAULT NULL COMMENT '备注',
+  `ip` varchar(15) DEFAULT NULL COMMENT '注册ip',
+  `parent_id` bigint(64) NOT NULL COMMENT '推荐人id',
+  `path` text COMMENT '关系路径',
+  `level` int(11) DEFAULT '0' COMMENT '等级(0=普通用户,1=会员,2=初级代理,3=区域代理,4=高级代理,5=事业股东)',
+  `type` int(11) DEFAULT '0' COMMENT '账户类型(0=手机号, 1=微信)',
+  `promotion_code` varchar(255) DEFAULT '' COMMENT '推广码',
+  `finance_id` varchar(64) DEFAULT NULL COMMENT '提现支付宝账号',
+  `finance_name` varchar(32) DEFAULT NULL COMMENT '提现支付宝姓名',
+  `wechat_business_card` varchar(255) DEFAULT NULL COMMENT '微信二维码名片',
+  `payment_password` varchar(32) DEFAULT NULL COMMENT '支付密码',
+  `promotion_poster` varchar(255) DEFAULT NULL COMMENT '推广海报',
+  PRIMARY KEY (`user_id`),
+  UNIQUE KEY `uq_phone` (`phone`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户表';
+
+
+
+CREATE TABLE `tb_wallets` (
+  `wallet_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` bigint(64) NOT NULL COMMENT '用户id',
+  `balance` decimal(12,2) NOT NULL DEFAULT '0.00' COMMENT '余额',
+  `update_time` datetime NOT NULL COMMENT '最后一次更新时间',
+  `version` int(11) DEFAULT '0' COMMENT '乐观锁',
+  PRIMARY KEY (`wallet_id`),
+  UNIQUE KEY `uq_walletId_userId` (`user_id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户钱包表';
+
+
+
+CREATE TABLE `tb_dictionary` (
+  `dictionary_id` int(11) NOT NULL AUTO_INCREMENT,
+  `key` varchar(64) DEFAULT NULL,
+  `value` text NOT NULL,
+  PRIMARY KEY (`dictionary_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=75 DEFAULT CHARSET=utf8 COMMENT='数据字典表';
+
+
+
+
+CREATE TABLE `tb_categorys` (
+  `category_id` int(11) NOT NULL AUTO_INCREMENT,
+  `text` varchar(255) DEFAULT NULL,
+  `parent_id` int(11) DEFAULT '0' COMMENT '父类目',
+  `image` varchar(255) DEFAULT NULL COMMENT '图标',
+  `link` varchar(255) DEFAULT NULL,
+  `sort` int(11) DEFAULT '10' COMMENT '排序(数值越大越靠后)',
+  PRIMARY KEY (`category_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='商品类目表';
+
+
+
+CREATE TABLE `tb_orders` (
+  `order_id` bigint(64) NOT NULL,
+  `product_id` bigint(64) NOT NULL,
+  `product_name` varchar(255) NOT NULL,
+  `product_image` varchar(255) NOT NULL,
+  `amount` decimal(12,2) NOT NULL,
+  `return_amount` decimal(12,2) NOT NULL,
+  `add_date` datetime DEFAULT CURRENT_TIMESTAMP,
+  `status` int(11) DEFAULT '0' COMMENT '状态（0=待付款，1=待发货，2=已完成）',
+  `user_id` bigint(64) NOT NULL,
+  `channel` varchar(255) DEFAULT NULL,
+  `edit_date` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`order_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='订单表';
+
+
+
+CREATE TABLE `tb_pays` (
+  `pay_id` bigint(64) NOT NULL,
+  `from_uid` bigint(64) NOT NULL COMMENT '交易主体账户id',
+  `from_name` varchar(32) NOT NULL COMMENT '交易主体账户名称',
+  `to_uid` bigint(64) NOT NULL COMMENT '交易对方账户id',
+  `to_name` varchar(32) NOT NULL COMMENT '交易对方账户名称',
+  `channel_type` int(11) NOT NULL COMMENT '渠道类型',
+  `channel_name` varchar(32) NOT NULL COMMENT '渠道名称',
+  `product_type` int(11) NOT NULL COMMENT '商品类别',
+  `product_name` varchar(32) NOT NULL COMMENT '商品名称',
+  `trade_type` int(11) NOT NULL COMMENT '交易类型',
+  `trade_name` varchar(32) NOT NULL COMMENT '交易名称',
+  `add_time` datetime NOT NULL COMMENT '发生时间',
+  `amount` decimal(12,2) NOT NULL COMMENT '交易总额',
+  `system_record_id` bigint(20) NOT NULL COMMENT '系统交易流水单号',
+  `remark` varchar(255) DEFAULT NULL COMMENT '摘要',
+  `channel_record_id` varchar(40) DEFAULT NULL COMMENT '渠道交易流水单号',
+  `status` int(11) NOT NULL DEFAULT '0' COMMENT '状态(0=正常,1=退款)',
+  `to_account_time` datetime DEFAULT NULL COMMENT '渠道交易到账响应时间',
+  PRIMARY KEY (`pay_id`),
+  UNIQUE KEY `uq_systemRecordId` (`system_record_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='财务交易记录表';
+
+
+
+CREATE TABLE `tb_accounts` (
+  `accounts_id` bigint(64) NOT NULL AUTO_INCREMENT,
+  `pay_id` bigint(64) NOT NULL COMMENT '交易记录id',
+  `trade_account_id` bigint(64) NOT NULL COMMENT '交易主体账户id',
+  `trade_account_name` varchar(32) NOT NULL COMMENT '交易主体账户名称',
+  `accounts_type` int(11) NOT NULL COMMENT '账目类型(1=进账,2=出账)',
+  `currency` int(11) NOT NULL DEFAULT '0' COMMENT '货币种类(0=现金,1=虚拟货币)',
+  `amount` decimal(12,2) NOT NULL COMMENT '账目总额',
+  `before_balance` decimal(12,2) NOT NULL COMMENT '操作前余额',
+  `after_balance` decimal(12,2) NOT NULL COMMENT '操作后余额',
+  `add_time` datetime NOT NULL COMMENT '发生时间',
+  `remark` varchar(255) DEFAULT NULL COMMENT '摘要',
+  PRIMARY KEY (`accounts_id`) USING BTREE,
+  KEY `dex_balance` (`before_balance`,`after_balance`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=626958629207019522 DEFAULT CHARSET=utf8 COMMENT='财务会计账目表';
+

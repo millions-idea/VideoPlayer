@@ -1,0 +1,10 @@
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["components/uni-grid/uni-grid.user"],{"01d4":function(t,u,n){"use strict";n.r(u);var r=n("aa19"),e=n.n(r);for(var o in r)"default"!==o&&function(t){n.d(u,t,function(){return r[t]})}(o);u["default"]=e.a},"348b":function(t,u,n){"use strict";var r=function(){var t=this,u=t.$createElement;t._self._c},e=[];n.d(u,"a",function(){return r}),n.d(u,"b",function(){return e})},"83f3":function(t,u,n){"use strict";var r=n("ddc0"),e=n.n(r);e.a},aa19:function(t,u,n){"use strict";Object.defineProperty(u,"__esModule",{value:!0}),u.default=void 0;var r={name:"uni-grid",props:{data:Array,type:{type:String,default:"square"},columnNum:{type:[Number,String],default:3},showOutBorder:{type:[Boolean,String],default:!0},showBorder:{type:[Boolean,String],default:!0}},data:function(){return{}},computed:{columnNumber:function(){return Number(this.columnNum)?Number(this.columnNum):3},gridGroup:function(){var t=this,u=[],n=[];return this.data&&this.data.forEach(function(r,e){n.push(r),e%t.columnNum===t.columnNum-1&&(u.push(n),n=[])}),n.length>0&&u.push(n),n=null,u},setBorderClass:function(){var t=[];return!1===this.showBorder||"false"===this.showBorder?(t.push("uni-grid-no-border"),t):(!1!==this.showOutBorder&&"false"!==this.showOutBorder||t.push("uni-grid-no-out-border"),t)}},methods:{onClick:function(t,u){this.$emit("click",{index:t*this.columnNumber+u})}}};u.default=r},ddc0:function(t,u,n){},fec2:function(t,u,n){"use strict";n.r(u);var r=n("348b"),e=n("01d4");for(var o in e)"default"!==o&&function(t){n.d(u,t,function(){return e[t]})}(o);n("83f3");var i=n("2877"),a=Object(i["a"])(e["default"],r["a"],r["b"],!1,null,null,null);u["default"]=a.exports}}]);
+;(global["webpackJsonp"] = global["webpackJsonp"] || []).push([
+    'components/uni-grid/uni-grid.user-create-component',
+    {
+        'components/uni-grid/uni-grid.user-create-component':(function(module, exports, __webpack_require__){
+            __webpack_require__('6e42')['createComponent'](__webpack_require__("fec2"))
+        })
+    },
+    [['components/uni-grid/uni-grid.user-create-component']]
+]);                

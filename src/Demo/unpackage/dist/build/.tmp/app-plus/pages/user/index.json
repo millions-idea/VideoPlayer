@@ -1,0 +1,7 @@
+{
+  "enablePullDownRefresh": true,
+  "titleNView": false,
+  "usingComponents": {
+    "uni-grid": "/components/uni-grid/uni-grid.user"
+  }
+}

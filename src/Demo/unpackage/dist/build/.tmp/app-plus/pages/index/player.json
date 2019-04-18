@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "视频加载中",
+  "enablePullDownRefresh": true,
+  "titleNView": {
+    "type": "transparent"
+  },
+  "usingComponents": {}
+}

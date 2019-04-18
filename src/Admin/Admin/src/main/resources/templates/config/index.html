@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+      layout:decorate="~{layout/layout}">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="'网站设置-' + ${title}"></title>
+    <style>
+        .my-view {
+            padding: 20px;
+        }
+
+        .layui-form-item .layui-input-inline {
+            width: 360px;
+        }
+
+        .layui-layout-admin .layui-body {
+            bottom: 0px !important;
+            overflow-y:scroll;
+        }
+
+        .img-list{
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .img-list img{
+            width: 110px;
+            float: left;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<th:block layout:fragment="current_page">
+    <a><cite>网站设置</cite></a>
+</th:block>
+
+<th:block layout:fragment="body">
+
+    <div class="layui-form layui-form-pane my-view layui-row layui-col-md6" xmlns:th="http://www.thymeleaf.org">
+        <div class="layui-form-item">
+            <div class="layui-card">
+                <div class="layui-card-header">首页轮播图</div>
+                <div class="layui-card-body">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 220px">图片配置</label>
+                        <div class="layui-input-inline">
+                            <div class="layui-upload">
+                                <button type="button" class="layui-btn" id="uploadA">替换A</button>
+                                <button type="button" class="layui-btn" id="uploadB">替换B</button>
+                                <button type="button" class="layui-btn" id="uploadC">替换C</button>
+                                <div class="layui-upload-list img-list">
+                                    <input type="hidden" id="link_img_homeBanner1" th:value='${map.get("link.img.homeBanner1").getValue().toString()}'>
+                                    <input type="hidden" id="link_img_homeBanner2" th:value='${map.get("link.img.homeBanner2").getValue().toString()}'>
+                                    <input type="hidden" id="link_img_homeBanner3" th:value='${map.get("link.img.homeBanner3").getValue().toString()}'>
+                                    <img class="layui-upload-img" id="imageA" th:src='${map.get("link.img.homeBanner1").getValue().toString()}'>
+                                    <img class="layui-upload-img" id="imageB" th:src='${map.get("link.img.homeBanner2").getValue().toString()}'>
+                                    <img class="layui-upload-img" id="imageC" th:src='${map.get("link.img.homeBanner3").getValue().toString()}'>
+                                </div>
+                                <p id="homeBannerUploadText"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 220px">图片链接A</label>
+                        <div class="layui-input-inline">
+                            <input type="text" autocomplete="off" class="layui-input"
+                                   th:id='link_text_homeBanner1'
+                                   th:value='${map.get("link.text.homeBanner1").getValue().toString()}'>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 220px">图片链接B</label>
+                        <div class="layui-input-inline">
+                            <input type="text" autocomplete="off" class="layui-input"
+                                   th:id='link_text_homeBanner2'
+                                   th:value='${map.get("link.text.homeBanner2").getValue().toString()}'>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 220px">图片链接C</label>
+                        <div class="layui-input-inline">
+                            <input type="text" autocomplete="off" class="layui-input"
+                                   th:id='link_text_homeBanner3'
+                                   th:value='${map.get("link.text.homeBanner3").getValue().toString()}'>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-card">
+                <div class="layui-card-header">发送短信</div>
+                <div class="layui-card-body">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 220px">AppId</label>
+                        <div class="layui-input-inline">
+                            <input type="text" autocomplete="off" class="layui-input"
+                                   th:id='sms_tencent_config_appId'
+                                   th:value='${map.get("sms.tencent.config.appId").getValue().toString()}'>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 220px">AppKey</label>
+                        <div class="layui-input-inline">
+                            <input type="text" autocomplete="off" class="layui-input"
+                                   th:id='sms_tencent_config_appKey'
+                                   th:value='${map.get("sms.tencent.config.appKey").getValue().toString()}'>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 220px">短信签名</label>
+                        <div class="layui-input-inline">
+                            <input type="text" autocomplete="off" class="layui-input"
+                                   th:id='sms_signature'
+                                   th:value='${map.get("sms.tencent.config.smsSign").getValue().toString()}'>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 220px">注册模板</label>
+                        <div class="layui-input-inline">
+                            <input type="text" autocomplete="off" class="layui-input"
+                                   th:id='sms_reg_templateCode'
+                                   th:value='${map.get("sms.reg.templateCode").getValue().toString()}'>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 220px">找回密码模板</label>
+                        <div class="layui-input-inline">
+                            <input type="text" autocomplete="off" class="layui-input"
+                                   th:id='sms_reset_templateCode'
+                                   th:value='${map.get("sms.reset.templateCode").getValue().toString()}'>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 220px">绑定手机号模板</label>
+                        <div class="layui-input-inline">
+                            <input type="text" autocomplete="off" class="layui-input"
+                                   th:id='sms_bindPhone_templateCode'
+                                   th:value='${map.get("sms.bindPhone.templateCode").getValue().toString()}'>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 220px">支付模板</label>
+                        <div class="layui-input-inline">
+                            <input type="text" autocomplete="off" class="layui-input"
+                                   th:id='sms_payment_templateCode'
+                                   th:value='${map.get("sms.payment.templateCode").getValue().toString()}'>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-card">
+                <div class="layui-card-header">对象存储</div>
+                <div class="layui-card-body">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 220px">存储桶</label>
+                        <div class="layui-input-inline">
+                            <input type="text" autocomplete="off" class="layui-input"
+                                   th:id='cos_bucket'
+                                   th:value='${map.get("cos.bucket").getValue().toString()}'>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 220px">API秘钥ID</label>
+                        <div class="layui-input-inline">
+                            <input type="text" autocomplete="off" class="layui-input"
+                                   th:id='${map.get("cos.secretId").getKey()}'
+                                   th:value='${map.get("cos.secretId").getValue().toString()}'>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 220px">API秘钥Key</label>
+                        <div class="layui-input-inline">
+                            <input type="text" autocomplete="off" class="layui-input"
+                                   th:id='cos_secretKey'
+                                   th:value='${map.get("cos.secretKey").getValue().toString()}'>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 220px">域</label>
+                        <div class="layui-input-inline">
+                            <input type="text" autocomplete="off" class="layui-input"
+                                   th:id='cos_region'
+                                   th:value='${map.get("cos.region").getValue().toString()}'>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 220px">链接</label>
+                        <div class="layui-input-inline">
+                            <input type="text" autocomplete="off" class="layui-input"
+                                   th:id='cos_accessUrl'
+                                   th:value='${map.get("cos.accessUrl").getValue().toString()}'>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="layui-form-item">
+            <div class="layui-card">
+                <div class="layui-card-header">支付宝APP支付</div>
+                <div class="layui-card-body">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 220px">AppId</label>
+                        <div class="layui-input-inline">
+                            <input type="text" autocomplete="off" class="layui-input"
+                                   th:id='payment_alipay_appId'
+                                   th:value='${map.get("payment.alipay.appId").getValue().toString()}'>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 220px">AppSecret</label>
+                        <div class="layui-input-inline">
+                            <input type="password" autocomplete="off" class="layui-input"
+                                   th:id='payment_alipay_secret'
+                                   th:value='${map.get("payment.alipay.secret").getValue().toString()}'>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 220px">渠道名</label>
+                        <div class="layui-input-inline">
+                            <input type="password" autocomplete="off" class="layui-input"
+                                   th:id='payment_alipay_channel'
+                                   th:value='${map.get("payment.alipay.channel").getValue().toString()}'>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="layui-form-item">
+            <div class="layui-card">
+                <div class="layui-card-header">商品统一设置</div>
+                <div class="layui-card-body">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 220px">价格</label>
+                        <div class="layui-input-inline">
+                            <input type="number" autocomplete="off" class="layui-input"
+                                   th:id='product_price_permanent'
+                                   th:value='${map.get("product.price.permanent").getValue().toString()}'>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 100%; z-index: 10005">商品描述</label>
+                        <div class="layui-input-inline" style="width: 100%; ">
+                            <input type="hidden" class="editor" th:value='${map.get("product.desc.common").getValue().toString()}'>
+                            <div id="divEdit"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-card">
+                <div class="layui-card-header">利率</div>
+                <div class="layui-card-body">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 220px">直推奖金(43.22%)</label>
+                        <div class="layui-input-inline">
+                            <input type="number" autocomplete="off" class="layui-input"
+                                   th:id='rate_zhixiaojiangjin'
+                                   th:value='${map.get("rate.zhixiaojiangjin").getValue().toString()}'>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 220px">初级代理商奖金(15.25%)</label>
+                        <div class="layui-input-inline">
+                            <input type="number" autocomplete="off" class="layui-input"
+                                   th:id='rate_dailishangjiangjin'
+                                   th:value='${map.get("rate.dailishangjiangjin").getValue().toString()}'>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 220px">初级代理同级奖金(1%)</label>
+                        <div class="layui-input-inline">
+                            <input type="number" autocomplete="off" class="layui-input"
+                                   th:id='rate_tj_chujidaili'
+                                   th:value='${map.get("rate.tj.chujidaili").getValue().toString()}'>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 220px">区域代理商奖金(21.18%)</label>
+                        <div class="layui-input-inline">
+                            <input type="number" autocomplete="off" class="layui-input"
+                                   th:id='rate_quyudailijiangjin'
+                                   th:value='${map.get("rate.quyudailijiangjin").getValue().toString()}'>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 220px">区域代理同级奖金(2%)</label>
+                        <div class="layui-input-inline">
+                            <input type="number" autocomplete="off" class="layui-input"
+                                   th:id='rate_tj_quyudaili'
+                                   th:value='${map.get("rate.tj.quyudaili").getValue().toString()}'>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 220px">高级代理商奖金(25.42%)</label>
+                        <div class="layui-input-inline">
+                            <input type="number" autocomplete="off" class="layui-input"
+                                   th:id='rate_gaojidailijiangjin'
+                                   th:value='${map.get("rate.gaojidailijiangjin").getValue().toString()}'>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 220px">高级代理同级奖金(3%)</label>
+                        <div class="layui-input-inline">
+                            <input type="number" autocomplete="off" class="layui-input"
+                                   th:id='rate_tj_gaojidaili'
+                                   th:value='${map.get("rate.tj.gaojidaili").getValue().toString()}'>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 220px">事业股东(30.50%)</label>
+                        <div class="layui-input-inline">
+                            <input type="number" autocomplete="off" class="layui-input"
+                                   th:id='rate_gudongjiangjin'
+                                   th:value='${map.get("rate.gudongjiangjin").getValue().toString()}'>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 220px">事业股东同级奖金(4%)</label>
+                        <div class="layui-input-inline">
+                            <input type="number" autocomplete="off" class="layui-input"
+                                   th:id='rate_tj_gudong'
+                                   th:value='${map.get("rate.tj.gudong").getValue().toString()}'>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-card">
+                <div class="layui-card-header">链接跳转</div>
+                <div class="layui-card-body">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 220px">亚博APP平台</label>
+                        <div class="layui-input-inline">
+                            <input type="text" autocomplete="off" class="layui-input"
+                                   th:id='link_app_yabo'
+                                   th:value='${map.get("link.app.yabo").getValue().toString()}'>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 220px">亚博平台</label>
+                        <div class="layui-input-inline">
+                            <input type="text" autocomplete="off" class="layui-input"
+                                   th:id='link_yabo'
+                                   th:value='${map.get("link.yabo").getValue().toString()}'>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-card">
+                <div class="layui-card-header">APP版本</div>
+                <div class="layui-card-body">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 220px">H5发布页面</label>
+                        <div class="layui-input-inline">
+                            <input type="text" autocomplete="off" class="layui-input"
+                                   th:id='link_app_download'
+                                   th:value='${map.get("link.app.download").getValue().toString()}'>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 220px">版本号</label>
+                        <div class="layui-input-inline">
+                            <input type="text" autocomplete="off" class="layui-input"
+                                   id='version'
+                                   th:value='${appVersion.getVersion()}'>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 220px">wgt小包更新</label>
+                        <div class="layui-input-inline">
+                            <input type="text" autocomplete="off" class="layui-input"
+                                   id='wgtUrl'
+                                   th:value='${appVersion.getWgtUrl()}'>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 220px">pkg整包更新</label>
+                        <div class="layui-input-inline">
+                            <input type="text" autocomplete="off" class="layui-input"
+                                   id='pkgUrl'
+                                   th:value='${appVersion.getPkgUrl()}'>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 220px">一句话概述</label>
+                        <div class="layui-input-inline">
+                            <input type="text" autocomplete="off" class="layui-input"
+                                   id='node'
+                                   th:value='${appVersion.getNode()}'>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-form-item ">
+            <button lay-submit lay-filter="my-form" class="layui-btn layui-btn layui-btn-warm" style="float: left;">保存
+            </button>
+        </div>
+    </div>
+
+</th:block>
+<th:block layout:fragment="free_footer">
+    <script type="text/javascript" th:src="@{/js/configuration/wangEditor.js}"></script>
+
+    <script>
+        layui.use(['form','upload'], function () {
+            var form = layui.form,
+                layer = layui.layer;
+
+            var $ = layui.jquery
+                ,upload = layui.upload;
+
+            //富文本使用
+            var E = window.wangEditor;
+            var editor = new E('#divEdit');
+            //重新设置富文本的内容
+            editor.customConfig.menus = [
+
+                'fontName',  // 字体
+                'strikeThrough',  // 删除线
+                'backColor',  // 背景颜色
+                'head',  // 标题
+                'bold',  // 粗体
+                'fontSize',  // 字号
+                'italic',  // 斜体
+                'underline',  // 下划线
+                'foreColor',  // 文字颜色
+                'link',  // 插入链接
+                'justify',  // 对齐方式
+                'image',  // 插入图片
+                'undo',  // 撤销
+                'redo'  // 重复
+            ];
+            // 隐藏“网络图片”tab
+            editor.customConfig.showLinkImg = false;
+            // 将图片大小限制为 3M
+            editor.customConfig.uploadImgMaxSize = 3 * 1024 * 1024;
+            // 限制一次最多上传 1 张图片
+            editor.customConfig.uploadImgMaxLength = 1;
+            //开启wangEditor的错误提示
+            editor.customConfig.debug=true;
+            // 关闭粘贴样式的过滤
+            editor.customConfig.pasteFilterStyle = false;
+            // 忽略粘贴内容中的图片
+            editor.customConfig.pasteIgnoreImg = true;
+
+            var photo="";
+
+            //上传图片 将图片以文件的形式传给后台进行操作返回图片 url
+            editor.customConfig.customUploadImg = function (files, insert) {
+                var date = new FormData();
+                date.append("file", files[0]);
+                $.ajax({
+                    type: "POST",
+                    url:"/management/file/cosUpload",
+                    data: date,
+                    dataType: 'json',
+                    async: false,
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    success: function (result) {
+                        photo=result.msg;
+                        console.log(result.msg);
+                        insert(result.msg);// insert 是获取图片 url 后，插入到编辑器的方法
+                    }
+                })
+            };
+
+            editor.create();//创建富文
+            editor.txt.html($(".editor").val());
+
+            //普通图片上传
+            var uploadInst1 = upload.render({
+                elem: '#uploadA'
+                ,url: '/management/file/cosUpload'
+                ,before: function(obj){
+                    //预读本地文件示例，不支持ie8
+                    obj.preview(function(index, file, result){
+                        $('#link_img_homeBanner1').val(result); //图片链接（base64）
+                        $('#imageA').attr('src', result); //图片链接（base64）
+                    });
+                }
+                ,done: function(res){
+                    //如果上传失败
+                    if(res.code != 200){
+                        return layer.msg('上传失败');
+                    }
+                    //上传成功
+                    $("#imageUrl").val(res.msg);
+                    $('#link_img_homeBanner1').val(res.msg); //图片链接（base64）
+                    $('#imageA').attr('src', res.msg); //图片链接（base64）
+                }
+                ,error: function(){
+                    //演示失败状态，并实现重传
+                    var demoText = $('#homeBannerUploadText');
+                    demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-xs demo-reload">重试</a>');
+                    demoText.find('.demo-reload').on('click', function(){
+                        uploadInst.upload();
+                    });
+                }
+            });
+
+            var uploadInst2 = upload.render({
+                elem: '#uploadB'
+                ,url: '/management/file/cosUpload'
+                ,before: function(obj){
+                    //预读本地文件示例，不支持ie8
+                    obj.preview(function(index, file, result){
+                        $('#link_img_homeBanner2').val(result); //图片链接（base64）
+                        $('#imageB').attr('src', result); //图片链接（base64）
+                    });
+                }
+                ,done: function(res){
+                    //如果上传失败
+                    if(res.code != 200){
+                        return layer.msg('上传失败');
+                    }
+                    //上传成功
+                    $('#link_img_homeBanner2').val(res.msg); //图片链接（base64）
+                    $('#imageB').attr('src', res.msg); //图片链接（base64）
+                }
+                ,error: function(){
+                    //演示失败状态，并实现重传
+                    var demoText = $('#homeBannerUploadText');
+                    demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-xs demo-reload">重试</a>');
+                    demoText.find('.demo-reload').on('click', function(){
+                        uploadInst.upload();
+                    });
+                }
+            });
+
+            var uploadInst3 = upload.render({
+                elem: '#uploadC'
+                ,url: '/management/file/cosUpload'
+                ,before: function(obj){
+                    //预读本地文件示例，不支持ie8
+                    obj.preview(function(index, file, result){
+                        $('#link_img_homeBanner3').val(result); //图片链接（base64）
+                        $('#imageC').attr('src', result); //图片链接（base64）
+                    });
+                }
+                ,done: function(res){
+                    //如果上传失败
+                    if(res.code != 200){
+                        return layer.msg('上传失败');
+                    }
+                    //上传成功
+                    $('#link_img_homeBanner3').val(res.msg); //图片链接（base64）
+                    $('#imageC').attr('src', res.msg); //图片链接（base64）
+                }
+                ,error: function(){
+                    //演示失败状态，并实现重传
+                    var demoText = $('#homeBannerUploadText');
+                    demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-xs demo-reload">重试</a>');
+                    demoText.find('.demo-reload').on('click', function(){
+                        uploadInst.upload();
+                    });
+                }
+            });
+
+            var uploadCommunityA = upload.render({
+                elem: '#uploadCommunityA'
+                ,url: '/management/file/cosUpload'
+                ,before: function(obj){
+                    //预读本地文件示例，不支持ie8
+                    obj.preview(function(index, file, result){
+                        $('#link_communityBanner1').val(result); //图片链接（base64）
+                        $('#communityImageA').attr('src', result); //图片链接（base64）
+                    });
+                }
+                ,done: function(res){
+                    //如果上传失败
+                    if(res.code != 200){
+                        return layer.msg('上传失败');
+                    }
+                    //上传成功
+                    $('#link_communityBanner1').val(res.msg); //图片链接（base64）
+                    $('#communityImageA').attr('src', res.msg); //图片链接（base64）
+                }
+                ,error: function(){
+                    //演示失败状态，并实现重传
+                    var demoText = $('#communityBannerUploadText');
+                    demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-xs demo-reload">重试</a>');
+                    demoText.find('.demo-reload').on('click', function(){
+                        uploadInst.upload();
+                    });
+                }
+            });
+
+            var uploadCommunityB = upload.render({
+                elem: '#uploadCommunityB'
+                ,url: '/management/file/cosUpload'
+                ,before: function(obj){
+                    //预读本地文件示例，不支持ie8
+                    obj.preview(function(index, file, result){
+                        $('#link_communityBanner2').val(result); //图片链接（base64）
+                        $('#communityImageB').attr('src', result); //图片链接（base64）
+                    });
+                }
+                ,done: function(res){
+                    //如果上传失败
+                    if(res.code != 200){
+                        return layer.msg('上传失败');
+                    }
+                    //上传成功
+                    $('#link_communityBanner2').val(res.msg); //图片链接（base64）
+                    $('#communityImageB').attr('src', res.msg); //图片链接（base64）
+                }
+                ,error: function(){
+                    //演示失败状态，并实现重传
+                    var demoText = $('#communityBannerUploadText');
+                    demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-xs demo-reload">重试</a>');
+                    demoText.find('.demo-reload').on('click', function(){
+                        uploadInst.upload();
+                    });
+                }
+            });
+
+            var uploadCommunityC = upload.render({
+                elem: '#uploadCommunityC'
+                ,url: '/management/file/cosUpload'
+                ,before: function(obj){
+                    //预读本地文件示例，不支持ie8
+                    obj.preview(function(index, file, result){
+                        $('#link_communityBanner3').val(result); //图片链接（base64）
+                        $('#communityImageC').attr('src', result); //图片链接（base64）
+                    });
+                }
+                ,done: function(res){
+                    //如果上传失败
+                    if(res.code != 200){
+                        return layer.msg('上传失败');
+                    }
+                    //上传成功
+                    $('#link_communityBanner3').val(res.msg); //图片链接（base64）
+                    $('#communityImageC').attr('src', res.msg); //图片链接（base64）
+                }
+                ,error: function(){
+                    //演示失败状态，并实现重传
+                    var demoText = $('#communityBannerUploadText');
+                    demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-xs demo-reload">重试</a>');
+                    demoText.find('.demo-reload').on('click', function(){
+                        uploadInst.upload();
+                    });
+                }
+            });
+
+            var posterUpload = upload.render({
+                elem: '#uploadPromotionBackground'
+                ,url: '/management/file/cosUpload'
+                ,before: function(obj){
+                    //预读本地文件示例，不支持ie8
+                    obj.preview(function(index, file, result){
+                        $('#poster_background_url').val(result); //图片链接（base64）
+                        $('#poster_background_img').attr('src', result); //图片链接（base64）
+                    });
+                }
+                ,done: function(res){
+                    //如果上传失败
+                    if(res.code != 200){
+                        return layer.msg('上传失败');
+                    }
+                    //上传成功
+                    $("#imageUrl").val(res.msg);
+                    $('#poster_background_url').val(res.msg); //图片链接（base64）
+                    $('#poster_background_img').attr('src', res.msg); //图片链接（base64）
+                }
+                ,error: function(){
+                    //演示失败状态，并实现重传
+                    var demoText = $('#poster_background_text');
+                    demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-xs demo-reload">重试</a>');
+                    demoText.find('.demo-reload').on('click', function(){
+                        uploadInst.upload();
+                    });
+                }
+            });
+
+            // 表单提交验证
+            form.on('submit(my-form)', function (data) {
+                $.post("/management/config/editProfile", {
+                    homeBanner1: $("#link_img_homeBanner1").val(),
+                    homeBanner2: $("#link_img_homeBanner2").val(),
+                    homeBanner3: $("#link_img_homeBanner3").val(),
+                    linkTextHomeBanner1: $("#link_text_homeBanner1").val(),
+                    linkTextHomeBanner2: $("#link_text_homeBanner2").val(),
+                    linkTextHomeBanner3: $("#link_text_homeBanner3").val(),
+                    smsTencentConfigAppId: $("#sms_tencent_config_appId").val(),
+                    smsTencentConfigAppKey: $("#sms_tencent_config_appKey").val(),
+                    smsTencentConfigSmsSign: $("#sms_tencent_config_smsSign").val(),
+                    smsRegTemplateCode: $("#sms_reg_templateCode").val(),
+                    smsResetTemplateCode: $("#sms_reset_templateCode").val(),
+                    smsBindPhoneTemplateCode: $("#sms_bindPhone_templateCode").val(),
+                    smsPaymentTemplateCode: $("#sms_payment_templateCode").val(),
+                    cosBucket: $("#cos_bucket").val(),
+                    cosSecretId: $("#cos_secretId").val(),
+                    cosSecretKey: $("#cos_secretKey").val(),
+                    cosAccessUrl: $("#cos_accessUrl").val(),
+                    cosRegion: $("#cos_region").val(),
+                    paymentAlipayAppId: $("#payment_alipay_appId").val(),
+                    paymentAlipaySecret: $("#payment_alipay_secret").val(),
+                    paymentAlipayChannel: $("#payment_alipay_channel").val(),
+                    productPricePermanent: $("#product_price_permanent").val(),
+                    productDescCommon: editor.txt.html(),
+                    rateZhixiaojiangjin: $("#rate_zhixiaojiangjin").val(),
+                    rateDailishangjiangjin: $("#rate_dailishangjiangjin").val(),
+                    rateQuyudailijiangjin: $("#rate_quyudailijiangjin").val(),
+                    rateGaojidailijiangjin: $("#rate_gaojidailijiangjin").val(),
+                    rateGudongjiangjin: $("#rate_gudongjiangjin").val(),
+                    rateTjChujidaili: $("#rate_tj_chujidaili").val(),
+                    rateTjQuyudaili: $("#rate_tj_quyudaili").val(),
+                    rateTjGaojidaili: $("#rate_tj_gaojidaili").val(),
+                    rateTjGudong: $("#rate_tj_gudong").val(),
+                    linkYabo: $("#link_yabo").val(),
+                    linkAppYabo: $("#link_app_yabo").val(),
+                    linkAppDownload: $("#link_app_download").val(),
+                    version: $("#version").val(),
+                    wgtUrl: $("#wgtUrl").val(),
+                    pkgUrl: $("#pkgUrl").val(),
+                    node: $("#node").val(),
+                }, function (data) {
+                    if (!isNaN(data.error) || data.code != 200) {
+                        layer.msg("更新失败");
+                        return;
+                    }
+                    layer.closeAll();
+                    layer.msg("更新成功");
+                    location.reload();
+                })
+
+                return false; //阻止表单跳转。如果需要表单跳转，去掉这段即可。
+            });
+            form.render();
+        });
+
+    </script>
+
+</th:block>
+</body>
+</html>

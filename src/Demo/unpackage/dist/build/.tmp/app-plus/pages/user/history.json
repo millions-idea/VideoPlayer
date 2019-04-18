@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "观看历史",
+  "usingComponents": {
+    "grace-loading": "/graceUI/components/graceLoading",
+    "stack-empty": "/components/stack-empty/stack-empty",
+    "mht-loader": "/components/mht-loader/mht-loader"
+  }
+}

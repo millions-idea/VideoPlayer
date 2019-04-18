@@ -1,0 +1,1 @@
+<view class="emptyView data-v-093164ce" bind:__l="__l"><view class="emptyImg data-v-093164ce"><image class="icon data-v-093164ce" style="{{'height:'+(height+'px')+';'}}" src="/static/data/empty.png" mode="aspectFit"></image><text class="label data-v-093164ce">{{label}}</text></view></view>

@@ -1,0 +1,1 @@
+"relation_id"	"permission_group_id"	"user_id"

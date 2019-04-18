@@ -1,0 +1,21 @@
+{
+  "enablePullDownRefresh": true,
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "navigationBarTitleText": "",
+  "titleNView": {
+    "buttons": [
+      {
+        "type": "text",
+        "float": "right",
+        "fontSize": "13px",
+        "colorPressed": "#333333",
+        "text": "筛选"
+      }
+    ]
+  },
+  "usingComponents": {
+    "grace-loading": "/graceUI/components/graceLoading",
+    "stack-empty": "/components/stack-empty/stack-empty",
+    "mht-loader": "/components/mht-loader/mht-loader"
+  }
+}

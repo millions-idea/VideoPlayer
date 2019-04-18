@@ -1,0 +1,9 @@
+{
+  "enablePullDownRefresh": true,
+  "titleNView": false,
+  "usingComponents": {
+    "jing-swiper": "/components/jing-swiper/jing-swiper",
+    "grace-loading": "/graceUI/components/graceLoading",
+    "stack-empty": "/components/stack-empty/stack-empty"
+  }
+}

@@ -1,0 +1,126 @@
+<div class="layui-form layui-form-pane my-view" method="post" action="./express-platform/edit"
+      enctype="application/x-www-form-urlencoded" xmlns:th="http://www.thymeleaf.org">
+    <input type="hidden" id="account" th:value="${user.getAccount()}">
+    <input type="hidden" id="userId" th:value="${user.getUserId()}">
+    <div class="layui-form-item">
+        <label class="layui-form-label">注册方式</label>
+        <div class="layui-input-block">
+            <input type="text" id="type" autocomplete="off"
+                 disabled class="layui-input" th:value='${user.getType().equals(0) ? "手机" : "微信"}'>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">等级</label>
+        <div class="layui-input-block">
+            <select id="level">
+                <option value=""></option>
+                <option value="0" th:if="${user.getLevel().equals(0)}" selected>普通用户</option>
+                <option value="0" th:if="${!user.getLevel().equals(0)}">普通用户</option>
+                <option value="1" th:if="${user.getLevel().equals(1)}" selected>会员</option>
+                <option value="1" th:if="${!user.getLevel().equals(1)}">会员</option>
+                <option value="2" th:if="${user.getLevel().equals(2)}" selected>初级代理</option>
+                <option value="2" th:if="${!user.getLevel().equals(2)}">初级代理</option>
+                <option value="3" th:if="${user.getLevel().equals(3)}" selected>区域代理</option>
+                <option value="3" th:if="${!user.getLevel().equals(3)}">区域代理</option>
+                <option value="4" th:if="${user.getLevel().equals(4)}" selected>高级代理</option>
+                <option value="4" th:if="${!user.getLevel().equals(4)}">高级代理</option>
+                <option value="5" th:if="${user.getLevel().equals(5)}" selected>事业股东</option>
+                <option value="5" th:if="${!user.getLevel().equals(5)}">事业股东</option>
+            </select>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">用户昵称</label>
+        <div class="layui-input-block">
+            <input type="text" id="nickName" autocomplete="off"
+                   class="layui-input" th:value="${user.getNickName()}">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">头像</label>
+        <div class="layui-input-block">
+            <img type="text" style="width: 200px;height: 200px;" id="photo" autocomplete="off"
+                   disabled="disabled"  class="layui-input" th:src="${user.photo}">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">手机号码</label>
+        <div class="layui-input-block">
+            <input type="text" id="phone" autocomplete="off"
+                    class="layui-input" th:value="${user.getPhone()}">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">登录密码</label>
+        <div class="layui-input-block">
+            <input type="text" id="password" autocomplete="off"
+                    class="layui-input" placeholder="请输入新的密码">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">注册时间</label>
+        <div class="layui-input-block">
+            <input type="text" id="addDate" autocomplete="off"
+                   disabled="disabled"  class="layui-input" th:value="${#dates.format(addDate, 'yyyy-MM-dd HH:mm:ss')}">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">注册IP</label>
+        <div class="layui-input-block">
+            <input type="text" id="ip" autocomplete="off"
+                   disabled="disabled"  class="layui-input" th:value="${user.ip}">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">上次登陆时间</label>
+        <div class="layui-input-block">
+            <input type="text" id="lastDate" autocomplete="off"
+                   disabled="disabled"  class="layui-input" th:value="${#dates.format(editDate, 'yyyy-MM-dd HH:mm:ss')}"/>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">团队成员</label>
+        <div class="layui-input-block">
+            <select name="city" lay-verify="" id="scheduleStatus">
+                <option th:each="item:${promoteMembers}" th:value="${item.getUserId()}" th:text="${item.getAccount()}"></option>
+            </select>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <button lay-submit lay-filter="my-form" class="layui-btn layui-btn-warm layui-row layui-col-xs12" id="save">保存</button>
+    </div>
+</div>
+
+<script>
+    layui.use(['form'], function(){
+        var form = layui.form;
+        form.render();
+    });
+
+    $(function () {
+        $("#save").click(function () {
+            $.post("./editProfile", {
+                "account": $("#account").val(),
+                "userId": $("#userId").val(),
+                "nickName": $("#nickName").val(),
+                "phone": $("#username").val(),
+                "password": $("#password").val(),
+                "level": $("#level").val()
+            }, function (data) {
+                if(data == null || data.code == null || data.code != 200) {
+                    if(data.code == 300){
+                        layer.msg(data.msg);
+                        return;
+                    }else{
+                        layer.msg("编辑失败");
+                        return;
+                    }
+                }
+                layer.msg("编辑成功");
+                tableIndex.reload();
+                layer.closeAll();
+            });
+        })
+    })
+</script>

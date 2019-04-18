@@ -1,0 +1,61 @@
+.grace-list .items .title .foot.data-v-703c0413 {
+  float: none !important;
+  margin-left: 100rpx;
+  font-size: 13px !important;
+  color: #000000;
+}
+.grace-list .items .title.data-v-703c0413 {
+  margin-left: 0px;
+  color: #9a9a9a !important;
+  font-size: 14px;
+  border-bottom: 1px solid #f3f3f3 !important;
+}
+.black.data-v-703c0413 {
+  color: #000000 !important;
+}
+.gray.data-v-703c0413 {
+  color: #9a9a9a !important;
+}
+.green.data-v-703c0413 {
+  color: #0ea295 !important;
+}
+.grace-list .items .title .head.data-v-703c0413 {
+  width: 90rpx;
+  float: left;
+}
+.icon-qrcode.data-v-703c0413 {
+  font-size: 19px;
+  font-style: normal;
+  height: 56px;
+  line-height: 56px;
+  text-align: center;
+  width: 30px;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  color: #b2b2b6;
+}
+.avatar-upload.data-v-703c0413 {
+  height: 150rpx;
+  overflow: hidden;
+  line-height: 150rpx;
+}
+.avatar-upload .title.data-v-703c0413 {
+  height: 80rpx;
+  line-height: 80rpx;
+  float: right;
+}
+.avatar-upload .foot.data-v-703c0413 {
+  margin-left: 90rpx !important;
+}
+.avatar.data-v-703c0413 {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 120rpx;
+  position: relative;
+  top: -15px;
+  left: 10px;
+  float: left;
+}
+
