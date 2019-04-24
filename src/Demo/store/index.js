@@ -28,7 +28,7 @@ const localStore = {
 
 const defaultProfile = {
 	userId: 0,
-	avatar: "../../../static/user/default-avatar.png",
+	avatar: "../../static/user/default-avatar.png",
 	account: "",
 	nickName: "",
 	phone: "",
@@ -71,7 +71,7 @@ const store = new Vuex.Store({
 		hasLogin: false,
 		profile: {
 			userId: 0,
-			avatar: "../../../static/user/default-avatar.png",
+			avatar: "../../static/user/default-avatar.png",
 			account: "",
 			nickName: "",
 			phone: "",

@@ -2,6 +2,7 @@
   "enablePullDownRefresh": true,
   "titleNView": false,
   "usingComponents": {
-    "uni-grid": "/components/uni-grid/uni-grid.user"
+    "uni-grid": "/components/uni-grid/uni-grid.user",
+    "lazy-image": "/components/lazy-image-user"
   }
 }

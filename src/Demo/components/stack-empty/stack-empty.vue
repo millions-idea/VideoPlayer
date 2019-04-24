@@ -45,10 +45,10 @@
 	.label{
 		display: flex;
 		width: 100%;
-		font-family: @common-font-zh;
 		// color: #d3d3d3;
 		color: #b9b9b9;
 		justify-content: center;
+		text-align: center;
 		font-size: 35upx;
 	}
 	

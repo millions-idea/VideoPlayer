@@ -43,9 +43,9 @@
 					</view>
 				</navigator>
 			</view>
-			<view v-if="dataList.length <= 0" class="list">
+			<!-- <view v-if="dataList.length <= 0" class="">
 				<view class="empty-list"><stackEmpty class="items item empty" height="180" label="最近没有更新喔"></stackEmpty></view>
-			</view>
+			</view> -->
 		</view>
 		<graceLoading v-if="dataList.length > 0" :loadingType="loadingType"></graceLoading>
 	</view>
@@ -160,6 +160,10 @@ export default {
 
 						if (res.data.data == null || res.data.data.length == 0) {
 							_self.loadingType = 3;
+							uni.showToast({
+								title: "没有最近更新的视频哦",
+								icon : "none"
+							})
 						}
 
 						res.data.data.forEach(item => {
@@ -275,7 +279,7 @@ page {
 	clear: both;
 	width: 100%;
 	overflow: hidden;
-	height: 359upx;
+	height: 350upx;
 	justify-content: center;
 	justify-items: center;
 	text-align: center;
@@ -298,7 +302,7 @@ page {
 
 .item .video-title {
 	transition: all 0.1s ease-in 0s;
-	width: 550upx;
+	width: 500upx;
 	filter: saturate(1);
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -349,252 +353,22 @@ page {
 	font-size: 22px;
 }
 
-.empty-list,
+
+.empty-list{
+	width: 100%;
+	overflow: hidden;
+	justify-content: center;
+	
+}
+
 .empty-list .item {
 	height: 600upx !important;
 	box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
 }
 
-/* preview */
-
-@import '../../graceUI/animate.css';
-
-.pop-container {
-	height: 400px;
-	border-radius: 5px;
-	background-color: #fff;
-	overflow: hidden;
-}
-
-.pop-container .title {
-	width: 100%;
-	height: 80upx;
-	line-height: 80upx;
-	background-color: #fafafa;
-	color: #000;
-	text-align: center;
-	font-family: @common-font-zh;
-}
-
-.pop-container .nickname {
-	width: 100%;
-	height: 50upx;
-	line-height: 50upx;
-	color: #000;
-	text-align: center;
-	font-family: @common-font-zh;
-}
-
-.pop-container .phone {
-	width: 100%;
-	height: 40upx;
-	line-height: 40upx;
-	color: #000;
-	text-align: center;
-	font-family: @common-font-zh;
-}
-
-.pop-container .info {
-	margin-top: 30upx;
-	height: 100upx;
-	line-height: 100upx;
-	display: flex;
-	justify-content: center;
-	text-align: center;
-	align-items: center;
-	width: 100%;
-}
-
-.pop-container .card {
-	max-height: 200px;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	text-align: center;
-	margin-top: 25upx;
-	border-radius: 15upx;
-}
-
-.pop-container .card-img {
-	width: 200px;
-	height: 200px;
-	border-radius: 15upx;
-}
-
-.top-user-preview {
-	width: 100%;
-	height: 300upx;
-	background-color: #fb7039;
-	background-image: url('../../static/user/user-preview-bg.png') !important;
-	background-size: 100% 300upx;
-	position: relative;
-	top: 0px;
-}
-
-/* #ifdef APP-PLUS */
-.top-user-preview {
-	height: 300upx;
-}
-/* #endif */
-
 .top-status-bar-placeholder {
-	min-height: var(--status-bar-height);
-	background-color: rgba(255, 255, 255, 0);
-}
+		min-height: var(--status-bar-height);
+		background-color: rgba(255, 255, 255, 0);
+	}
 
-.sample-header {
-	width: 90%;
-	min-height: 80upx;
-	margin: 0 auto;
-}
-
-.sample-header .left,
-.sample-header .right {
-	overflow: hidden;
-}
-
-.sample-header .left {
-	float: left;
-}
-
-.sample-header .right {
-	float: right;
-}
-
-.default-avatar {
-	float: left;
-	width: 80upx;
-	height: 80upx;
-	position: absolute;
-	left: 0px;
-	top: 0px;
-	overflow: hidden !important;
-	border-radius: 60upx !important;
-}
-
-.avatar-container {
-	position: relative;
-	display: inline-flex;
-	float: left;
-	width: 80upx;
-	height: 80upx;
-	overflow: hidden !important;
-	border-radius: 60upx !important;
-}
-
-.account {
-	float: left;
-	display: inline-flex;
-	margin-left: 25upx;
-	line-height: 80upx;
-	height: 80upx;
-	font-size: 30upx;
-	color: @dark-text-color;
-	font-family: @normal-number-font;
-}
-
-.header-icon {
-	display: inline-flex;
-	float: right;
-	font-size: 40upx;
-	line-height: 80upx;
-	color: @dark-text-color;
-	margin-left: 20upx;
-}
-
-.header-icon-vip {
-	font-size: 50upx !important;
-}
-
-.header-icon-settings {
-	font-size: 50upx !important;
-}
-
-.parent-user {
-	line-height: 80upx;
-	color: #ffe8e0;
-	font-size: 13px;
-	text-decoration: underline;
-}
-
-/* finance */
-.finance-preview {
-	width: 100%;
-}
-
-.finance-preview .item-line {
-	width: 90%;
-	height: 120upx;
-	margin: 0 auto;
-	white-space: nowrap;
-}
-
-.item-line .title {
-	height: 24upx;
-	line-height: 24upx;
-}
-
-.finance-preview .item-label {
-	font-family: @normal-text-font;
-	color: rgba(255, 255, 255, 0.6);
-	font-size: 24upx;
-}
-
-.lock-eye {
-	display: inline-flex;
-	margin-left: 30upx;
-	color: @dark-text-color;
-	font-size: 40upx !important;
-	position: relative;
-	top: 5upx;
-}
-
-.balance {
-	color: rgb(255, 255, 255);
-	font-family: @common-font-num;
-	font-size: 70upx;
-}
-
-.item-inline {
-	width: 90%;
-	margin: 0 auto;
-}
-
-.inline-item .item-label {
-	width: 100%;
-	height: 36upx;
-}
-
-.inline-item .item-label .title {
-	display: flex;
-	flex-wrap: wrap;
-	width: 100%;
-	height: 36upx;
-}
-
-.inline-item .balance {
-	display: flex;
-	flex-wrap: wrap;
-	width: 100%;
-	font-size: 40upx;
-	line-height: 84upx;
-}
-
-.inline-item {
-	clear: both;
-	display: inline-block;
-	width: 28.4%;
-	min-height: 120upx;
-}
-
-/* finance end */
-
-/* navigation */
-
-.container {
-	min-height: 150upx;
-	max-height: 150upx;
-	height: 150upx;
-	background-color: #fff;
-}
 </style>

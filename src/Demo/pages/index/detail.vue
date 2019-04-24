@@ -23,7 +23,7 @@
 					</view>
 				</navigator>
 			</view>
-			<view v-if="dataList.length <= 0" class="list">
+			<view v-if="dataList.length <= 0">
 				<view class="empty-list"><stackEmpty class="items item empty" height="180" label="暂无数据"></stackEmpty></view>
 			</view>
 		</view>

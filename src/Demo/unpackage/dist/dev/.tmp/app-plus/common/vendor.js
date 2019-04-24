@@ -8671,7 +8671,7 @@ var localStore = {
 
 var defaultProfile = {
   userId: 0,
-  avatar: "../../../static/user/default-avatar.png",
+  avatar: "../../static/user/default-avatar.png",
   account: "",
   nickName: "",
   phone: "",
@@ -8714,7 +8714,7 @@ var store = new _vuex.default.Store({
     hasLogin: false,
     profile: {
       userId: 0,
-      avatar: "../../../static/user/default-avatar.png",
+      avatar: "../../static/user/default-avatar.png",
       account: "",
       nickName: "",
       phone: "",

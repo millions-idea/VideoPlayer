@@ -1,0 +1,242 @@
+{
+	"pages": [
+		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages 
+		{
+			"path": "pages/index/index",
+			"style": {
+				"enablePullDownRefresh": true,
+				"app-plus": {
+					"titleNView": false //禁用原生导航栏  
+				}
+			}
+		},
+		{
+			"path": "pages/user/index/index",
+			"style": {
+				"enablePullDownRefresh": true,
+				"app-plus": {
+					"titleNView": false //禁用原生导航栏  
+				}
+			}
+		},
+		{
+			"path": "pages/user/index/profile",
+			"style": {
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"navigationBarTitleText": "设置"
+			}
+		},
+		{
+			"path": "pages/user/bootstrap/login",
+			"style": {
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"navigationBarTitleText": "登录"
+			}
+		},
+		{
+			"path": "pages/user/bootstrap/register",
+			"style": {
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"navigationBarTitleText": "注册"
+			}
+		},
+		{
+			"path": "pages/user/bootstrap/find",
+			"style": {
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"navigationBarTitleText": "找回密码"
+			}
+		},
+		{
+			"path": "pages/user/bootstrap/bind",
+			"style": {
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"navigationBarTitleText": "绑定手机号"
+			}
+		},
+		{
+			"path": "pages/user/order/index",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/user/order/payment",
+			"style": {
+				"navigationBarTitleText": "收银台"
+			}
+		},
+		{
+			"path": "pages/user/index/payment",
+			"style": {
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/user/finance/recharge",
+			"style": {
+				"navigationBarTitleText": "充值"
+			}
+		},
+		{
+			"path": "pages/user/finance/withdraw",
+			"style": {
+				"navigationBarTitleText": "提现"
+			}
+		},
+		{
+			"path": "pages/user/history/index",
+			"style": {
+				"navigationBarTitleText": "观看历史"
+			}
+		},
+		{
+			"path": "pages/user/index/collect",
+			"style": {
+				"navigationBarTitleText": "我的收藏"
+			}
+		},
+		{
+			"path": "pages/user/shopping/index",
+			"style": {
+				"navigationBarTitleText": "我的购买"
+			}
+		},
+		{
+			"path": "pages/user/finance/finance",
+			"style": {
+				"navigationBarTitleText": "充值提现"
+			}
+		},
+		{
+			"path": "pages/generics-form/generics-form",
+			"style": {
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"navigationBarTitleText": "",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"type": "text",
+							"float": "right",
+							"fontSize": "13px",
+							"colorPressed": "#333333",
+							"text": "完成" //原生标题栏增加分享按钮，点击事件可通过页面的 onNavigationBarButtonTap 函数进行监听
+						}]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/generics-sms/generics-sms",
+			"style": {
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/generics-webview/generics-webview",
+			"style": {
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/player/index",
+			"style": {
+				"navigationBarTitleText": "视频加载中",
+				"enablePullDownRefresh": true,
+				"app-plus": {
+					"titleNView": {
+						"type": "transparent"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/user/index/team",
+			"style": {
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"navigationBarTitleText": "我的团队"
+			}
+		},
+		{
+			"path": "pages/user/index/bill",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/index/category",
+			"style": {
+				"enablePullDownRefresh": true,
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"navigationBarTitleText": "分类"
+			}
+		},
+		{
+			"path": "pages/index/detail",
+			"style": {
+				"enablePullDownRefresh": true,
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"navigationBarTitleText": "",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"type": "text",
+							"float": "right",
+							"fontSize": "13px",
+							"colorPressed": "#333333",
+							"text": "筛选" //原生标题栏增加分享按钮，点击事件可通过页面的 onNavigationBarButtonTap 函数进行监听
+						}]
+					}
+				}
+			}
+		}
+	],
+	"tabBar": {
+		"color": "#9D9D9D",
+		"selectedColor": "#F83A2E",
+		"backgroundColor": "#FEFEFE",
+		"borderStyle": "black",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/tabbar/home.png",
+				"selectedIconPath": "static/tabbar/home_active.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/index/category",
+				"iconPath": "static/tabbar/fenlei.png",
+				"selectedIconPath": "static/tabbar/fenlei_active.png",
+				"text": "分类"
+			},
+			{
+				"pagePath": "pages/user/index/index",
+				"iconPath": "static/tabbar/wode.png",
+				"selectedIconPath": "static/tabbar/wode_active.png",
+				"text": "我的"
+			}
+		]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "爱视",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"condition": {
+		//模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [{
+			"name": "", //模式名称
+			"path": "", //启动页面，必选
+			"query": "" //启动参数，在页面的onLoad函数里面得到
+		}]
+	}
+}

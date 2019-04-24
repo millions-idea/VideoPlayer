@@ -553,12 +553,12 @@ uni-tabbar .uni-tabbar__icon.data-v-093164ce {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  font-family: "PingFangSC-Light";
   color: #b9b9b9;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: center;
   font-size: 35rpx;
 }
 
