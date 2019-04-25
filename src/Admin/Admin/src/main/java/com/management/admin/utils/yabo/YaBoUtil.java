@@ -21,6 +21,11 @@ public class YaBoUtil {
     private final static String DOMAIN = "https://www.yabo2022.com/";
 
     public static YaBoLoginResp login(String username, String password){
+        Map<String, String> header = new HashMap<>();
+        header.put("Content-Type","application/x-www-form-urlencoded");
+        header.put("Referer", DOMAIN + "entry/login");
+        header.put("User-Agent", "Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1");
+
         YaBoLoginBody body = new YaBoLoginBody();
         body.setDomain("www.yabo2022.com");
         body.setName(username);
@@ -28,16 +33,17 @@ public class YaBoUtil {
         String postForm = "name=" + body.getName() + "&password=" + body.getPassword() + "&domain=" + body.getDomain();
 
         //获取cookies
-        Response cookieResponse = HttpUtil.getResponse(DOMAIN, null);
+        Response cookieResponse = HttpUtil.getResponse(DOMAIN + "entry/login", header);
         String setCookie = cookieResponse.header("Set-Cookie");
         String cdnUid = setCookie.split(";")[0];
-        System.out.println(cdnUid);
-
-        Map<String, String> header = new HashMap<>();
+        header = new HashMap<>();
         header.put("Content-Type","application/x-www-form-urlencoded");
         header.put("Referer", DOMAIN + "entry/login");
         header.put("User-Agent", "Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1");
-        header.put("Cookie", "__cdnuid=a9f576a966147e4a35c7e80d1a7e9e41; serwe=we05; ser=a03; __cdn_clearance=1556073655.856|0|ScbJWJh%2Bbp3bQ5QoSJ437joszv0%3D");
+        header.put("Cookie",  cdnUid + "; serwe=we05; ser=a03; " + YaBoScriptUtil.evalJS());
+
+
+        System.out.println(header.get("Cookie"));
 
         String response = HttpUtil.postForm(DOMAIN + "api/v2/login", postForm, header);
         System.out.println(response);

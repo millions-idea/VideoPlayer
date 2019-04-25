@@ -181,8 +181,8 @@ public class UserFacadeServiceImpl implements IUserFacadeService {
     public User login(String username, String password, String userIp) {
         User user = userService.loginByUsername(username, password);
         //用户在亚博平台注册, 到我们平台登录, 此时给用户进行无感自动注册
-        syncAccount(username, password, userIp, user);
-        user = userService.loginByUsername(username, password);
+        //syncAccount(username, password, userIp, user);
+        //user = userService.loginByUsername(username, password);
         return user;
     }
 

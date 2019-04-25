@@ -78,7 +78,7 @@ public class UserApiController {
         }
         //同步亚博信息
         //查询亚博信息
-        if(user.getYaboToken() != null){
+        /*if(user.getYaboToken() != null){
             YaBoProfileResp profile = YaBoUtil.getProfile(user.getYaboToken(), user.getPhone());
             userProfileView.setYabo(profile);
             userProfileView.setAvatar(profile.getData().getUserprofile());
@@ -92,7 +92,7 @@ public class UserApiController {
                     userService.changeYaBoToken(userId, login.getData().getToken());
                 }
             }
-        }
+        }*/
         userProfileView.setYaboUrl(DataDictionary.Map.get("link.yabo").getValue());
         userProfileView.setYaboAppUrl(DataDictionary.Map.get("link.app.yabo").getValue());
         return new JsonResult<>().successful(userProfileView);

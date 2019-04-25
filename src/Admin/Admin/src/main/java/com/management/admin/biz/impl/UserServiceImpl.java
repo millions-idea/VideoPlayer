@@ -345,11 +345,11 @@ public class UserServiceImpl implements IUserService {
         boolean result = userMapper.changePassword(userId, encryptPassword) > 0;
 
         //更新亚博平台密码
-        User profile = userMapper.selectById(userId);
+        //User profile = userMapper.selectById(userId);
 
-        YaBoResp resp = YaBoUtil.changeLoginPassword(profile.getYaboToken(), profile.getAccount(), profile.getYaboPassword(), password);
+        /*YaBoResp resp = YaBoUtil.changeLoginPassword(profile.getYaboToken(), profile.getAccount(), profile.getYaboPassword(), password);
 
-        if(resp == null || !resp.getStatus().equals("success")) throw new InfoException("同步新密码失败");
+        if(resp == null || !resp.getStatus().equals("success")) throw new InfoException("同步新密码失败");*/
 
         return result;
     }

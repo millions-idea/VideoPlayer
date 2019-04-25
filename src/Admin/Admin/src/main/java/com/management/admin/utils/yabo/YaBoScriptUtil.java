@@ -12,7 +12,7 @@ import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 
 public class YaBoScriptUtil {
-    private static final String JSCode = "'__cdn_clearance=1556091349.25|0|' + (function () {\n" +
+    private static final String JSCode = "'__cdn_clearance=' + Math.round(new Date().getTime()/1000).toString() + '.025|0|' + (function () {\n" +
             "        return [\n" +
             "            [{} + []][0].charAt(2), 'v', [~~!{}], 'GUP', (!{} + [] + []).charAt(-~-~(+[])) + (-~[-~[] - ~(-~((-~{} | -~-~(+[]))))] + [] + []) + [!/!/ + [] + []][0].charAt(-~{} + 2), 'RF', [\n" +
             "                [] / !/!/ + [] + [\n" +
