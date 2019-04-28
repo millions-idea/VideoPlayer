@@ -406,13 +406,13 @@ export default {
 		onClick(e) {
 			switch (e.index) {
 				case 0:
-					this.authOpenWindow('user/history/index');
+					this.authOpenWindow('user/history');
 					break;
 				case 1:
-					this.authOpenWindow('user/index/collect');
+					this.authOpenWindow('user/collect');
 					break;
 				case 2:
-					this.authOpenWindow('user/shopping/index');
+					this.authOpenWindow('user/shopping');
 					break;
 				case 3:
 					this.common.window.toNew('generics-webview/generics-webview', {

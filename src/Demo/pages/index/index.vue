@@ -95,9 +95,15 @@ export default {
 	onLoad() {
 		_self = this;
 		page = 0;
+		
+		
+		if(_self.session.getValue("token") != null && _self.session.getValue("token").length > 5){
+			_self.session.setValue('token', res.data.msg);
+			_self.login();
+		}
 	},
 	onShow() {
-		this.getList();
+		uni.startPullDownRefresh();
 	},
 	computed: {
 		...mapState(['hasLogin', 'profile'])
@@ -302,7 +308,7 @@ page {
 
 .item .video-title {
 	transition: all 0.1s ease-in 0s;
-	width: 500upx;
+	width: 450upx;
 	filter: saturate(1);
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -317,14 +323,23 @@ page {
 	color: #434748;
 }
 
+.item .video-play-count{
+	width: 120upx;
+	text-align: right;
+}
+
+
 .item .video-play-count-icon {
 	margin-right: 10upx;
 	color: #ababab;
+	width: 36upx;
+	display: inline-block;
 }
 
 .item .video-play-count-text {
 	color: #ababab;
 	font-family: @common-font-num;
+	display: inline-flex;
 }
 
 .video-info {

@@ -534,6 +534,9 @@ uni-tabbar .uni-tabbar__icon.data-v-d9059922 {
   right: 20rpx;
   font-family: "Roboto";
 }
+page.data-v-d9059922 {
+  background-color: #F5F5F5 !important;
+}
 .container.data-v-d9059922 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -562,7 +565,7 @@ uni-tabbar .uni-tabbar__icon.data-v-d9059922 {
   height: 500rpx;
 }
 .group.data-v-d9059922 {
-  background-color: #fff;
+  background-color: #fff !important;
   min-height: 95px;
   width: 100%;
 }
@@ -652,6 +655,7 @@ uni-tabbar .uni-tabbar__icon.data-v-d9059922 {
 .desc.data-v-d9059922 {
   width: 95%;
   margin: 0 auto;
+  padding: 25rpx;
 }
 .desc text.data-v-d9059922 {
   width: 100%;
@@ -704,7 +708,7 @@ uni-tabbar .uni-tabbar__icon.data-v-d9059922 {
   -webkit-transition: all 0.1s ease-in 0s;
   -o-transition: all 0.1s ease-in 0s;
   transition: all 0.1s ease-in 0s;
-  width: 55%;
+  width: 50%;
   -webkit-filter: saturate(1);
           filter: saturate(1);
   overflow: hidden;
@@ -721,15 +725,25 @@ uni-tabbar .uni-tabbar__icon.data-v-d9059922 {
   font-size: 16px;
   color: #434748;
 }
+.video-play-count.data-v-d9059922 {
+  text-align: right;
+  width: 120rpx;
+}
 .video-play-count-icon.data-v-d9059922 {
   height: 50rpx;
   line-height: 50rpx;
   margin-right: 10rpx;
   color: #ababab;
+  width: 36rpx;
+  display: inline-block;
 }
 .video-play-count-text.data-v-d9059922 {
   color: #ababab;
   font-family: "DINCOND-BOLD";
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 .video-info.data-v-d9059922 {
   width: 55%;
@@ -773,5 +787,9 @@ uni-tabbar .uni-tabbar__icon.data-v-d9059922 {
   position: absolute;
   right: 10px;
   font-size: 22px;
+}
+.frame.data-v-d9059922 {
+  width: 100%;
+  overflow: hidden;
 }
 

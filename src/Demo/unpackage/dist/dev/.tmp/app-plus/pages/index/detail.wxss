@@ -599,13 +599,23 @@ page.data-v-4e670e42 {
   font-size: 16px;
   color: #434748;
 }
+.item .video-play-count.data-v-4e670e42 {
+  width: 120rpx;
+  text-align: right;
+}
 .item .video-play-count-icon.data-v-4e670e42 {
   margin-right: 10rpx;
   color: #ababab;
+  width: 36rpx;
+  display: inline-block;
 }
 .item .video-play-count-text.data-v-4e670e42 {
   color: #ababab;
   font-family: "DINCOND-BOLD";
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 .video-info.data-v-4e670e42 {
   display: -webkit-box;

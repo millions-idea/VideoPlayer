@@ -118,9 +118,15 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
 //
 //
 //
-var page = 0,_self;var jingSwiper = function jingSwiper() {return __webpack_require__.e(/*! import() | components/jing-swiper/jing-swiper */ "components/jing-swiper/jing-swiper").then(__webpack_require__.bind(null, /*! @/components/jing-swiper/jing-swiper.vue */ "F:\\repository\\VideoPlayer\\src\\Demo\\components\\jing-swiper\\jing-swiper.vue"));};var graceLoading = function graceLoading() {return __webpack_require__.e(/*! import() | graceUI/components/graceLoading */ "graceUI/components/graceLoading").then(__webpack_require__.bind(null, /*! @/graceUI/components/graceLoading.vue */ "F:\\repository\\VideoPlayer\\src\\Demo\\graceUI\\components\\graceLoading.vue"));};var stackEmpty = function stackEmpty() {return __webpack_require__.e(/*! import() | components/stack-empty/stack-empty */ "components/stack-empty/stack-empty").then(__webpack_require__.bind(null, /*! @/components/stack-empty/stack-empty.vue */ "F:\\repository\\VideoPlayer\\src\\Demo\\components\\stack-empty\\stack-empty.vue"));};var _default = { components: { jingSwiper: jingSwiper, graceLoading: graceLoading, stackEmpty: stackEmpty }, data: function data() {return { loading: false, loadingType: 0, isEnd: false, dataList: [], cid: 0, maxPage: 1000, empty: true, imgList: [{ img: 'https://stack-1251694474.cos.ap-guangzhou.myqcloud.com/aishi/banner1.png', desc: '' }, { img: 'https://stack-1251694474.cos.ap-guangzhou.myqcloud.com/aishi/banner2.png', desc: '' }, { img: 'https://stack-1251694474.cos.ap-guangzhou.myqcloud.com/aishi/banner3.png', desc: '' }] };}, onLoad: function onLoad() {_self = this;page = 0;}, onShow: function onShow() {this.getList();}, computed: _objectSpread({}, (0, _vuex.mapState)(['hasLogin', 'profile'])), onPullDownRefresh: function onPullDownRefresh() {//监听下拉刷新动作
-    console.log('onPullDownRefresh', " at pages\\index\\index.vue:107"); // 这里获取数据
-    this.getBanner();this.getProfile();this.getList();}, //上拉加载更多
+var page = 0,_self;var jingSwiper = function jingSwiper() {return __webpack_require__.e(/*! import() | components/jing-swiper/jing-swiper */ "components/jing-swiper/jing-swiper").then(__webpack_require__.bind(null, /*! @/components/jing-swiper/jing-swiper.vue */ "F:\\repository\\VideoPlayer\\src\\Demo\\components\\jing-swiper\\jing-swiper.vue"));};var graceLoading = function graceLoading() {return __webpack_require__.e(/*! import() | graceUI/components/graceLoading */ "graceUI/components/graceLoading").then(__webpack_require__.bind(null, /*! @/graceUI/components/graceLoading.vue */ "F:\\repository\\VideoPlayer\\src\\Demo\\graceUI\\components\\graceLoading.vue"));};var stackEmpty = function stackEmpty() {return __webpack_require__.e(/*! import() | components/stack-empty/stack-empty */ "components/stack-empty/stack-empty").then(__webpack_require__.bind(null, /*! @/components/stack-empty/stack-empty.vue */ "F:\\repository\\VideoPlayer\\src\\Demo\\components\\stack-empty\\stack-empty.vue"));};var _default = { components: { jingSwiper: jingSwiper, graceLoading: graceLoading, stackEmpty: stackEmpty }, data: function data() {return { loading: false, loadingType: 0, isEnd: false, dataList: [], cid: 0, maxPage: 1000, empty: true, imgList: [{ img: 'https://stack-1251694474.cos.ap-guangzhou.myqcloud.com/aishi/banner1.png', desc: '' }, { img: 'https://stack-1251694474.cos.ap-guangzhou.myqcloud.com/aishi/banner2.png', desc: '' }, { img: 'https://stack-1251694474.cos.ap-guangzhou.myqcloud.com/aishi/banner3.png', desc: '' }] };}, onLoad: function onLoad() {_self = this;page = 0;if (_self.session.getValue("token") != null && _self.session.getValue("token").length > 5) {_self.session.setValue('token', res.data.msg);_self.login();}}, onShow: function onShow() {uni.startPullDownRefresh();}, computed: _objectSpread({}, (0, _vuex.mapState)(['hasLogin', 'profile'])), onPullDownRefresh: function onPullDownRefresh() {
+    //监听下拉刷新动作
+    console.log('onPullDownRefresh', " at pages\\index\\index.vue:113");
+    // 这里获取数据
+    this.getBanner();
+    this.getProfile();
+    this.getList();
+  },
+  //上拉加载更多
   onReachBottom: function onReachBottom() {
     this.getList();
   },
@@ -170,6 +176,10 @@ var page = 0,_self;var jingSwiper = function jingSwiper() {return __webpack_requ
 
           if (res.data.data == null || res.data.data.length == 0) {
             _self.loadingType = 3;
+            uni.showToast({
+              title: "没有最近更新的视频哦",
+              icon: "none" });
+
           }
 
           res.data.data.forEach(function (item) {
@@ -188,7 +198,7 @@ var page = 0,_self;var jingSwiper = function jingSwiper() {return __webpack_requ
       this.session.clearState();
       var session = this.session.getSession();
       if (session == null) {
-        console.log('加载用户信息', " at pages\\index\\index.vue:181");
+        console.log('加载用户信息', " at pages\\index\\index.vue:191");
         var _self2 = this;
         this.$api.
         post('api/user/getProfile', {}).
@@ -213,7 +223,7 @@ var page = 0,_self;var jingSwiper = function jingSwiper() {return __webpack_requ
           return;
         });
       } else {
-        console.log('更新用户信息', " at pages\\index\\index.vue:206");
+        console.log('更新用户信息', " at pages\\index\\index.vue:216");
         _self.setProfile(session);
       }
     },

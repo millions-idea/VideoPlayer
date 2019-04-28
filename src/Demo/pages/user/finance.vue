@@ -2,12 +2,12 @@
 	<view>
 		<view class="grace-list ">
 			<navigator class="items" url="./recharge">
-				<view class="icons"><image class="icon" src="../../../static/user/chongzhi.png"></image></view>
+				<view class="icons"><image class="icon" src="../../static/user/chongzhi.png"></image></view>
 				<view class="title">充值</view>
 				<view class="arrow-right"></view>
 			</navigator>
 			<navigator class="items" url="./withdraw">
-				<view class="icons"><image class="icon" src="../../../static/user/tixian.png"></image></view>
+				<view class="icons"><image class="icon" src="../../static/user/tixian.png"></image></view>
 				<view class="title">
 					提现
 					<text>手续费2.00元</text>

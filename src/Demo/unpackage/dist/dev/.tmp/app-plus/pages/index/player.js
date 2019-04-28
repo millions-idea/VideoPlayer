@@ -114,6 +114,7 @@
 
 
 
+
 var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var _default =
 
 {
@@ -142,7 +143,13 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
     this.videoContext = uni.createVideoContext('myVideo');
   },
   computed: _objectSpread({},
-  (0, _vuex.mapState)(['hasLogin', 'profile'])),
+  (0, _vuex.mapState)(['hasLogin', 'profile']), {
+    getTitle: function getTitle() {
+      if (this.title.length > 15) {
+        return this.title.substr(0, 14) + "...";
+      }
+      return this.title;
+    } }),
 
   methods: _objectSpread({},
   (0, _vuex.mapActions)(['setProfile', 'authOpenWindow']), {
@@ -162,7 +169,7 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
         productId: this.videoId }).
 
       then(function (res) {
-        console.log(res, " at pages\\index\\player.vue:155");
+        console.log(res, " at pages\\index\\player.vue:162");
         if (_this.common.Response.isFaild(res.data)) {
           uni.showToast({
             title: '播放失败',
@@ -261,7 +268,7 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
         return;
       }
 
-      this.common.window.toNew('user/payment/payment', {
+      this.common.window.toNew('payment/payment', {
         title: this.title + '-' + '观看一次',
         amount: this.data.amount,
         id: this.videoId });
@@ -273,7 +280,7 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
         this.common.window.toNew('user/bootstrap/login', null);
         return;
       }
-      this.common.window.toNew('user/payment/payment', {
+      this.common.window.toNew('payment/payment', {
         title: this.title + '-' + '永久观看',
         amount: this.data.commonAmount,
         id: this.videoId });

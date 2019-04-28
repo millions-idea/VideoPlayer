@@ -147,6 +147,17 @@ var page = 0,_self;var graceLoading = function graceLoading() {return __webpack_
           page++;
         }
       });
+    },
+    onClick: function onClick(item) {
+      if (this.hasLogin) {
+        this.common.window.toNew('index/player', {
+          videoId: item.productId,
+          title: item.productName,
+          poster: item.image });
+
+      } else {
+        this.common.window.toNew('user/bootstrap/login', null);
+      }
     } }) };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["default"]))
 

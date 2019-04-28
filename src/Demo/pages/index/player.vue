@@ -1,5 +1,5 @@
 <template>
-	<view>
+	<view class="frame">
 		<view class="container">
 			<video
 				v-if="data.videoUrl != null && data.videoUrl.length > 10 && !data.watchOne"
@@ -18,7 +18,7 @@
 		<view class="group">
 			<view class="blank-line-20"></view>
 			<view class="item-line title">
-				<text>{{ title }}</text>
+				<text>{{getTitle}}</text>
 				<template v-if="!isCollect">
 					<i class="iconfont-video-player icon-shoucang8 my-icon-collect" @tap="collect"></i>
 				</template>
@@ -64,7 +64,8 @@
 			</view>
 			<view class="blank-line-10"></view>
 			<view class="desc">
-				<text>{{ data.commonDesc }}</text>
+				<rich-text :nodes="data.commonDesc"></rich-text>
+				<!-- <text>{{ data.commonDesc }}</text> -->
 			</view>
 			<view class="blank-line-20"></view>
 		</view>
@@ -132,7 +133,13 @@ export default {
 		this.videoContext = uni.createVideoContext('myVideo');
 	},
 	computed: {
-		...mapState(['hasLogin', 'profile'])
+		...mapState(['hasLogin', 'profile']),
+		getTitle(){ 
+			if(this.title.length > 15){
+				return this.title.substr(0, 14) + "...";
+			}
+			return this.title;
+		}
 	},
 	methods: {
 		...mapActions(['setProfile', 'authOpenWindow']),
@@ -251,7 +258,7 @@ export default {
 				return;
 			}
 
-			this.common.window.toNew('user/payment/payment', {
+			this.common.window.toNew('payment/payment', {
 				title: this.title + '-' + '观看一次',
 				amount: this.data.amount,
 				id: this.videoId
@@ -263,7 +270,7 @@ export default {
 				this.common.window.toNew('user/bootstrap/login', null);
 				return;
 			}
-			this.common.window.toNew('user/payment/payment', {
+			this.common.window.toNew('payment/payment', {
 				title: this.title + '-' + '永久观看',
 				amount: this.data.commonAmount,
 				id: this.videoId
@@ -282,6 +289,11 @@ export default {
 
 <style lang="less" scoped>
 @import '../../static/common.less';
+
+
+page{
+	background-color: #F5F5F5 !important;
+}
 
 .container {
 	display: flex;
@@ -305,7 +317,7 @@ export default {
 }
 
 .group {
-	background-color: #fff;
+	background-color: #fff !important;
 	min-height: 95px;
 	width: 100%;
 }
@@ -392,6 +404,7 @@ export default {
 .desc {
 	width: 95%;
 	margin: 0 auto;
+	padding: 25upx;
 }
 
 .desc text {
@@ -439,7 +452,7 @@ export default {
 
 .video-title {
 	transition: all 0.1s ease-in 0s;
-	width: 55%;
+	width: 50%;
 	filter: saturate(1);
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -456,17 +469,29 @@ export default {
 	color: #434748;
 }
 
+
+.video-play-count{
+	text-align: right;
+	width: 120upx;
+}
+
+
 .video-play-count-icon {
 	height: 50upx;
 	line-height: 50upx;
 	margin-right: 10upx;
 	color: #ababab;
+	width: 36upx;
+	display: inline-block;
 }
 
 .video-play-count-text {
 	color: #ababab;
 	font-family: @common-font-num;
+	display: inline-flex;
 }
+ 
+
 
 .video-info {
 	width: 55%;
@@ -509,4 +534,10 @@ export default {
 	right: 10px;
 	font-size: 22px;
 }
+
+.frame{
+	width: 100%;
+	overflow: hidden;
+}
+
 </style>

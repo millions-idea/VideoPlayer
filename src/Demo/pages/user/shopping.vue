@@ -185,7 +185,7 @@ page {
 
 .item .video-title {
 	transition: all 0.1s ease-in 0s;
-	width: 550upx;
+	width: 500upx;
 	filter: saturate(1);
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -195,20 +195,34 @@ page {
 	line-height: 50upx;
 }
 
+
 .item .video-title-text {
 	font-size: 16px;
 	color: #434748;
 }
 
+
+
+.item .video-play-count{
+	width: 120upx;
+	text-align: right;
+}
+
+
 .item .video-play-count-icon {
 	margin-right: 10upx;
 	color: #ababab;
+	width: 36upx;
+	display: inline-block;
 }
 
 .item .video-play-count-text {
 	color: #ababab;
 	font-family: @common-font-num;
+	display: inline-flex;
 }
+
+
 
 .video-info {
 	display: flex;

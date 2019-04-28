@@ -6,7 +6,7 @@
 		</view>
 		<view v-else class="grace-waterfall">
 			<view v-if="dataList.length > 0" class="list">
-				<navigator class="items item" v-for="(item, index) in dataList" :key="index">
+				<navigator class="items item" v-for="(item, index) in dataList" :key="index" @tap="onClick(item)">
 					<image class="img" :src="item.image"></image>
 					<view class="item-tips">
 						￥
@@ -137,6 +137,17 @@ export default {
 						page++;
 					}
 				});
+		},
+		onClick(item){
+			if (this.hasLogin) {
+				this.common.window.toNew('index/player', {
+					videoId: item.productId,
+					title: item.productName,
+					poster: item.image
+				});
+			} else {
+				this.common.window.toNew('user/bootstrap/login', null);
+			}
 		}
 	}
 };
@@ -204,15 +215,26 @@ page {
 	color: #434748;
 }
 
+
+.item .video-play-count{
+	width: 120upx;
+	text-align: right;
+}
+
+
 .item .video-play-count-icon {
 	margin-right: 10upx;
 	color: #ababab;
+	width: 36upx;
+	display: inline-block;
 }
 
 .item .video-play-count-text {
 	color: #ababab;
 	font-family: @common-font-num;
+	display: inline-flex;
 }
+
 
 .video-info {
 	display: flex;
