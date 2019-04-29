@@ -237,7 +237,14 @@ public class FinanceFacadeServiceImpl implements IFinanceFacadeService {
         payParam.setFromUid(userId);
         payParam.setAmount(order.getAmount());
         payParam.setToUid(Constant.SYSTEM_ACCOUNTS_ID);
-        payParam.setRemark("购买商品-" + order.getProductName());
+
+        //如果是在线充值, 商品id为固定值0
+        if(order.getProductId().equals(0)){
+            payParam.setRemark("在线充值");
+        }else{
+            payParam.setRemark("购买商品-" + order.getProductName());
+        }
+
         if(channel.equalsIgnoreCase("alipay")){
             payParam.setChannelType(DataDictionary.Map.get("finance.pays.channel.alipay").getDictionaryId());
         }else if(channel.equalsIgnoreCase("wxpay")){

@@ -43,9 +43,11 @@
 					</view>
 				</navigator>
 			</view>
-			<!-- <view v-if="dataList.length <= 0" class="">
-				<view class="empty-list"><stackEmpty class="items item empty" height="180" label="最近没有更新喔"></stackEmpty></view>
-			</view> -->
+			<view v-if="dataList.length <= 0" class="">
+				<view class="empty-list">
+					<cmd-result-page></cmd-result-page>
+				</view>
+			</view>
 		</view>
 		<graceLoading v-if="dataList.length > 0" :loadingType="loadingType"></graceLoading>
 	</view>
@@ -59,12 +61,14 @@ import { mapState, mapActions } from 'vuex';
 import jingSwiper from '@/components/jing-swiper/jing-swiper.vue';
 import graceLoading from '@/graceUI/components/graceLoading.vue';
 import stackEmpty from '@/components/stack-empty/stack-empty.vue';
+import cmdResultPage from "@/components/cmd-result-page/cmd-result-page.vue";
 
 export default {
 	components: {
 		jingSwiper,
 		graceLoading,
-		stackEmpty
+		stackEmpty,
+		cmdResultPage
 	},
 	data() {
 		return {

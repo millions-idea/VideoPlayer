@@ -24,7 +24,9 @@
 				</navigator>
 			</view>
 			<view v-if="dataList.length <= 0">
-				<view class="empty-list"><stackEmpty class="items item empty" height="180" label="暂无数据"></stackEmpty></view>
+				<view class="empty-list">
+					<cmd-result-page></cmd-result-page>
+				</view>
 			</view>
 		</view>
 		<graceLoading v-if="dataList.length > 0" :loadingType="loadingType"></graceLoading>
@@ -39,12 +41,14 @@ import { mapState, mapActions } from 'vuex';
 import graceLoading from '@/graceUI/components/graceLoading.vue';
 import stackEmpty from '@/components/stack-empty/stack-empty.vue';
 import mhtLoader from '@/components/mht-loader/mht-loader.vue';
+import cmdResultPage from "@/components/cmd-result-page/cmd-result-page.vue";
 
 export default {
 	components: {
 		graceLoading,
 		stackEmpty,
-		mhtLoader
+		mhtLoader,
+		cmdResultPage
 	},
 	data() {
 		return {

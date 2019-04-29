@@ -94,23 +94,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var uniGrid = function uniGrid() {return __webpack_require__.e(/*! import() | components/uni-grid/uni-grid.user */ "components/uni-grid/uni-grid.user").then(__webpack_require__.bind(null, /*! @/components/uni-grid/uni-grid.user.vue */ "F:\\repository\\VideoPlayer\\src\\Demo\\components\\uni-grid\\uni-grid.user.vue"));};var lazyImage = function lazyImage() {return __webpack_require__.e(/*! import() | components/lazy-image-user */ "components/lazy-image-user").then(__webpack_require__.bind(null, /*! @/components/lazy-image-user.vue */ "F:\\repository\\VideoPlayer\\src\\Demo\\components\\lazy-image-user.vue"));};var _default =
 
 
@@ -123,24 +106,24 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
   data: function data() {
     return {
       wallet: {
-        balance: "0.00",
-        account: "0.00",
-        playCount: "0",
-        consumeCount: "0.00" },
+        balance: '0.00',
+        account: '0.00',
+        playCount: '0',
+        consumeCount: '0.00' },
 
       yabo: {
-        money: "0.00" },
+        money: '0.00' },
 
 
       /* preview */
       isShow: false,
-      avatar: "../../static/user/default-avatar.png",
-      balance: "0.00",
-      account: "0.00",
-      playCount: "0",
-      consumeCount: "0.00",
-      yaboMoney: "0.00",
-      shakeAnimation: "",
+      avatar: '../../static/user/default-avatar.png',
+      balance: '0.00',
+      account: '0.00',
+      playCount: '0',
+      consumeCount: '0.00',
+      yaboMoney: '0.00',
+      shakeAnimation: '',
       show: false };
 
   },
@@ -157,12 +140,12 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
     },
     previewHeight: function previewHeight() {
       if (!this.hasLogin) {
-        return uni.upx2px(750 * 77 / 414) + "px";
+        return uni.upx2px(750 * 77 / 414) + 'px';
       }
     },
     queryNickName: function queryNickName() {
       if (this.profile.account == null || this.profile.account.length < 1) {
-        return "请您先登录";
+        return '请您先登录';
       }
       return this.profile.nickName;
     } }),
@@ -170,7 +153,7 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
   methods: _objectSpread({},
   (0, _vuex.mapActions)(['setProfile', 'authOpenWindow']), {
     toAgentLink: function toAgentLink() {
-      this.common.window.toNew("article/list", null);
+      this.common.window.toNew('article/list', null);
     },
     toYaboLink: function toYaboLink() {
       this.common.window.toNew('generics-webview/generics-webview', {
@@ -179,7 +162,7 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
     },
     queryAsserts: function queryAsserts() {
       var _self = this;
-      this.$api.get("api/user/getAssetSample", {}).then(function (res) {
+      this.$api.get('api/user/getAssetSample', {}).then(function (res) {
         uni.stopPullDownRefresh(); //停止下拉刷新
 
         if (res.data.code == 200) {
@@ -193,16 +176,15 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
       if (!typeof this.profile.yabo == undefined) {
         _self.yabo.money = this.profile.yabo.data.money;
       } else {
-        _self.yabo.money = "0.00";
+        _self.yabo.money = '0.00';
       }
-
     },
     refreshInfo: function refreshInfo() {var _this = this;
       this.session.clearSession();
       this.session.clearState();
       var session = this.session.getSession();
       if (session == null) {
-        console.log("加载用户信息", " at pages\\user\\index.vue:195");
+        console.log('加载用户信息', " at pages\\user\\index.vue:177");
         var _self2 = this;
         this.$api.
         post('api/user/getProfile', {}).
@@ -211,24 +193,24 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
           if (_self2.common.Response.isFaild(res.data)) {
             return;
           } else if (_self2.common.Response.isException(res.data)) {
-            if (res.data.msg.indexOf("冻结") != -1 || res.data.msg.indexOf("null") != -1) {
-              if (res.data.msg.indexOf("null") != -1) {
-                res.data.msg = "请重新登录";
+            if (res.data.msg.indexOf('冻结') != -1 || res.data.msg.indexOf('null') != -1) {
+              if (res.data.msg.indexOf('null') != -1) {
+                res.data.msg = '请重新登录';
               }
               uni.showModal({
-                title: "强制退出通知",
+                title: '强制退出通知',
                 content: res.data.msg,
                 showCancel: false,
                 cancelText: '',
                 confirmText: '',
                 success: function success(res) {
                   _this.session.clear();
-                  _this.session.removeValue("token");
+                  _this.session.removeValue('token');
                   _this.sysLogout();
                   setTimeout(function () {
                     uni.hideLoading();
                     uni.reLaunch({
-                      url: "./bootstrap/login" });
+                      url: './bootstrap/login' });
 
                   }, 1000);
                 },
@@ -249,20 +231,19 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
       } else {
         uni.stopPullDownRefresh(); //停止下拉刷新
 
-        console.log("更新用户信息", " at pages\\user\\index.vue:242");
+        console.log('更新用户信息', " at pages\\user\\index.vue:224");
         _self.setProfile(session);
       }
 
       this.queryAsserts();
     },
     updatePassword: function updatePassword() {
-      this.common.window.toNew("generics-form/generics-form", {
+      this.common.window.toNew('generics-form/generics-form', {
         formName: 'Password',
         title: '修改登录密码',
         topLabel: '需要接收短信验证码进行身份验证',
-        bottomLabel:
-        '为确保您账户的安全及正常使用，依《网络安全法》相关要求，6月1日起会员账户需绑定手机。如您还未绑定，请尽快完成，感谢您的理解及支持！ ',
-        placeholder: "请输入新的登录密码",
+        bottomLabel: '为确保您账户的安全及正常使用，依《网络安全法》相关要求，6月1日起会员账户需绑定手机。如您还未绑定，请尽快完成，感谢您的理解及支持！ ',
+        placeholder: '请输入新的登录密码',
         maxLength: 128,
         minLength: 6,
         success: 'onPasswordDone',
@@ -275,7 +256,7 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
       if (this.tapHz == 1) {
         uni.showToast({
           title: '操作过于频繁',
-          icon: "none" });
+          icon: 'none' });
 
         setTimeout(function () {
           _this2.tapHz = 0;
@@ -283,13 +264,11 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
         return;
       }
 
-
       uni.showLoading({
         title: '请稍后',
-        icon: "none" });
+        icon: 'none' });
 
       this.tapHz = 1;
-
 
       this.$api.
       get('api/user/sendPasswordSmsCode', {
@@ -314,14 +293,14 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
         }
 
         //发送短信验证
-        _this2.common.window.toNew("generics-sms/generics-sms", {
-          formName: "Password",
+        _this2.common.window.toNew('generics-sms/generics-sms', {
+          formName: 'Password',
           phone: _this2.profile.phone,
           ext: JSON.stringify({
             password: data }),
 
-          success: "onSmsPasswordDone",
-          reTry: "onReSendPasswordSmsCode" });
+          success: 'onSmsPasswordDone',
+          reTry: 'onReSendPasswordSmsCode' });
 
       });
     },
@@ -333,10 +312,10 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
         this.account = this.wallet.account;
         this.playCount = this.wallet.playCount;
         this.consumeCount = this.wallet.consumeCount;
-        this.wallet.balance = "....";
-        this.wallet.account = "....";
-        this.wallet.playCount = "....";
-        this.wallet.consumeCount = "....";
+        this.wallet.balance = '....';
+        this.wallet.account = '....';
+        this.wallet.playCount = '....';
+        this.wallet.consumeCount = '....';
       } else {
         this.isShow = false;
         this.wallet.balance = this.balance;
@@ -346,12 +325,11 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
       }
     },
     shakeAndTo: function shakeAndTo() {var _this3 = this;
-      this.shakeAnimation = "bounceIn";
+      this.shakeAnimation = 'bounceIn';
       setTimeout(function () {
-        _this3.shakeAnimation = "";
-        _this3.common.window.toNew('user/index/profile', null);
+        _this3.shakeAnimation = '';
+        _this3.common.window.toNew('user/profile', null);
       }, 100);
-
     },
     buyVip: function buyVip() {var _this4 = this;
       if (!this.hasLogin) {
@@ -365,37 +343,34 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
       if (this.profile.isVip) {
         uni.hideLoading();
         uni.showToast({
-          title: "您已经是VIP会员啦",
-          icon: "none" });
-
+          title: '您已经是VIP会员啦',
+          icon: 'none' });
 
         return;
       }
-      this.$api.get("api/user/getVipOrderInfo", {}).then(function (res) {
+      this.$api.get('api/user/getVipOrderInfo', {}).then(function (res) {
         uni.hideLoading();
         if (_this4.common.Response.isFaild(res.data)) {
           uni.showToast({
-            title: "拉取服务器信息超时",
-            icon: "none" });
-
+            title: '拉取服务器信息超时',
+            icon: 'none' });
 
           return;
         } else if (_this4.common.Response.isException(res.data)) {
           uni.showToast({
             title: res.data.msg,
-            icon: "none" });
+            icon: 'none' });
 
           return;
         }
-        _this4.common.window.toNew("user/order/payment", res.data.msg);
+        _this4.common.window.toNew('user/order/payment', res.data.msg);
       });
-
     },
 
     vipTip: function vipTip() {
       uni.showToast({
-        title: "尊敬的VIP会员您好!",
-        icon: "none",
+        title: '尊敬的VIP会员您好!',
+        icon: 'none',
         duration: 3000 });
 
     },
@@ -406,9 +381,7 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
     closeBanner: function closeBanner() {
       this.show = false;
     },
-    tap: function tap() {
-
-    },
+    tap: function tap() {},
     finance: function finance() {
       this.authOpenWindow('user/finance');
     },
@@ -439,8 +412,9 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
     uni.startPullDownRefresh();
   },
 
-  onPullDownRefresh: function onPullDownRefresh() {//监听下拉刷新动作
-    console.log('onPullDownRefresh', " at pages\\user\\index.vue:433");
+  onPullDownRefresh: function onPullDownRefresh() {
+    //监听下拉刷新动作
+    console.log('onPullDownRefresh', " at pages\\user\\index.vue:407");
     // 这里获取数据
     this.refreshInfo();
   } };exports.default = _default;

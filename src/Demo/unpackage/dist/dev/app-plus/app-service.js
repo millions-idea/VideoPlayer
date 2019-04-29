@@ -960,7 +960,7 @@ __WXML_GLOBAL__.debuginfo_set = __WXML_GLOBAL__.debuginfo_set || {};
 var debugInfo=__WXML_GLOBAL__.debuginfo_set.$gwx || [];
 if ( !__WXML_GLOBAL__.ops_init.$gwx){
 (function(z){var a=11;function Z(ops){z.push(ops)}
-Z([3,'__l']);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,179]);Z([[4],[[5],[[5],[[5],[1,'uni-navbar data-v-17b07f54']],[[2,'?:'],[[7],[3,'isFixed']],[1,'uni-navbar-fixed'],[1,'']]],[[2,'?:'],[[7],[3,'hasShadow']],[1,'uni-navbar-shadow'],[1,'']]]]);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,12]);Z([[2,'+'],[[2,'+'],[1,'background-color:'],[[7],[3,'backgroundColor']]],[1,';']]);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,122]);Z([[7],[3,'insertStatusBar']]);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,198]);Z([3,'data-v-17b07f54']);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,242]);Z([3,'uni-navbar-header data-v-17b07f54']);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,297]);Z([[2,'+'],[[2,'+'],[1,'color:'],[[7],[3,'color']]],[1,';']]);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,339]);Z([3,'__e']);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,488]);Z([3,'uni-navbar-header-btns data-v-17b07f54']);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,439]);Z([[4],[[5],[[4],[[5],[[5],[1,'tap']],[[4],[[5],[[4],[[5],[[5],[1,'onClickLeft']],[[4],[[5],[1,'$event']]]]]]]]]]]);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,388]);Z([[6],[[7],[3,'leftIcon']],[3,'length']]);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,507]);Z(z[4]);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,623]);Z([[7],[3,'color']]);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,595]);Z([3,'24']);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,612]);Z([[7],[3,'leftIcon']]);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,574]);Z([3,'left']);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,847]);Z(z[7]);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,1175]);Z(z[8]);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,1126]);Z([[4],[[5],[[4],[[5],[[5],[1,'tap']],[[4],[[5],[[4],[[5],[[5],[1,'onClickRight']],[[4],[[5],[1,'$event']]]]]]]]]]]);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,1074]);Z([[6],[[7],[3,'rightIcon']],[3,'length']]);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,1194]);Z(z[4]);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,1312]);Z(z[12]);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,1284]);Z(z[13]);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,1301]);Z([[7],[3,'rightIcon']]);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,1262]);Z([3,'right']);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,1500]);Z(z[0]);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,33]);Z([[7],[3,'show']]);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,13]);Z(z[0]);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,224]);Z(z[7]);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,209]);Z([3,'uni-noticebar']);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,108]);Z([[4],[[5],[[4],[[5],[[5],[1,'tap']],[[4],[[5],[[4],[[5],[[5],[1,'onClick']],[[4],[[5],[1,'$event']]]]]]]]]]]);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,61]);Z([[2,'+'],[[2,'+'],[[2,'+'],[1,'background-color:'],[[7],[3,'backgroundColor']]],[1,';']],[[2,'+'],[[2,'+'],[1,'color:'],[[7],[3,'color']]],[1,';']]]);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,130]);Z([[2,'||'],[[2,'==='],[[7],[3,'showClose']],[1,'true']],[[2,'==='],[[7],[3,'showClose']],[1,true]]]);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,243]);Z([3,'12']);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,353]);Z([3,'closefill']);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,336]);Z([[4],[[5],[[5],[1,'uni-noticebar__content']],[[7],[3,'setContenClass']]]]);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,396]);Z([[2,'||'],[[2,'==='],[[7],[3,'showIcon']],[1,'true']],[[2,'==='],[[7],[3,'showIcon']],[1,true]]]);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,457]);Z(z[12]);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,656]);Z([3,'14']);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,645]);Z([3,'sound']);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,632]);Z([[2,'||'],[[2,'==='],[[7],[3,'showGetMore']],[1,'true']],[[2,'==='],[[7],[3,'showGetMore']],[1,true]]]);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,929]);Z(z[7]);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,1137]);Z([3,'uni-noticebar__content-more']);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,1047]);Z([[4],[[5],[[4],[[5],[[5],[1,'tap']],[[4],[[5],[[4],[[5],[[5],[1,'clickMore']],[[4],[[5],[1,'$event']]]]]]]]]]]);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,998]);Z([[2,'+'],[[2,'+'],[1,'width:'],[[2,'?:'],[[7],[3,'moreText']],[1,'180upx'],[1,'20px']]],[1,';']]);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,1083]);Z(z[38]);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,1278]);Z([3,'arrowright']);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,1260]);Z(z[0]);debugInfo.push(['./components/uni-status-bar/uni-status-bar.wxml',1,58]);Z([3,'uni-status-bar']);debugInfo.push(['./components/uni-status-bar/uni-status-bar.wxml',1,12]);Z([[7],[3,'style']]);debugInfo.push(['./components/uni-status-bar/uni-status-bar.wxml',1,35]);Z(z[0]);debugInfo.push(['./pages/generics-sms/generics-sms.wxml',1,15]);Z([[7],[3,'shadeLoading']]);debugInfo.push(['./pages/generics-sms/generics-sms.wxml',1,34]);Z([3,'jumping']);debugInfo.push(['./pages/generics-sms/generics-sms.wxml',1,183]);Z([1,false]);debugInfo.push(['./pages/generics-sms/generics-sms.wxml',1,159]);Z(z[7]);debugInfo.push(['./pages/generics-sms/generics-sms.wxml',1,4075]);Z(z[7]);debugInfo.push(['./pages/generics-sms/generics-sms.wxml',1,4024]);Z(z[7]);debugInfo.push(['./pages/generics-sms/generics-sms.wxml',1,4049]);Z([[4],[[5],[[5],[[5],[[4],[[5],[[5],[1,'^keyboardDone']],[[4],[[5],[[4],[[5],[1,'keyboardDone']]]]]]]],[[4],[[5],[[5],[1,'^keyboardInput']],[[4],[[5],[[4],[[5],[1,'keyboardInput']]]]]]]],[[4],[[5],[[5],[1,'^keyboardDelete']],[[4],[[5],[[4],[[5],[1,'keyboardDelete']]]]]]]]]);debugInfo.push(['./pages/generics-sms/generics-sms.wxml',1,3881]);Z([[7],[3,'graceNumberKeyboardShow']]);debugInfo.push(['./pages/generics-sms/generics-sms.wxml',1,3835]);Z(z[0]);debugInfo.push(['./pages/index/detail.wxml',1,39]);Z([3,'data-v-4e670e42']);debugInfo.push(['./pages/index/detail.wxml',1,12]);Z([[7],[3,'loading']]);debugInfo.push(['./pages/index/detail.wxml',1,58]);Z(z[60]);debugInfo.push(['./pages/index/detail.wxml',1,164]);Z(z[52]);debugInfo.push(['./pages/index/detail.wxml',1,148]);Z(z[53]);debugInfo.push(['./pages/index/detail.wxml',1,124]);Z([[2,'<='],[[6],[[7],[3,'dataList']],[3,'length']],[1,0]]);debugInfo.push(['./pages/index/detail.wxml',1,1182]);Z([3,'items item empty data-v-4e670e42']);debugInfo.push(['./pages/index/detail.wxml',1,1297]);Z([3,'180']);debugInfo.push(['./pages/index/detail.wxml',1,1339]);Z([3,'暂无数据']);debugInfo.push(['./pages/index/detail.wxml',1,1351]);Z([[2,'>'],[[6],[[7],[3,'dataList']],[3,'length']],[1,0]]);debugInfo.push(['./pages/index/detail.wxml',1,1430]);Z(z[60]);debugInfo.push(['./pages/index/detail.wxml',1,1505]);Z([[7],[3,'loadingType']]);debugInfo.push(['./pages/index/detail.wxml',1,1481]);Z(z[0]);debugInfo.push(['./pages/index/index.wxml',1,39]);Z([3,'data-v-2d638598']);debugInfo.push(['./pages/index/index.wxml',1,12]);Z(z[7]);debugInfo.push(['./pages/index/index.wxml',1,376]);Z(z[73]);debugInfo.push(['./pages/index/index.wxml',1,388]);Z([[4],[[5],[[4],[[5],[[5],[1,'^click']],[[4],[[5],[[4],[[5],[1,'onSwiperClick']]]]]]]]]);debugInfo.push(['./pages/index/index.wxml',1,326]);Z([1,1000]);debugInfo.push(['./pages/index/index.wxml',1,299]);Z([[7],[3,'imgList']]);debugInfo.push(['./pages/index/index.wxml',1,256]);Z([1,5000]);debugInfo.push(['./pages/index/index.wxml',1,279]);Z(z[69]);debugInfo.push(['./pages/index/index.wxml',1,1810]);Z(z[73]);debugInfo.push(['./pages/index/index.wxml',1,1885]);Z(z[71]);debugInfo.push(['./pages/index/index.wxml',1,1861]);Z(z[0]);debugInfo.push(['./pages/user/bill.wxml',1,39]);Z([3,'data-v-4013d66a']);debugInfo.push(['./pages/user/bill.wxml',1,12]);Z(z[7]);debugInfo.push(['./pages/user/bill.wxml',1,296]);Z(z[84]);debugInfo.push(['./pages/user/bill.wxml',1,308]);Z([3,'#808080']);debugInfo.push(['./pages/user/bill.wxml',1,219]);Z([[4],[[5],[[4],[[5],[[5],[1,'^clickLeft']],[[4],[[5],[[4],[[5],[1,'backUp']]]]]]]]]);debugInfo.push(['./pages/user/bill.wxml',1,245]);Z([3,'back']);debugInfo.push(['./pages/user/bill.wxml',1,206]);Z([1,true]);debugInfo.push(['./pages/user/bill.wxml',1,360]);Z(z[7]);debugInfo.push(['./pages/user/bill.wxml',1,988]);Z([3,'grace-tab-swiper-full data-v-4013d66a']);debugInfo.push(['./pages/user/bill.wxml',1,796]);Z([[7],[3,'swiperCurrentIndex']]);debugInfo.push(['./pages/user/bill.wxml',1,887]);Z([[4],[[5],[[4],[[5],[[5],[1,'change']],[[4],[[5],[[4],[[5],[[5],[1,'swiperChange']],[[4],[[5],[1,'$event']]]]]]]]]]]);debugInfo.push(['./pages/user/bill.wxml',1,928]);Z([[2,'+'],[[2,'+'],[1,'height:'],[[2,'+'],[[7],[3,'tabHeight']],[1,'px']]],[1,';']]);debugInfo.push(['./pages/user/bill.wxml',1,842]);Z([3,'listIndex']);debugInfo.push(['./pages/user/bill.wxml',1,1055]);Z([3,'list']);debugInfo.push(['./pages/user/bill.wxml',1,1035]);Z([[7],[3,'dataList']]);debugInfo.push(['./pages/user/bill.wxml',1,1008]);Z(z[96]);debugInfo.push(['./pages/user/bill.wxml',1,1074]);Z(z[84]);debugInfo.push(['./pages/user/bill.wxml',1,1105]);Z([[2,'=='],[[6],[[7],[3,'dataList']],[3,'length']],[1,0]]);debugInfo.push(['./pages/user/bill.wxml',1,1136]);Z(z[84]);debugInfo.push(['./pages/user/bill.wxml',1,1214]);Z(z[67]);debugInfo.push(['./pages/user/bill.wxml',1,1181]);Z(z[68]);debugInfo.push(['./pages/user/bill.wxml',1,1193]);Z([[2,'&&'],[[2,'=='],[[7],[3,'tabCurrentIndex']],[1,0]],[[2,'=='],[[6],[[6],[[7],[3,'dataList']],[1,0]],[3,'length']],[1,0]]]);debugInfo.push(['./pages/user/bill.wxml',1,1282]);Z(z[84]);debugInfo.push(['./pages/user/bill.wxml',1,1389]);Z(z[67]);debugInfo.push(['./pages/user/bill.wxml',1,1350]);Z([3,'暂无交易流水']);debugInfo.push(['./pages/user/bill.wxml',1,1362]);Z([[2,'&&'],[[2,'=='],[[7],[3,'tabCurrentIndex']],[1,1]],[[2,'=='],[[6],[[6],[[7],[3,'dataList']],[1,1]],[3,'length']],[1,0]]]);debugInfo.push(['./pages/user/bill.wxml',1,1457]);Z(z[84]);debugInfo.push(['./pages/user/bill.wxml',1,1564]);Z(z[67]);debugInfo.push(['./pages/user/bill.wxml',1,1525]);Z([3,'暂无提现记录']);debugInfo.push(['./pages/user/bill.wxml',1,1537]);Z(z[7]);debugInfo.push(['./pages/user/bill.wxml',1,1764]);Z(z[84]);debugInfo.push(['./pages/user/bill.wxml',1,1776]);Z([[4],[[5],[[4],[[5],[[5],[1,'scrolltolower']],[[4],[[5],[[4],[[5],[[5],[1,'scrollend']],[[4],[[5],[1,'$event']]]]]]]]]]]);debugInfo.push(['./pages/user/bill.wxml',1,1693]);Z([[7],[3,'listIndex']]);debugInfo.push(['./pages/user/bill.wxml',1,1661]);Z([3,'true']);debugInfo.push(['./pages/user/bill.wxml',1,1641]);Z(z[84]);debugInfo.push(['./pages/user/bill.wxml',1,2792]);Z([[6],[[6],[[7],[3,'tabs']],[[7],[3,'listIndex']]],[3,'loadingType']]);debugInfo.push(['./pages/user/bill.wxml',1,2752]);Z(z[0]);debugInfo.push(['./pages/user/collect.wxml',1,39]);Z([3,'data-v-50074b97']);debugInfo.push(['./pages/user/collect.wxml',1,12]);Z(z[61]);debugInfo.push(['./pages/user/collect.wxml',1,58]);Z(z[121]);debugInfo.push(['./pages/user/collect.wxml',1,164]);Z(z[52]);debugInfo.push(['./pages/user/collect.wxml',1,148]);Z(z[53]);debugInfo.push(['./pages/user/collect.wxml',1,124]);Z(z[65]);debugInfo.push(['./pages/user/collect.wxml',1,1181]);Z([3,'items item empty data-v-50074b97']);debugInfo.push(['./pages/user/collect.wxml',1,1301]);Z(z[67]);debugInfo.push(['./pages/user/collect.wxml',1,1343]);Z([3,'您还没有收藏过视频哦']);debugInfo.push(['./pages/user/collect.wxml',1,1355]);Z(z[69]);debugInfo.push(['./pages/user/collect.wxml',1,1452]);Z(z[121]);debugInfo.push(['./pages/user/collect.wxml',1,1527]);Z(z[71]);debugInfo.push(['./pages/user/collect.wxml',1,1503]);Z(z[0]);debugInfo.push(['./pages/user/history.wxml',1,39]);Z([3,'data-v-12e7ebfe']);debugInfo.push(['./pages/user/history.wxml',1,12]);Z(z[61]);debugInfo.push(['./pages/user/history.wxml',1,58]);Z(z[134]);debugInfo.push(['./pages/user/history.wxml',1,164]);Z(z[52]);debugInfo.push(['./pages/user/history.wxml',1,148]);Z(z[53]);debugInfo.push(['./pages/user/history.wxml',1,124]);Z(z[65]);debugInfo.push(['./pages/user/history.wxml',1,1181]);Z([3,'items item empty data-v-12e7ebfe']);debugInfo.push(['./pages/user/history.wxml',1,1301]);Z(z[67]);debugInfo.push(['./pages/user/history.wxml',1,1343]);Z([3,'您还没有观看过视频哦']);debugInfo.push(['./pages/user/history.wxml',1,1355]);Z(z[69]);debugInfo.push(['./pages/user/history.wxml',1,1452]);Z(z[134]);debugInfo.push(['./pages/user/history.wxml',1,1527]);Z(z[71]);debugInfo.push(['./pages/user/history.wxml',1,1503]);Z(z[0]);debugInfo.push(['./pages/user/index.wxml',1,15]);Z(z[7]);debugInfo.push(['./pages/user/index.wxml',1,301]);Z(z[15]);debugInfo.push(['./pages/user/index.wxml',1,286]);Z([[4],[[5],[[4],[[5],[[5],[1,'tap']],[[4],[[5],[[4],[[5],[[5],[1,'authOpenWindow']],[[4],[[5],[1,'user/index/profile']]]]]]]]]]]);debugInfo.push(['./pages/user/index.wxml',1,220]);Z([3,'lazy-image default-avatar']);debugInfo.push(['./pages/user/index.wxml',1,356]);Z([[6],[[7],[3,'this']],[3,'avatar']]);debugInfo.push(['./pages/user/index.wxml',1,431]);Z([[6],[[6],[[7],[3,'this']],[3,'profile']],[3,'avatar']]);debugInfo.push(['./pages/user/index.wxml',1,392]);Z(z[7]);debugInfo.push(['./pages/user/index.wxml',1,2371]);Z([3,'4']);debugInfo.push(['./pages/user/index.wxml',1,2307]);Z([[4],[[5],[[5],[[5],[[5],[[9],[[8],'image',[1,'../../static/user/lishi.png']],[[8],'text',[1,'观看历史']]]],[[9],[[8],'image',[1,'../../static/user/shouchang.png']],[[8],'text',[1,'我的收藏']]]],[[9],[[8],'image',[1,'../../static/user/goumai.png']],[[8],'text',[1,'我的购买']]]],[[9],[[8],'image',[1,'../../static/user/web.png']],[[8],'text',[1,'进入亚博']]]]]);debugInfo.push(['./pages/user/index.wxml',1,2033]);Z([[4],[[5],[[4],[[5],[[5],[1,'^click']],[[4],[[5],[[4],[[5],[1,'onClick']]]]]]]]]);debugInfo.push(['./pages/user/index.wxml',1,2327]);Z([3,'false']);debugInfo.push(['./pages/user/index.wxml',1,2288]);Z(z[0]);debugInfo.push(['./pages/user/order.wxml',1,39]);Z([3,'data-v-4144f0fb']);debugInfo.push(['./pages/user/order.wxml',1,12]);Z(z[7]);debugInfo.push(['./pages/user/order.wxml',1,296]);Z(z[159]);debugInfo.push(['./pages/user/order.wxml',1,308]);Z(z[87]);debugInfo.push(['./pages/user/order.wxml',1,219]);Z(z[88]);debugInfo.push(['./pages/user/order.wxml',1,245]);Z(z[89]);debugInfo.push(['./pages/user/order.wxml',1,206]);Z(z[90]);debugInfo.push(['./pages/user/order.wxml',1,360]);Z(z[7]);debugInfo.push(['./pages/user/order.wxml',1,988]);Z([3,'grace-tab-swiper-full data-v-4144f0fb']);debugInfo.push(['./pages/user/order.wxml',1,796]);Z(z[93]);debugInfo.push(['./pages/user/order.wxml',1,887]);Z(z[94]);debugInfo.push(['./pages/user/order.wxml',1,928]);Z(z[95]);debugInfo.push(['./pages/user/order.wxml',1,842]);Z(z[96]);debugInfo.push(['./pages/user/order.wxml',1,1055]);Z(z[97]);debugInfo.push(['./pages/user/order.wxml',1,1035]);Z(z[98]);debugInfo.push(['./pages/user/order.wxml',1,1008]);Z(z[96]);debugInfo.push(['./pages/user/order.wxml',1,1074]);Z(z[159]);debugInfo.push(['./pages/user/order.wxml',1,1105]);Z(z[105]);debugInfo.push(['./pages/user/order.wxml',1,1136]);Z(z[159]);debugInfo.push(['./pages/user/order.wxml',1,1237]);Z(z[67]);debugInfo.push(['./pages/user/order.wxml',1,1204]);Z([3,'没有订单']);debugInfo.push(['./pages/user/order.wxml',1,1216]);Z(z[109]);debugInfo.push(['./pages/user/order.wxml',1,1305]);Z(z[159]);debugInfo.push(['./pages/user/order.wxml',1,1418]);Z(z[67]);debugInfo.push(['./pages/user/order.wxml',1,1373]);Z([3,'没有待付款的订单']);debugInfo.push(['./pages/user/order.wxml',1,1385]);Z([[2,'&&'],[[2,'=='],[[7],[3,'tabCurrentIndex']],[1,2]],[[2,'=='],[[6],[[6],[[7],[3,'dataList']],[1,2]],[3,'length']],[1,0]]]);debugInfo.push(['./pages/user/order.wxml',1,1486]);Z(z[159]);debugInfo.push(['./pages/user/order.wxml',1,1599]);Z(z[67]);debugInfo.push(['./pages/user/order.wxml',1,1554]);Z([3,'没有已完成的订单']);debugInfo.push(['./pages/user/order.wxml',1,1566]);Z(z[7]);debugInfo.push(['./pages/user/order.wxml',1,1799]);Z(z[159]);debugInfo.push(['./pages/user/order.wxml',1,1811]);Z(z[115]);debugInfo.push(['./pages/user/order.wxml',1,1728]);Z(z[116]);debugInfo.push(['./pages/user/order.wxml',1,1696]);Z(z[117]);debugInfo.push(['./pages/user/order.wxml',1,1676]);Z(z[159]);debugInfo.push(['./pages/user/order.wxml',1,3586]);Z(z[119]);debugInfo.push(['./pages/user/order.wxml',1,3546]);Z(z[0]);debugInfo.push(['./pages/user/payment.wxml',1,39]);Z([3,'data-v-f47f631a']);debugInfo.push(['./pages/user/payment.wxml',1,12]);Z([[2,'!'],[[6],[[6],[[7],[3,'this']],[3,'profile']],[3,'exitsPayment']]]);debugInfo.push(['./pages/user/payment.wxml',1,95]);Z(z[196]);debugInfo.push(['./pages/user/payment.wxml',1,273]);Z(z[117]);debugInfo.push(['./pages/user/payment.wxml',1,154]);Z(z[117]);debugInfo.push(['./pages/user/payment.wxml',1,168]);Z([3,'为保障资金安全, 请您设置支付密码, 在本页设置后可直接消费 !']);debugInfo.push(['./pages/user/payment.wxml',1,180]);Z(z[7]);debugInfo.push(['./pages/user/payment.wxml',1,4014]);Z(z[7]);debugInfo.push(['./pages/user/payment.wxml',1,3963]);Z(z[7]);debugInfo.push(['./pages/user/payment.wxml',1,3988]);Z(z[196]);debugInfo.push(['./pages/user/payment.wxml',1,4026]);Z(z[57]);debugInfo.push(['./pages/user/payment.wxml',1,3820]);Z(z[58]);debugInfo.push(['./pages/user/payment.wxml',1,3774]);Z(z[0]);debugInfo.push(['./pages/user/shopping.wxml',1,39]);Z([3,'data-v-16fd246a']);debugInfo.push(['./pages/user/shopping.wxml',1,12]);Z(z[61]);debugInfo.push(['./pages/user/shopping.wxml',1,58]);Z(z[209]);debugInfo.push(['./pages/user/shopping.wxml',1,164]);Z(z[52]);debugInfo.push(['./pages/user/shopping.wxml',1,148]);Z(z[53]);debugInfo.push(['./pages/user/shopping.wxml',1,124]);Z(z[65]);debugInfo.push(['./pages/user/shopping.wxml',1,1188]);Z([3,'items item empty data-v-16fd246a']);debugInfo.push(['./pages/user/shopping.wxml',1,1308]);Z(z[67]);debugInfo.push(['./pages/user/shopping.wxml',1,1350]);Z(z[142]);debugInfo.push(['./pages/user/shopping.wxml',1,1362]);Z(z[69]);debugInfo.push(['./pages/user/shopping.wxml',1,1459]);Z(z[209]);debugInfo.push(['./pages/user/shopping.wxml',1,1534]);Z(z[71]);debugInfo.push(['./pages/user/shopping.wxml',1,1510]);Z(z[0]);debugInfo.push(['./pages/user/team.wxml',1,39]);Z([3,'data-v-b0ce4c80']);debugInfo.push(['./pages/user/team.wxml',1,12]);Z(z[7]);debugInfo.push(['./pages/user/team.wxml',1,185]);Z(z[222]);debugInfo.push(['./pages/user/team.wxml',1,197]);Z([[4],[[5],[[4],[[5],[[5],[1,'^search']],[[4],[[5],[[4],[[5],[[5],[1,'search']],[[4],[[5],[[5],[1,'$event']],[1,1]]]]]]]]]]]);debugInfo.push(['./pages/user/team.wxml',1,127]);Z([3,'请输入手机号搜索']);debugInfo.push(['./pages/user/team.wxml',1,84]);Z(z[53]);debugInfo.push(['./pages/user/team.wxml',1,60]);Z(z[90]);debugInfo.push(['./pages/user/team.wxml',1,1106]);Z(z[7]);debugInfo.push(['./pages/user/team.wxml',1,1370]);Z([3,'grace-tab-swiper-full data-v-b0ce4c80']);debugInfo.push(['./pages/user/team.wxml',1,1178]);Z(z[93]);debugInfo.push(['./pages/user/team.wxml',1,1269]);Z(z[94]);debugInfo.push(['./pages/user/team.wxml',1,1310]);Z(z[95]);debugInfo.push(['./pages/user/team.wxml',1,1224]);Z(z[96]);debugInfo.push(['./pages/user/team.wxml',1,1437]);Z(z[97]);debugInfo.push(['./pages/user/team.wxml',1,1417]);Z(z[98]);debugInfo.push(['./pages/user/team.wxml',1,1390]);Z(z[96]);debugInfo.push(['./pages/user/team.wxml',1,1456]);Z(z[222]);debugInfo.push(['./pages/user/team.wxml',1,1487]);Z([[2,'||'],[[2,'=='],[[6],[[7],[3,'dataList']],[3,'length']],[1,0]],[[2,'=='],[[6],[[6],[[7],[3,'dataList']],[1,0]],[3,'length']],[1,0]]]);debugInfo.push(['./pages/user/team.wxml',1,1518]);Z(z[222]);debugInfo.push(['./pages/user/team.wxml',1,1619]);Z(z[67]);debugInfo.push(['./pages/user/team.wxml',1,1586]);Z(z[68]);debugInfo.push(['./pages/user/team.wxml',1,1598]);Z(z[7]);debugInfo.push(['./pages/user/team.wxml',1,1819]);Z(z[222]);debugInfo.push(['./pages/user/team.wxml',1,1831]);Z(z[115]);debugInfo.push(['./pages/user/team.wxml',1,1748]);Z(z[116]);debugInfo.push(['./pages/user/team.wxml',1,1716]);Z(z[117]);debugInfo.push(['./pages/user/team.wxml',1,1696]);Z(z[222]);debugInfo.push(['./pages/user/team.wxml',1,2641]);Z(z[119]);debugInfo.push(['./pages/user/team.wxml',1,2601]);})(z);__WXML_GLOBAL__.ops_set.$gwx=z;
+Z([3,'__l']);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,179]);Z([[4],[[5],[[5],[[5],[1,'uni-navbar data-v-17b07f54']],[[2,'?:'],[[7],[3,'isFixed']],[1,'uni-navbar-fixed'],[1,'']]],[[2,'?:'],[[7],[3,'hasShadow']],[1,'uni-navbar-shadow'],[1,'']]]]);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,12]);Z([[2,'+'],[[2,'+'],[1,'background-color:'],[[7],[3,'backgroundColor']]],[1,';']]);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,122]);Z([[7],[3,'insertStatusBar']]);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,198]);Z([3,'data-v-17b07f54']);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,242]);Z([3,'uni-navbar-header data-v-17b07f54']);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,297]);Z([[2,'+'],[[2,'+'],[1,'color:'],[[7],[3,'color']]],[1,';']]);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,339]);Z([3,'__e']);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,488]);Z([3,'uni-navbar-header-btns data-v-17b07f54']);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,439]);Z([[4],[[5],[[4],[[5],[[5],[1,'tap']],[[4],[[5],[[4],[[5],[[5],[1,'onClickLeft']],[[4],[[5],[1,'$event']]]]]]]]]]]);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,388]);Z([[6],[[7],[3,'leftIcon']],[3,'length']]);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,507]);Z(z[4]);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,623]);Z([[7],[3,'color']]);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,595]);Z([3,'24']);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,612]);Z([[7],[3,'leftIcon']]);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,574]);Z([3,'left']);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,847]);Z(z[7]);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,1175]);Z(z[8]);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,1126]);Z([[4],[[5],[[4],[[5],[[5],[1,'tap']],[[4],[[5],[[4],[[5],[[5],[1,'onClickRight']],[[4],[[5],[1,'$event']]]]]]]]]]]);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,1074]);Z([[6],[[7],[3,'rightIcon']],[3,'length']]);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,1194]);Z(z[4]);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,1312]);Z(z[12]);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,1284]);Z(z[13]);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,1301]);Z([[7],[3,'rightIcon']]);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,1262]);Z([3,'right']);debugInfo.push(['./components/uni-nav-bar/uni-nav-bar.wxml',1,1500]);Z(z[0]);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,33]);Z([[7],[3,'show']]);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,13]);Z(z[0]);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,224]);Z(z[7]);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,209]);Z([3,'uni-noticebar']);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,108]);Z([[4],[[5],[[4],[[5],[[5],[1,'tap']],[[4],[[5],[[4],[[5],[[5],[1,'onClick']],[[4],[[5],[1,'$event']]]]]]]]]]]);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,61]);Z([[2,'+'],[[2,'+'],[[2,'+'],[1,'background-color:'],[[7],[3,'backgroundColor']]],[1,';']],[[2,'+'],[[2,'+'],[1,'color:'],[[7],[3,'color']]],[1,';']]]);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,130]);Z([[2,'||'],[[2,'==='],[[7],[3,'showClose']],[1,'true']],[[2,'==='],[[7],[3,'showClose']],[1,true]]]);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,243]);Z([3,'12']);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,353]);Z([3,'closefill']);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,336]);Z([[4],[[5],[[5],[1,'uni-noticebar__content']],[[7],[3,'setContenClass']]]]);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,396]);Z([[2,'||'],[[2,'==='],[[7],[3,'showIcon']],[1,'true']],[[2,'==='],[[7],[3,'showIcon']],[1,true]]]);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,457]);Z(z[12]);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,656]);Z([3,'14']);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,645]);Z([3,'sound']);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,632]);Z([[2,'||'],[[2,'==='],[[7],[3,'showGetMore']],[1,'true']],[[2,'==='],[[7],[3,'showGetMore']],[1,true]]]);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,929]);Z(z[7]);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,1137]);Z([3,'uni-noticebar__content-more']);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,1047]);Z([[4],[[5],[[4],[[5],[[5],[1,'tap']],[[4],[[5],[[4],[[5],[[5],[1,'clickMore']],[[4],[[5],[1,'$event']]]]]]]]]]]);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,998]);Z([[2,'+'],[[2,'+'],[1,'width:'],[[2,'?:'],[[7],[3,'moreText']],[1,'180upx'],[1,'20px']]],[1,';']]);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,1083]);Z(z[38]);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,1278]);Z([3,'arrowright']);debugInfo.push(['./components/uni-notice-bar/uni-notice-bar.wxml',1,1260]);Z(z[0]);debugInfo.push(['./components/uni-status-bar/uni-status-bar.wxml',1,58]);Z([3,'uni-status-bar']);debugInfo.push(['./components/uni-status-bar/uni-status-bar.wxml',1,12]);Z([[7],[3,'style']]);debugInfo.push(['./components/uni-status-bar/uni-status-bar.wxml',1,35]);Z(z[0]);debugInfo.push(['./pages/generics-sms/generics-sms.wxml',1,15]);Z([[7],[3,'shadeLoading']]);debugInfo.push(['./pages/generics-sms/generics-sms.wxml',1,34]);Z([3,'jumping']);debugInfo.push(['./pages/generics-sms/generics-sms.wxml',1,183]);Z([1,false]);debugInfo.push(['./pages/generics-sms/generics-sms.wxml',1,159]);Z(z[7]);debugInfo.push(['./pages/generics-sms/generics-sms.wxml',1,4075]);Z(z[7]);debugInfo.push(['./pages/generics-sms/generics-sms.wxml',1,4024]);Z(z[7]);debugInfo.push(['./pages/generics-sms/generics-sms.wxml',1,4049]);Z([[4],[[5],[[5],[[5],[[4],[[5],[[5],[1,'^keyboardDone']],[[4],[[5],[[4],[[5],[1,'keyboardDone']]]]]]]],[[4],[[5],[[5],[1,'^keyboardInput']],[[4],[[5],[[4],[[5],[1,'keyboardInput']]]]]]]],[[4],[[5],[[5],[1,'^keyboardDelete']],[[4],[[5],[[4],[[5],[1,'keyboardDelete']]]]]]]]]);debugInfo.push(['./pages/generics-sms/generics-sms.wxml',1,3881]);Z([[7],[3,'graceNumberKeyboardShow']]);debugInfo.push(['./pages/generics-sms/generics-sms.wxml',1,3835]);Z(z[0]);debugInfo.push(['./pages/index/detail.wxml',1,39]);Z([3,'data-v-4e670e42']);debugInfo.push(['./pages/index/detail.wxml',1,12]);Z([[7],[3,'loading']]);debugInfo.push(['./pages/index/detail.wxml',1,58]);Z(z[60]);debugInfo.push(['./pages/index/detail.wxml',1,164]);Z(z[52]);debugInfo.push(['./pages/index/detail.wxml',1,148]);Z(z[53]);debugInfo.push(['./pages/index/detail.wxml',1,124]);Z([[2,'<='],[[6],[[7],[3,'dataList']],[3,'length']],[1,0]]);debugInfo.push(['./pages/index/detail.wxml',1,1182]);Z([3,'items item empty data-v-4e670e42']);debugInfo.push(['./pages/index/detail.wxml',1,1297]);Z([3,'180']);debugInfo.push(['./pages/index/detail.wxml',1,1339]);Z([3,'暂无数据']);debugInfo.push(['./pages/index/detail.wxml',1,1351]);Z([[2,'>'],[[6],[[7],[3,'dataList']],[3,'length']],[1,0]]);debugInfo.push(['./pages/index/detail.wxml',1,1430]);Z(z[60]);debugInfo.push(['./pages/index/detail.wxml',1,1505]);Z([[7],[3,'loadingType']]);debugInfo.push(['./pages/index/detail.wxml',1,1481]);Z(z[0]);debugInfo.push(['./pages/index/index.wxml',1,39]);Z([3,'data-v-2d638598']);debugInfo.push(['./pages/index/index.wxml',1,12]);Z(z[7]);debugInfo.push(['./pages/index/index.wxml',1,376]);Z(z[73]);debugInfo.push(['./pages/index/index.wxml',1,388]);Z([[4],[[5],[[4],[[5],[[5],[1,'^click']],[[4],[[5],[[4],[[5],[1,'onSwiperClick']]]]]]]]]);debugInfo.push(['./pages/index/index.wxml',1,326]);Z([1,1000]);debugInfo.push(['./pages/index/index.wxml',1,299]);Z([[7],[3,'imgList']]);debugInfo.push(['./pages/index/index.wxml',1,256]);Z([1,5000]);debugInfo.push(['./pages/index/index.wxml',1,279]);Z(z[69]);debugInfo.push(['./pages/index/index.wxml',1,1810]);Z(z[73]);debugInfo.push(['./pages/index/index.wxml',1,1885]);Z(z[71]);debugInfo.push(['./pages/index/index.wxml',1,1861]);Z(z[0]);debugInfo.push(['./pages/user/bill.wxml',1,39]);Z([3,'data-v-4013d66a']);debugInfo.push(['./pages/user/bill.wxml',1,12]);Z(z[7]);debugInfo.push(['./pages/user/bill.wxml',1,296]);Z(z[84]);debugInfo.push(['./pages/user/bill.wxml',1,308]);Z([3,'#808080']);debugInfo.push(['./pages/user/bill.wxml',1,219]);Z([[4],[[5],[[4],[[5],[[5],[1,'^clickLeft']],[[4],[[5],[[4],[[5],[1,'backUp']]]]]]]]]);debugInfo.push(['./pages/user/bill.wxml',1,245]);Z([3,'back']);debugInfo.push(['./pages/user/bill.wxml',1,206]);Z([1,true]);debugInfo.push(['./pages/user/bill.wxml',1,360]);Z(z[7]);debugInfo.push(['./pages/user/bill.wxml',1,988]);Z([3,'grace-tab-swiper-full data-v-4013d66a']);debugInfo.push(['./pages/user/bill.wxml',1,796]);Z([[7],[3,'swiperCurrentIndex']]);debugInfo.push(['./pages/user/bill.wxml',1,887]);Z([[4],[[5],[[4],[[5],[[5],[1,'change']],[[4],[[5],[[4],[[5],[[5],[1,'swiperChange']],[[4],[[5],[1,'$event']]]]]]]]]]]);debugInfo.push(['./pages/user/bill.wxml',1,928]);Z([[2,'+'],[[2,'+'],[1,'height:'],[[2,'+'],[[7],[3,'tabHeight']],[1,'px']]],[1,';']]);debugInfo.push(['./pages/user/bill.wxml',1,842]);Z([3,'listIndex']);debugInfo.push(['./pages/user/bill.wxml',1,1055]);Z([3,'list']);debugInfo.push(['./pages/user/bill.wxml',1,1035]);Z([[7],[3,'dataList']]);debugInfo.push(['./pages/user/bill.wxml',1,1008]);Z(z[96]);debugInfo.push(['./pages/user/bill.wxml',1,1074]);Z(z[84]);debugInfo.push(['./pages/user/bill.wxml',1,1105]);Z([[2,'=='],[[6],[[7],[3,'dataList']],[3,'length']],[1,0]]);debugInfo.push(['./pages/user/bill.wxml',1,1136]);Z(z[84]);debugInfo.push(['./pages/user/bill.wxml',1,1214]);Z(z[67]);debugInfo.push(['./pages/user/bill.wxml',1,1181]);Z(z[68]);debugInfo.push(['./pages/user/bill.wxml',1,1193]);Z([[2,'&&'],[[2,'=='],[[7],[3,'tabCurrentIndex']],[1,0]],[[2,'=='],[[6],[[6],[[7],[3,'dataList']],[1,0]],[3,'length']],[1,0]]]);debugInfo.push(['./pages/user/bill.wxml',1,1282]);Z(z[84]);debugInfo.push(['./pages/user/bill.wxml',1,1389]);Z(z[67]);debugInfo.push(['./pages/user/bill.wxml',1,1350]);Z([3,'暂无交易流水']);debugInfo.push(['./pages/user/bill.wxml',1,1362]);Z([[2,'&&'],[[2,'=='],[[7],[3,'tabCurrentIndex']],[1,1]],[[2,'=='],[[6],[[6],[[7],[3,'dataList']],[1,1]],[3,'length']],[1,0]]]);debugInfo.push(['./pages/user/bill.wxml',1,1457]);Z(z[84]);debugInfo.push(['./pages/user/bill.wxml',1,1564]);Z(z[67]);debugInfo.push(['./pages/user/bill.wxml',1,1525]);Z([3,'暂无提现记录']);debugInfo.push(['./pages/user/bill.wxml',1,1537]);Z(z[7]);debugInfo.push(['./pages/user/bill.wxml',1,1764]);Z(z[84]);debugInfo.push(['./pages/user/bill.wxml',1,1776]);Z([[4],[[5],[[4],[[5],[[5],[1,'scrolltolower']],[[4],[[5],[[4],[[5],[[5],[1,'scrollend']],[[4],[[5],[1,'$event']]]]]]]]]]]);debugInfo.push(['./pages/user/bill.wxml',1,1693]);Z([[7],[3,'listIndex']]);debugInfo.push(['./pages/user/bill.wxml',1,1661]);Z([3,'true']);debugInfo.push(['./pages/user/bill.wxml',1,1641]);Z(z[84]);debugInfo.push(['./pages/user/bill.wxml',1,2792]);Z([[6],[[6],[[7],[3,'tabs']],[[7],[3,'listIndex']]],[3,'loadingType']]);debugInfo.push(['./pages/user/bill.wxml',1,2752]);Z(z[0]);debugInfo.push(['./pages/user/collect.wxml',1,39]);Z([3,'data-v-50074b97']);debugInfo.push(['./pages/user/collect.wxml',1,12]);Z(z[61]);debugInfo.push(['./pages/user/collect.wxml',1,58]);Z(z[121]);debugInfo.push(['./pages/user/collect.wxml',1,164]);Z(z[52]);debugInfo.push(['./pages/user/collect.wxml',1,148]);Z(z[53]);debugInfo.push(['./pages/user/collect.wxml',1,124]);Z(z[65]);debugInfo.push(['./pages/user/collect.wxml',1,1181]);Z([3,'items item empty data-v-50074b97']);debugInfo.push(['./pages/user/collect.wxml',1,1301]);Z(z[67]);debugInfo.push(['./pages/user/collect.wxml',1,1343]);Z([3,'您还没有收藏过视频哦']);debugInfo.push(['./pages/user/collect.wxml',1,1355]);Z(z[69]);debugInfo.push(['./pages/user/collect.wxml',1,1452]);Z(z[121]);debugInfo.push(['./pages/user/collect.wxml',1,1527]);Z(z[71]);debugInfo.push(['./pages/user/collect.wxml',1,1503]);Z(z[0]);debugInfo.push(['./pages/user/history.wxml',1,39]);Z([3,'data-v-12e7ebfe']);debugInfo.push(['./pages/user/history.wxml',1,12]);Z(z[61]);debugInfo.push(['./pages/user/history.wxml',1,58]);Z(z[134]);debugInfo.push(['./pages/user/history.wxml',1,164]);Z(z[52]);debugInfo.push(['./pages/user/history.wxml',1,148]);Z(z[53]);debugInfo.push(['./pages/user/history.wxml',1,124]);Z(z[65]);debugInfo.push(['./pages/user/history.wxml',1,1181]);Z([3,'items item empty data-v-12e7ebfe']);debugInfo.push(['./pages/user/history.wxml',1,1301]);Z(z[67]);debugInfo.push(['./pages/user/history.wxml',1,1343]);Z([3,'您还没有观看过视频哦']);debugInfo.push(['./pages/user/history.wxml',1,1355]);Z(z[69]);debugInfo.push(['./pages/user/history.wxml',1,1452]);Z(z[134]);debugInfo.push(['./pages/user/history.wxml',1,1527]);Z(z[71]);debugInfo.push(['./pages/user/history.wxml',1,1503]);Z(z[0]);debugInfo.push(['./pages/user/index.wxml',1,15]);Z(z[7]);debugInfo.push(['./pages/user/index.wxml',1,295]);Z(z[15]);debugInfo.push(['./pages/user/index.wxml',1,280]);Z([[4],[[5],[[4],[[5],[[5],[1,'tap']],[[4],[[5],[[4],[[5],[[5],[1,'authOpenWindow']],[[4],[[5],[1,'user/profile']]]]]]]]]]]);debugInfo.push(['./pages/user/index.wxml',1,220]);Z([3,'lazy-image default-avatar']);debugInfo.push(['./pages/user/index.wxml',1,350]);Z([[6],[[7],[3,'this']],[3,'avatar']]);debugInfo.push(['./pages/user/index.wxml',1,425]);Z([[6],[[6],[[7],[3,'this']],[3,'profile']],[3,'avatar']]);debugInfo.push(['./pages/user/index.wxml',1,386]);Z(z[7]);debugInfo.push(['./pages/user/index.wxml',1,2365]);Z([3,'4']);debugInfo.push(['./pages/user/index.wxml',1,2301]);Z([[4],[[5],[[5],[[5],[[5],[[9],[[8],'image',[1,'../../static/user/lishi.png']],[[8],'text',[1,'观看历史']]]],[[9],[[8],'image',[1,'../../static/user/shouchang.png']],[[8],'text',[1,'我的收藏']]]],[[9],[[8],'image',[1,'../../static/user/goumai.png']],[[8],'text',[1,'我的购买']]]],[[9],[[8],'image',[1,'../../static/user/web.png']],[[8],'text',[1,'进入亚博']]]]]);debugInfo.push(['./pages/user/index.wxml',1,2027]);Z([[4],[[5],[[4],[[5],[[5],[1,'^click']],[[4],[[5],[[4],[[5],[1,'onClick']]]]]]]]]);debugInfo.push(['./pages/user/index.wxml',1,2321]);Z([3,'false']);debugInfo.push(['./pages/user/index.wxml',1,2282]);Z(z[0]);debugInfo.push(['./pages/user/order.wxml',1,39]);Z([3,'data-v-4144f0fb']);debugInfo.push(['./pages/user/order.wxml',1,12]);Z(z[7]);debugInfo.push(['./pages/user/order.wxml',1,296]);Z(z[159]);debugInfo.push(['./pages/user/order.wxml',1,308]);Z(z[87]);debugInfo.push(['./pages/user/order.wxml',1,219]);Z(z[88]);debugInfo.push(['./pages/user/order.wxml',1,245]);Z(z[89]);debugInfo.push(['./pages/user/order.wxml',1,206]);Z(z[90]);debugInfo.push(['./pages/user/order.wxml',1,360]);Z(z[7]);debugInfo.push(['./pages/user/order.wxml',1,988]);Z([3,'grace-tab-swiper-full data-v-4144f0fb']);debugInfo.push(['./pages/user/order.wxml',1,796]);Z(z[93]);debugInfo.push(['./pages/user/order.wxml',1,887]);Z(z[94]);debugInfo.push(['./pages/user/order.wxml',1,928]);Z(z[95]);debugInfo.push(['./pages/user/order.wxml',1,842]);Z(z[96]);debugInfo.push(['./pages/user/order.wxml',1,1055]);Z(z[97]);debugInfo.push(['./pages/user/order.wxml',1,1035]);Z(z[98]);debugInfo.push(['./pages/user/order.wxml',1,1008]);Z(z[96]);debugInfo.push(['./pages/user/order.wxml',1,1074]);Z(z[159]);debugInfo.push(['./pages/user/order.wxml',1,1105]);Z(z[105]);debugInfo.push(['./pages/user/order.wxml',1,1136]);Z(z[159]);debugInfo.push(['./pages/user/order.wxml',1,1237]);Z(z[67]);debugInfo.push(['./pages/user/order.wxml',1,1204]);Z([3,'没有订单']);debugInfo.push(['./pages/user/order.wxml',1,1216]);Z(z[109]);debugInfo.push(['./pages/user/order.wxml',1,1305]);Z(z[159]);debugInfo.push(['./pages/user/order.wxml',1,1418]);Z(z[67]);debugInfo.push(['./pages/user/order.wxml',1,1373]);Z([3,'没有待付款的订单']);debugInfo.push(['./pages/user/order.wxml',1,1385]);Z([[2,'&&'],[[2,'=='],[[7],[3,'tabCurrentIndex']],[1,2]],[[2,'=='],[[6],[[6],[[7],[3,'dataList']],[1,2]],[3,'length']],[1,0]]]);debugInfo.push(['./pages/user/order.wxml',1,1486]);Z(z[159]);debugInfo.push(['./pages/user/order.wxml',1,1599]);Z(z[67]);debugInfo.push(['./pages/user/order.wxml',1,1554]);Z([3,'没有已完成的订单']);debugInfo.push(['./pages/user/order.wxml',1,1566]);Z(z[7]);debugInfo.push(['./pages/user/order.wxml',1,1799]);Z(z[159]);debugInfo.push(['./pages/user/order.wxml',1,1811]);Z(z[115]);debugInfo.push(['./pages/user/order.wxml',1,1728]);Z(z[116]);debugInfo.push(['./pages/user/order.wxml',1,1696]);Z(z[117]);debugInfo.push(['./pages/user/order.wxml',1,1676]);Z(z[159]);debugInfo.push(['./pages/user/order.wxml',1,3586]);Z(z[119]);debugInfo.push(['./pages/user/order.wxml',1,3546]);Z(z[0]);debugInfo.push(['./pages/user/payment.wxml',1,39]);Z([3,'data-v-f47f631a']);debugInfo.push(['./pages/user/payment.wxml',1,12]);Z([[2,'!'],[[6],[[6],[[7],[3,'this']],[3,'profile']],[3,'exitsPayment']]]);debugInfo.push(['./pages/user/payment.wxml',1,95]);Z(z[196]);debugInfo.push(['./pages/user/payment.wxml',1,273]);Z(z[117]);debugInfo.push(['./pages/user/payment.wxml',1,154]);Z(z[117]);debugInfo.push(['./pages/user/payment.wxml',1,168]);Z([3,'为保障资金安全, 请您设置支付密码, 在本页设置后可直接消费 !']);debugInfo.push(['./pages/user/payment.wxml',1,180]);Z(z[7]);debugInfo.push(['./pages/user/payment.wxml',1,4014]);Z(z[7]);debugInfo.push(['./pages/user/payment.wxml',1,3963]);Z(z[7]);debugInfo.push(['./pages/user/payment.wxml',1,3988]);Z(z[196]);debugInfo.push(['./pages/user/payment.wxml',1,4026]);Z(z[57]);debugInfo.push(['./pages/user/payment.wxml',1,3820]);Z(z[58]);debugInfo.push(['./pages/user/payment.wxml',1,3774]);Z(z[0]);debugInfo.push(['./pages/user/shopping.wxml',1,39]);Z([3,'data-v-16fd246a']);debugInfo.push(['./pages/user/shopping.wxml',1,12]);Z(z[61]);debugInfo.push(['./pages/user/shopping.wxml',1,58]);Z(z[209]);debugInfo.push(['./pages/user/shopping.wxml',1,164]);Z(z[52]);debugInfo.push(['./pages/user/shopping.wxml',1,148]);Z(z[53]);debugInfo.push(['./pages/user/shopping.wxml',1,124]);Z(z[65]);debugInfo.push(['./pages/user/shopping.wxml',1,1188]);Z([3,'items item empty data-v-16fd246a']);debugInfo.push(['./pages/user/shopping.wxml',1,1308]);Z(z[67]);debugInfo.push(['./pages/user/shopping.wxml',1,1350]);Z(z[142]);debugInfo.push(['./pages/user/shopping.wxml',1,1362]);Z(z[69]);debugInfo.push(['./pages/user/shopping.wxml',1,1459]);Z(z[209]);debugInfo.push(['./pages/user/shopping.wxml',1,1534]);Z(z[71]);debugInfo.push(['./pages/user/shopping.wxml',1,1510]);Z(z[0]);debugInfo.push(['./pages/user/team.wxml',1,39]);Z([3,'data-v-b0ce4c80']);debugInfo.push(['./pages/user/team.wxml',1,12]);Z(z[7]);debugInfo.push(['./pages/user/team.wxml',1,185]);Z(z[222]);debugInfo.push(['./pages/user/team.wxml',1,197]);Z([[4],[[5],[[4],[[5],[[5],[1,'^search']],[[4],[[5],[[4],[[5],[[5],[1,'search']],[[4],[[5],[[5],[1,'$event']],[1,1]]]]]]]]]]]);debugInfo.push(['./pages/user/team.wxml',1,127]);Z([3,'请输入手机号搜索']);debugInfo.push(['./pages/user/team.wxml',1,84]);Z(z[53]);debugInfo.push(['./pages/user/team.wxml',1,60]);Z(z[90]);debugInfo.push(['./pages/user/team.wxml',1,1106]);Z(z[7]);debugInfo.push(['./pages/user/team.wxml',1,1370]);Z([3,'grace-tab-swiper-full data-v-b0ce4c80']);debugInfo.push(['./pages/user/team.wxml',1,1178]);Z(z[93]);debugInfo.push(['./pages/user/team.wxml',1,1269]);Z(z[94]);debugInfo.push(['./pages/user/team.wxml',1,1310]);Z(z[95]);debugInfo.push(['./pages/user/team.wxml',1,1224]);Z(z[96]);debugInfo.push(['./pages/user/team.wxml',1,1437]);Z(z[97]);debugInfo.push(['./pages/user/team.wxml',1,1417]);Z(z[98]);debugInfo.push(['./pages/user/team.wxml',1,1390]);Z(z[96]);debugInfo.push(['./pages/user/team.wxml',1,1456]);Z(z[222]);debugInfo.push(['./pages/user/team.wxml',1,1487]);Z([[2,'||'],[[2,'=='],[[6],[[7],[3,'dataList']],[3,'length']],[1,0]],[[2,'=='],[[6],[[6],[[7],[3,'dataList']],[1,0]],[3,'length']],[1,0]]]);debugInfo.push(['./pages/user/team.wxml',1,1518]);Z(z[222]);debugInfo.push(['./pages/user/team.wxml',1,1619]);Z(z[67]);debugInfo.push(['./pages/user/team.wxml',1,1586]);Z(z[68]);debugInfo.push(['./pages/user/team.wxml',1,1598]);Z(z[7]);debugInfo.push(['./pages/user/team.wxml',1,1819]);Z(z[222]);debugInfo.push(['./pages/user/team.wxml',1,1831]);Z(z[115]);debugInfo.push(['./pages/user/team.wxml',1,1748]);Z(z[116]);debugInfo.push(['./pages/user/team.wxml',1,1716]);Z(z[117]);debugInfo.push(['./pages/user/team.wxml',1,1696]);Z(z[222]);debugInfo.push(['./pages/user/team.wxml',1,2641]);Z(z[119]);debugInfo.push(['./pages/user/team.wxml',1,2601]);})(z);__WXML_GLOBAL__.ops_set.$gwx=z;
 __WXML_GLOBAL__.ops_init.$gwx=true;
 __WXML_GLOBAL__.debuginfo_set.$gwx=debugInfo;
 }
@@ -1514,13 +1514,13 @@ var f5C=_n('view')
 _r(f5C,'bind:__l',146,e,s,gg)
 cs.push("./pages/user/index.wxml:view:1:199")
 var c6C=_m('view',['bindtap',147,'class',1,'data-event-opts',2],[],e,s,gg)
-cs.push("./pages/user/index.wxml:lazy-image:1:339")
+cs.push("./pages/user/index.wxml:lazy-image:1:333")
 var h7C=_m('lazy-image',['class',150,'placeholdSrc',1,'realSrc',2],[],e,s,gg)
 cs.pop()
 _(c6C,h7C)
 cs.pop()
 _(f5C,c6C)
-cs.push("./pages/user/index.wxml:uni-grid:1:2019")
+cs.push("./pages/user/index.wxml:uni-grid:1:2013")
 var o8C=_m('uni-grid',['bind:click',153,'columnNum',1,'data',2,'data-event-opts',3,'showBorder',4],[],e,s,gg)
 cs.pop()
 _(f5C,o8C)
@@ -14479,23 +14479,6 @@ define('pages/user/index.js',function(require, module, exports, window, document
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var uniGrid = function uniGrid() {return __webpack_require__.e(/*! import() | components/uni-grid/uni-grid.user */ "components/uni-grid/uni-grid.user").then(__webpack_require__.bind(null, /*! @/components/uni-grid/uni-grid.user.vue */ "F:\\repository\\VideoPlayer\\src\\Demo\\components\\uni-grid\\uni-grid.user.vue"));};var lazyImage = function lazyImage() {return __webpack_require__.e(/*! import() | components/lazy-image-user */ "components/lazy-image-user").then(__webpack_require__.bind(null, /*! @/components/lazy-image-user.vue */ "F:\\repository\\VideoPlayer\\src\\Demo\\components\\lazy-image-user.vue"));};var _default =
 
 
@@ -14508,24 +14491,24 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
   data: function data() {
     return {
       wallet: {
-        balance: "0.00",
-        account: "0.00",
-        playCount: "0",
-        consumeCount: "0.00" },
+        balance: '0.00',
+        account: '0.00',
+        playCount: '0',
+        consumeCount: '0.00' },
 
       yabo: {
-        money: "0.00" },
+        money: '0.00' },
 
 
       /* preview */
       isShow: false,
-      avatar: "../../static/user/default-avatar.png",
-      balance: "0.00",
-      account: "0.00",
-      playCount: "0",
-      consumeCount: "0.00",
-      yaboMoney: "0.00",
-      shakeAnimation: "",
+      avatar: '../../static/user/default-avatar.png',
+      balance: '0.00',
+      account: '0.00',
+      playCount: '0',
+      consumeCount: '0.00',
+      yaboMoney: '0.00',
+      shakeAnimation: '',
       show: false };
 
   },
@@ -14542,12 +14525,12 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
     },
     previewHeight: function previewHeight() {
       if (!this.hasLogin) {
-        return uni.upx2px(750 * 77 / 414) + "px";
+        return uni.upx2px(750 * 77 / 414) + 'px';
       }
     },
     queryNickName: function queryNickName() {
       if (this.profile.account == null || this.profile.account.length < 1) {
-        return "请您先登录";
+        return '请您先登录';
       }
       return this.profile.nickName;
     } }),
@@ -14555,7 +14538,7 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
   methods: _objectSpread({},
   (0, _vuex.mapActions)(['setProfile', 'authOpenWindow']), {
     toAgentLink: function toAgentLink() {
-      this.common.window.toNew("article/list", null);
+      this.common.window.toNew('article/list', null);
     },
     toYaboLink: function toYaboLink() {
       this.common.window.toNew('generics-webview/generics-webview', {
@@ -14564,7 +14547,7 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
     },
     queryAsserts: function queryAsserts() {
       var _self = this;
-      this.$api.get("api/user/getAssetSample", {}).then(function (res) {
+      this.$api.get('api/user/getAssetSample', {}).then(function (res) {
         uni.stopPullDownRefresh(); //停止下拉刷新
 
         if (res.data.code == 200) {
@@ -14578,16 +14561,15 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
       if (!typeof this.profile.yabo == undefined) {
         _self.yabo.money = this.profile.yabo.data.money;
       } else {
-        _self.yabo.money = "0.00";
+        _self.yabo.money = '0.00';
       }
-
     },
     refreshInfo: function refreshInfo() {var _this = this;
       this.session.clearSession();
       this.session.clearState();
       var session = this.session.getSession();
       if (session == null) {
-        console.log("加载用户信息", " at pages\\user\\index.vue:195");
+        console.log('加载用户信息', " at pages\\user\\index.vue:177");
         var _self2 = this;
         this.$api.
         post('api/user/getProfile', {}).
@@ -14596,24 +14578,24 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
           if (_self2.common.Response.isFaild(res.data)) {
             return;
           } else if (_self2.common.Response.isException(res.data)) {
-            if (res.data.msg.indexOf("冻结") != -1 || res.data.msg.indexOf("null") != -1) {
-              if (res.data.msg.indexOf("null") != -1) {
-                res.data.msg = "请重新登录";
+            if (res.data.msg.indexOf('冻结') != -1 || res.data.msg.indexOf('null') != -1) {
+              if (res.data.msg.indexOf('null') != -1) {
+                res.data.msg = '请重新登录';
               }
               uni.showModal({
-                title: "强制退出通知",
+                title: '强制退出通知',
                 content: res.data.msg,
                 showCancel: false,
                 cancelText: '',
                 confirmText: '',
                 success: function success(res) {
                   _this.session.clear();
-                  _this.session.removeValue("token");
+                  _this.session.removeValue('token');
                   _this.sysLogout();
                   setTimeout(function () {
                     uni.hideLoading();
                     uni.reLaunch({
-                      url: "./bootstrap/login" });
+                      url: './bootstrap/login' });
 
                   }, 1000);
                 },
@@ -14634,20 +14616,19 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
       } else {
         uni.stopPullDownRefresh(); //停止下拉刷新
 
-        console.log("更新用户信息", " at pages\\user\\index.vue:242");
+        console.log('更新用户信息', " at pages\\user\\index.vue:224");
         _self.setProfile(session);
       }
 
       this.queryAsserts();
     },
     updatePassword: function updatePassword() {
-      this.common.window.toNew("generics-form/generics-form", {
+      this.common.window.toNew('generics-form/generics-form', {
         formName: 'Password',
         title: '修改登录密码',
         topLabel: '需要接收短信验证码进行身份验证',
-        bottomLabel:
-        '为确保您账户的安全及正常使用，依《网络安全法》相关要求，6月1日起会员账户需绑定手机。如您还未绑定，请尽快完成，感谢您的理解及支持！ ',
-        placeholder: "请输入新的登录密码",
+        bottomLabel: '为确保您账户的安全及正常使用，依《网络安全法》相关要求，6月1日起会员账户需绑定手机。如您还未绑定，请尽快完成，感谢您的理解及支持！ ',
+        placeholder: '请输入新的登录密码',
         maxLength: 128,
         minLength: 6,
         success: 'onPasswordDone',
@@ -14660,7 +14641,7 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
       if (this.tapHz == 1) {
         uni.showToast({
           title: '操作过于频繁',
-          icon: "none" });
+          icon: 'none' });
 
         setTimeout(function () {
           _this2.tapHz = 0;
@@ -14668,13 +14649,11 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
         return;
       }
 
-
       uni.showLoading({
         title: '请稍后',
-        icon: "none" });
+        icon: 'none' });
 
       this.tapHz = 1;
-
 
       this.$api.
       get('api/user/sendPasswordSmsCode', {
@@ -14699,14 +14678,14 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
         }
 
         //发送短信验证
-        _this2.common.window.toNew("generics-sms/generics-sms", {
-          formName: "Password",
+        _this2.common.window.toNew('generics-sms/generics-sms', {
+          formName: 'Password',
           phone: _this2.profile.phone,
           ext: JSON.stringify({
             password: data }),
 
-          success: "onSmsPasswordDone",
-          reTry: "onReSendPasswordSmsCode" });
+          success: 'onSmsPasswordDone',
+          reTry: 'onReSendPasswordSmsCode' });
 
       });
     },
@@ -14718,10 +14697,10 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
         this.account = this.wallet.account;
         this.playCount = this.wallet.playCount;
         this.consumeCount = this.wallet.consumeCount;
-        this.wallet.balance = "....";
-        this.wallet.account = "....";
-        this.wallet.playCount = "....";
-        this.wallet.consumeCount = "....";
+        this.wallet.balance = '....';
+        this.wallet.account = '....';
+        this.wallet.playCount = '....';
+        this.wallet.consumeCount = '....';
       } else {
         this.isShow = false;
         this.wallet.balance = this.balance;
@@ -14731,12 +14710,11 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
       }
     },
     shakeAndTo: function shakeAndTo() {var _this3 = this;
-      this.shakeAnimation = "bounceIn";
+      this.shakeAnimation = 'bounceIn';
       setTimeout(function () {
-        _this3.shakeAnimation = "";
-        _this3.common.window.toNew('user/index/profile', null);
+        _this3.shakeAnimation = '';
+        _this3.common.window.toNew('user/profile', null);
       }, 100);
-
     },
     buyVip: function buyVip() {var _this4 = this;
       if (!this.hasLogin) {
@@ -14750,37 +14728,34 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
       if (this.profile.isVip) {
         uni.hideLoading();
         uni.showToast({
-          title: "您已经是VIP会员啦",
-          icon: "none" });
-
+          title: '您已经是VIP会员啦',
+          icon: 'none' });
 
         return;
       }
-      this.$api.get("api/user/getVipOrderInfo", {}).then(function (res) {
+      this.$api.get('api/user/getVipOrderInfo', {}).then(function (res) {
         uni.hideLoading();
         if (_this4.common.Response.isFaild(res.data)) {
           uni.showToast({
-            title: "拉取服务器信息超时",
-            icon: "none" });
-
+            title: '拉取服务器信息超时',
+            icon: 'none' });
 
           return;
         } else if (_this4.common.Response.isException(res.data)) {
           uni.showToast({
             title: res.data.msg,
-            icon: "none" });
+            icon: 'none' });
 
           return;
         }
-        _this4.common.window.toNew("user/order/payment", res.data.msg);
+        _this4.common.window.toNew('user/order/payment', res.data.msg);
       });
-
     },
 
     vipTip: function vipTip() {
       uni.showToast({
-        title: "尊敬的VIP会员您好!",
-        icon: "none",
+        title: '尊敬的VIP会员您好!',
+        icon: 'none',
         duration: 3000 });
 
     },
@@ -14791,9 +14766,7 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
     closeBanner: function closeBanner() {
       this.show = false;
     },
-    tap: function tap() {
-
-    },
+    tap: function tap() {},
     finance: function finance() {
       this.authOpenWindow('user/finance');
     },
@@ -14824,8 +14797,9 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
     uni.startPullDownRefresh();
   },
 
-  onPullDownRefresh: function onPullDownRefresh() {//监听下拉刷新动作
-    console.log('onPullDownRefresh', " at pages\\user\\index.vue:433");
+  onPullDownRefresh: function onPullDownRefresh() {
+    //监听下拉刷新动作
+    console.log('onPullDownRefresh', " at pages\\user\\index.vue:407");
     // 这里获取数据
     this.refreshInfo();
   } };exports.default = _default;
@@ -15031,7 +15005,7 @@ define('pages/user/profile.js',function(require, module, exports, window, docume
 
 
 
-var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var http = function http() {return __webpack_require__.e(/*! import() | common/vmeitime-http/interface */ "common/vendor").then(__webpack_require__.t.bind(null, /*! @/common/vmeitime-http/interface.js */ "F:\\repository\\VideoPlayer\\src\\Demo\\common\\vmeitime-http\\interface.js", 7));};var _default =
+var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var http = function http() {return __webpack_require__.e(/*! import() | common/vmeitime-http/interface */ "common/vendor").then(__webpack_require__.t.bind(null, /*! ../../common/vmeitime-http/interface.js */ "F:\\repository\\VideoPlayer\\src\\Demo\\common\\vmeitime-http\\interface.js", 7));};var _default =
 
 
 {
@@ -15437,7 +15411,7 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
   },
   data: function data() {
     return {
-      avatar: '../../../static/user/default-avatar.png',
+      avatar: '../../static/user/default-avatar.png',
       phoneClassName: '',
       paymentClassName: '',
       wechatClassName: '',

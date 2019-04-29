@@ -229,8 +229,10 @@ public class UserFacadeServiceImpl implements IUserFacadeService {
     public User loginWithPhone(String phone, String username, String password, String userIp) {
         User user = userService.loginWithPhone(phone, username, password);
         //用户在亚博平台注册, 到我们平台登录, 此时给用户进行无感自动注册
-        syncAccount(username, password, userIp, user);
-        user = userService.loginWithPhone(phone, username, password);
+        //syncAccount(username, password, userIp, user);
+        if(user == null){
+            user = userService.loginWithPhone(phone, username, password);
+        }
         return user;
     }
 

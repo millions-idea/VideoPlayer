@@ -48,6 +48,6 @@ export default {
 @import './static/common.less';
 
 page {
-	background-color: #fff; //f5
+	background-color: #f5f5f5; //f5
 }
 </style>

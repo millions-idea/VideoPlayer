@@ -57,7 +57,7 @@
 
 <script>
 import { mapState, mapActions, mapMutations } from 'vuex';
-import http from '@/common/vmeitime-http/interface.js';
+import http from '../../common/vmeitime-http/interface.js';
 
 export default {
 	components: {
@@ -462,7 +462,7 @@ export default {
 	},
 	data() {
 		return {
-			avatar: '../../../static/user/default-avatar.png',
+			avatar: '../../static/user/default-avatar.png',
 			phoneClassName: '',
 			paymentClassName: '',
 			wechatClassName: '',

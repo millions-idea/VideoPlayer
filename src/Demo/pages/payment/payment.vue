@@ -26,13 +26,13 @@
 			<view class="recharge-item">
 				<view class="grace-list ">
 					<navigator v-if="amount > 0" class="items" url="" @tap="useAlipay">
-						<view class="icons"><image class="icon" src="../../../static/user/payment-alipay.png"></image></view>
+						<view class="icons"><image class="icon" src="../../static/user/payment-alipay.png"></image></view>
 						<view class="title">支付宝支付(推荐)</view>
 						<view class="arrow-right"></view>
 					</navigator>
 
 					<navigator class="items" url="" @tap="useBalance">
-						<view class="icons"><image class="icon" src="../../../static/user/payment-master.png"></image></view>
+						<view class="icons"><image class="icon" src="../../static/user/payment-master.png"></image></view>
 						<view class="title">
 							余额支付
 							<text>{{ balance }}元</text>
@@ -68,7 +68,7 @@ export default {
 			title: '',
 			amount: 0,
 			id: '',
-			balance: ''
+			balance: '...'
 		};
 	},
 	computed: {

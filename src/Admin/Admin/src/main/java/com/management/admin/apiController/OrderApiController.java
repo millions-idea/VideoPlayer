@@ -164,8 +164,6 @@ public class OrderApiController {
         return null;
     }
 
-
-
     @GetMapping("/huPayment")
     public String huPayment(HttpServletRequest request, OrderParam orderParam) throws Exception {
         SessionModel session = SessionUtil.getSession(request);

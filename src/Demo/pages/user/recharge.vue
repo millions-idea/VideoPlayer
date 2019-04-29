@@ -39,16 +39,14 @@ export default {
 		nextStep() {
 			// #ifdef H5/MP
 			uni.showModal({
-				title: '下载APP',
-				content: '本终端只支持微信充值, 如需支付宝充值请下载APP!',
-				showCancel: true,
-				cancelText: '知道了',
-				confirmText: '立刻下载',
+				title: '不支持的终端',
+				content: '请您下载APP客户端后充值',
+				showCancel: false,
+				confirmText: '知道了',
 				success: res => {
-					if (res.confirm) {
-						plus.runtime.openURL(this.session.getValue('homeConfig').appDownloadLink);
-					} else if (res.cancel) {
-					}
+					uni.reLaunch({
+						url: '../index/index'
+					});
 				},
 				fail: () => {},
 				complete: () => {}
@@ -56,155 +54,85 @@ export default {
 			return;
 			// #endif
 
-			// #ifdef APP-PLUS
 			this.useAlipay();
-			// #endif
-
-			// #ifdef H5
-			this.useWxpay();
-			// #endif
 		},
 		useAlipay(data) {
 			uni.showLoading({
 				title: '请稍后',
 				mask: true
 			});
-
-			//发起支付
-			this.$api
-				.get('api/order/getRechargeOrderInfo', {
-					amount: this.changeValue
+			
+			let _self = this;
+			
+			//下订单
+			_self.$api
+				.get('api/order/buy', {
+					id: 0,
+					channel: 'alipay',
+					amount: _self.changeValue
 				})
-				.then(res => {
+				.then(_res => {
 					uni.hideLoading();
-					if (res.data != null && res.data.length > 1) {
-						uni.requestPayment({
-							provider: 'alipay',
-							orderInfo: res.data, //微信、支付宝订单数据
-							success: function(res) {
-								console.log('success:' + JSON.stringify(res));
-								//TODO::APP支付权限
-								uni.showToast({
-									icon: 'none',
-									title: '支付成功, 稍后跳转……'
-								});
-								setTimeout(() => {
-									uni.reLaunch({
-										url: '../index/index'
-									});
-								}, 3000);
-							},
-							fail: function(err) {
-								console.log('fail:' + JSON.stringify(err));
-
-								this.session.setValue('recharge_alipay_error', JSON.stringify(err));
-
-								uni.showToast({
-									icon: 'none',
-									title: '支付失败, 错误代码:[' + JSON.stringify(err) + ']'
-								});
-								setTimeout(() => {
-									uni.navigateBack({
-										delta: 1
-									});
-								}, 1000);
-							}
-						});
-					} else {
-						uni.hideLoading();
-						uni.showToast({
-							title: '拉起支付请求失败',
-							icon: 'none'
-						});
-					}
-				});
-		},
-		useWxpay(data) {
-			uni.showLoading({
-				title: '请稍后',
-				mask: true
-			});
-
-			//发起支付
-			this.$api
-				.get('api/wx/recharge', {
-					totalFee: _self.amount
-				})
-				.then(res => {
-					uni.hideLoading();
-					if (res.data != null && JSON.stringify(res.data).length > 5) {
-						try {
-							WeixinJSBridge.invoke(
-								'getBrandWCPayRequest',
-								{
-									appId: res.data.appId, //公众号名称,由商户传入
-									timeStamp: res.data.timeStamp, //时间戳,自1970年以来的秒数
-									nonceStr: res.data.nonceStr, //随机串
-									package: res.data.package,
-									signType: res.data.signType, //微信签名方式：
-									paySign: res.data.paySign //微信签名
-								},
-								function(payResult) {
-									if (payResult.err_msg == 'get_brand_wcpay_request:ok') {
-										console.log('支付成功');
-										//支付成功后跳转的页面
-										uni.showToast({
-											icon: 'none',
-											title: '支付成功, 稍后跳转……'
-										});
-										setTimeout(() => {
-											uni.reLaunch({
-												url: '../index/index'
-											});
-										}, 3000);
-									} else if (payResult.err_msg == 'get_brand_wcpay_request:cancel') {
-										console.log('支付取消');
-										uni.showToast({
-											icon: 'none',
-											title: '支付中途取消'
-										});
-										setTimeout(() => {
-											uni.navigateBack({
-												delta: 1
-											});
-										}, 1000);
-									} else if (payResult.err_msg == 'get_brand_wcpay_request:fail') {
-										console.log('支付失败');
-										//WeixinJSBridge.call('closeWindow');
-
-										_self.session.setValue('recharge_wxpay_error', JSON.stringify(err));
-
-										uni.showToast({
-											icon: 'none',
-											title: '支付失败'
-										});
-										setTimeout(() => {
-											uni.navigateBack({
-												delta: 1
-											});
-										}, 1000);
-									} //使用以上方式判断前端返回,微信团队郑重提示：res.err_msg将在用户支付成功后返回ok,但并不保证它绝对可靠。
-								}
-							);
-						} catch (e) {
-							//TODO handle the exception
-							_self.common.window.logger('getBrandWCPayRequest_exception_' + JSON.stringify(e));
-
-							uni.hideLoading();
+			
+					if (_self.common.Response.isFaild(_res.data)) {
+						if (_res.data.msg.length < 10 && _res.data.msg.indexOf('null') == -1 && _res.data.msg.indexOf('faild') == -1) {
 							uni.showToast({
-								title: '拉起支付请求失败',
-								icon: 'none'
+								icon: 'none',
+								title: _res.data.msg
+							});
+						} else {
+							uni.showToast({
+								icon: 'none',
+								title: '充值失败，请联系在线客服处理！'
 							});
 						}
-					} else {
-						uni.hideLoading();
+			
+						setTimeout(() => {
+							uni.navigateBack({
+								delta: 1
+							});
+						}, 3000);
+						return;
+					} else if (_self.common.Response.isException(_res.data)) {
+						if (_res.data.msg == 'fail' || _res.data.msg.indexOf('null') != -1) {
+							uni.showToast({
+								icon: 'none',
+								title: '支付失败，请联系在线客服处理！'
+							});
+							setTimeout(() => {
+								uni.navigateBack({
+									delta: 1
+								});
+							}, 1000);
+						}
 						uni.showToast({
-							title: '拉起支付请求失败',
-							icon: 'none'
+							icon: 'none',
+							title: _res.data.msg
 						});
+						setTimeout(() => {
+							uni.navigateBack({
+								delta: 1
+							});
+						}, 3000);
+						return;
 					}
+			
+					//发起支付
+					this.$api
+						.get('api/order/huPayment', {
+							amount: _self.changeValue,
+							outTradeNo: _res.data.msg
+						})
+						.then(res => {
+							uni.hideLoading();
+							this.common.window.toNew('generics-webview/generics-webview', {
+								url: res.data,
+								title: '在线充值'
+							});
+						});
 				});
 		}
+		
 	}
 };
 </script>
