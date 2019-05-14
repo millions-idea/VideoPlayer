@@ -538,6 +538,7 @@ page.data-v-d9059922 {
   background-color: #F5F5F5 !important;
 }
 .container.data-v-d9059922 {
+  width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -629,6 +630,16 @@ page.data-v-d9059922 {
 }
 .item-amount-white.data-v-d9059922 {
   color: #ffe1c4 !important;
+}
+.download .download-title.data-v-d9059922 {
+  position: relative;
+  left: 12px;
+  top: -85px;
+  z-index: 10;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: "PingFangSC-Semibold";
 }
 .shopping-right-item.data-v-d9059922 {
   margin-right: 40rpx;

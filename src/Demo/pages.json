@@ -2,12 +2,15 @@
     "pages":[
         {
             "path":"pages/index/index",
-            "style":{
-                "enablePullDownRefresh":true,
-                "app-plus":{
-                    "titleNView":false
-                }
-            }
+			"style":{
+			    "navigationBarTitleText":"首页",
+			    "enablePullDownRefresh":true,
+			    "app-plus":{
+			        "titleNView":{
+			            "type":"transparent"
+			        }
+			    }
+			}
         },
         {
             "path":"pages/user/index",
@@ -200,6 +203,10 @@
                     }
                 }
             }
+        }
+        ,{
+            "path" : "pages/payment/hupijiao/hupijiao",
+            "style" : {}
         }
     ],
     "tabBar":{

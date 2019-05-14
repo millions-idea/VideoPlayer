@@ -54,7 +54,7 @@ public interface OrderMapper extends MyMapper<Order> {
             "WHERE t1.user_id = #{userId}")
     int selectTotalPageByUid(@Param("userId") Long userId);
 
-    @Select("SELECT * FROM tb_orders WHERE product_id = #{productId} AND user_id = #{userId} LIMIT 1")
+    @Select("SELECT * FROM tb_orders WHERE product_id = #{productId} AND user_id = #{userId} ORDER BY add_date DESC LIMIT 1")
     Order selectOrderByUserProduct(@Param("productId") String productId, @Param("userId") Long userId);
 
     @Select("SELECT COUNT(t1.order_id) FROM tb_orders t1 " +

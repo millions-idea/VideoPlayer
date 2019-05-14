@@ -45,6 +45,8 @@
 
 
 
+
+
 var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;} //
 //
 //
@@ -78,7 +80,9 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
 //
 //
 //
-var page = 0,_self;var graceLoading = function graceLoading() {return __webpack_require__.e(/*! import() | graceUI/components/graceLoading */ "graceUI/components/graceLoading").then(__webpack_require__.bind(null, /*! @/graceUI/components/graceLoading.vue */ "F:\\repository\\VideoPlayer\\src\\Demo\\graceUI\\components\\graceLoading.vue"));};var stackEmpty = function stackEmpty() {return __webpack_require__.e(/*! import() | components/stack-empty/stack-empty */ "components/stack-empty/stack-empty").then(__webpack_require__.bind(null, /*! @/components/stack-empty/stack-empty.vue */ "F:\\repository\\VideoPlayer\\src\\Demo\\components\\stack-empty\\stack-empty.vue"));};var mhtLoader = function mhtLoader() {return __webpack_require__.e(/*! import() | components/mht-loader/mht-loader */ "components/mht-loader/mht-loader").then(__webpack_require__.bind(null, /*! @/components/mht-loader/mht-loader.vue */ "F:\\repository\\VideoPlayer\\src\\Demo\\components\\mht-loader\\mht-loader.vue"));};var _default = { components: { graceLoading: graceLoading, stackEmpty: stackEmpty, mhtLoader: mhtLoader }, data: function data() {return { loading: false, loadingType: 0, isEnd: false, dataList: [], categoryId: 0, categoryName: '', maxPage: 1000, empty: true };}, onLoad: function onLoad(option) {_self = this;page = 0;this.categoryId = option.categoryId;this.categoryName = option.categoryName;uni.setNavigationBarTitle({ title: this.categoryName });
+//
+//
+var page = 0,_self;var graceLoading = function graceLoading() {return __webpack_require__.e(/*! import() | graceUI/components/graceLoading */ "graceUI/components/graceLoading").then(__webpack_require__.bind(null, /*! @/graceUI/components/graceLoading.vue */ "F:\\repository\\VideoPlayer\\src\\Demo\\graceUI\\components\\graceLoading.vue"));};var stackEmpty = function stackEmpty() {return __webpack_require__.e(/*! import() | components/stack-empty/stack-empty */ "components/stack-empty/stack-empty").then(__webpack_require__.bind(null, /*! @/components/stack-empty/stack-empty.vue */ "F:\\repository\\VideoPlayer\\src\\Demo\\components\\stack-empty\\stack-empty.vue"));};var mhtLoader = function mhtLoader() {return __webpack_require__.e(/*! import() | components/mht-loader/mht-loader */ "components/mht-loader/mht-loader").then(__webpack_require__.bind(null, /*! @/components/mht-loader/mht-loader.vue */ "F:\\repository\\VideoPlayer\\src\\Demo\\components\\mht-loader\\mht-loader.vue"));};var cmdResultPage = function cmdResultPage() {return __webpack_require__.e(/*! import() | components/cmd-result-page/cmd-result-page */ "components/cmd-result-page/cmd-result-page").then(__webpack_require__.bind(null, /*! @/components/cmd-result-page/cmd-result-page.vue */ "F:\\repository\\VideoPlayer\\src\\Demo\\components\\cmd-result-page\\cmd-result-page.vue"));};var _default = { components: { graceLoading: graceLoading, stackEmpty: stackEmpty, mhtLoader: mhtLoader, cmdResultPage: cmdResultPage }, data: function data() {return { loading: false, loadingType: 0, isEnd: false, dataList: [], categoryId: 0, categoryName: '', maxPage: 1000, empty: true };}, onLoad: function onLoad(option) {_self = this;page = 0;this.categoryId = option.categoryId;this.categoryName = option.categoryName;uni.setNavigationBarTitle({ title: this.categoryName });
     this.getList();
   },
   onShow: function onShow() {
@@ -94,7 +98,7 @@ var page = 0,_self;var graceLoading = function graceLoading() {return __webpack_
 
   onPullDownRefresh: function onPullDownRefresh() {
     //监听下拉刷新动作
-    console.log('onPullDownRefresh', " at pages\\index\\detail.vue:87");
+    console.log('onPullDownRefresh', " at pages\\index\\detail.vue:91");
     // 这里获取数据
     this.getList();
   },

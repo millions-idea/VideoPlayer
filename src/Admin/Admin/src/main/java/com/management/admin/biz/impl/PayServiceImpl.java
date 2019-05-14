@@ -182,7 +182,7 @@ public class PayServiceImpl extends BaseServiceImpl<Pays> implements IPayService
             isInternal = false;
         }
 
-        if(!isInternal && fromUserInfo.getBalance() <= 0) throw new InfoException("甲方钱包余额不足");
+        if(isInternal && fromUserInfo.getBalance() <= 0) throw new InfoException("甲方钱包余额不足");
 
         // 生成交易流水账单
         Pays pays = null;

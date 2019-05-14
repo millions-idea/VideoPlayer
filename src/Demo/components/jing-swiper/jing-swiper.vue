@@ -3,8 +3,7 @@
 		<!-- 3D轮播 -->
 		<view class="my-swiper">
 			<swiper class="imageContainer" @change="handleChange" :interval="interval" :duration="duration" :previous-margin="margin" :next-margin="margin" circular  autoplay>
-				<block v-for="(item,index) in imgList" :key="index">
-					<swiper-item class="swiperitem"  @tap="onClick(index, item)">
+					<swiper-item class="swiperitem" v-for="(item,index) in imgList" :key="index" @tap="openBrowser(item)">
 						<!-- <lazy-image class="lazy-image itemImg" :class="currentIndex == index ? 'swiperactive': ''" mode="scaleToFill"
 								:realSrc="item.img" placeholdSrc="/static/data/banner_loading.png"></lazy-image> -->
 						<image class="itemImg" :class="currentIndex == index ? 'swiperactive': ''" mode="scaleToFill"
@@ -13,7 +12,6 @@
 							<view class="desc"><text class="font">{{item.desc}}</text></view>
 						</template> -->
 					</swiper-item>
-				</block>
 			</swiper>
 		</view>
 	</view>
@@ -48,11 +46,8 @@
 			handleChange(event){
 				this.currentIndex = event.detail.current;
 			},
-			onClick(index, item){
-				this.$emit('click', {
-					index: index,
-					item: item
-				})
+			openBrowser(item){
+				this.$emit('click', item);
 			}
 		}
 	}	

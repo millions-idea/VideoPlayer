@@ -78,7 +78,7 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
       title: '',
       amount: 0,
       id: '',
-      balance: '' };
+      balance: '...' };
 
   },
   computed: _objectSpread({},
@@ -349,6 +349,7 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
           outTradeNo: _res.data.msg }).
 
         then(function (res) {
+          console.log("虎皮椒DATA: " + JSON.stringify(res), " at pages\\payment\\payment.vue:342");
           uni.hideLoading();
           _this.common.window.toNew('generics-webview/generics-webview', {
             url: res.data,
@@ -439,7 +440,7 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
               },
               function (payResult) {
                 if (payResult.err_msg == 'get_brand_wcpay_request:ok') {
-                  console.log('支付成功', " at pages\\payment\\payment.vue:432");
+                  console.log('支付成功', " at pages\\payment\\payment.vue:433");
                   //支付成功后跳转的页面
                   uni.showToast({
                     icon: 'none',
@@ -451,7 +452,7 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
 
                   }, 3000);
                 } else if (payResult.err_msg == 'get_brand_wcpay_request:cancel') {
-                  console.log('支付取消', " at pages\\payment\\payment.vue:444");
+                  console.log('支付取消', " at pages\\payment\\payment.vue:445");
                   uni.showToast({
                     icon: 'none',
                     title: '支付中途取消' });
@@ -462,7 +463,7 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
 
                   }, 1000);
                 } else if (payResult.err_msg == 'get_brand_wcpay_request:fail') {
-                  console.log('支付失败', " at pages\\payment\\payment.vue:455");
+                  console.log('支付失败', " at pages\\payment\\payment.vue:456");
                   //WeixinJSBridge.call('closeWindow');
 
                   _self.session.setValue('recharge_wxpay_error', JSON.stringify(err));

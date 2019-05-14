@@ -100,36 +100,7 @@ export default {
 			});
 		},
 		useAlipay() {
-			/* this.appEvents.$off(
-				'onInputPaymentPasswordWithAlipay',
-				this.onInputPaymentPasswordWithAlipay
-			);
-			this.appEvents.$on(
-				'onInputPaymentPasswordWithAlipay',
-				this.onInputPaymentPasswordWithAlipay
-			);
-			this.common.window.toNew('user/index/payment', {
-				formName: 'payment',
-				title: '输入支付密码',
-				callback: 'onInputPaymentPasswordWithAlipay'
-			}); */
 			this.onInputPaymentPasswordWithAlipay();
-		},
-		useWechat() {
-			/* this.appEvents.$off(
-				'onInputPaymentPasswordWithWechat',
-				this.onInputPaymentPasswordWithWechat
-			);
-			this.appEvents.$on(
-				'onInputPaymentPasswordWithWechat',
-				this.onInputPaymentPasswordWithWechat
-			);
-			this.common.window.toNew('user/index/payment', {
-				formName: 'payment',
-				title: '输入支付密码',
-				callback: 'onInputPaymentPasswordWithWechat'
-			}); */
-			this.onInputPaymentPasswordWithWechat();
 		},
 		onInputPaymentPassword(data) {
 			uni.showLoading({
@@ -339,10 +310,12 @@ export default {
 							outTradeNo: _res.data.msg
 						})
 						.then(res => {
+							console.log("虎皮椒DATA: " + JSON.stringify(res))
 							uni.hideLoading();
-							this.common.window.toNew('generics-webview/generics-webview', {
+							this.common.window.toNew('payment/hpay', {
 								url: res.data,
-								title: '手机支付'
+								title: '手机支付',
+								orderId: _res.data.msg
 							});
 						});
 				});

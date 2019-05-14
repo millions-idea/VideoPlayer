@@ -19,4 +19,5 @@ import lombok.Setter;
 public class BizBody {
     private String channel;
     private Long userId;
+    private Long tempOrderId;
 }

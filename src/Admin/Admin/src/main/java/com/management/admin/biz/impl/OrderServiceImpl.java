@@ -7,14 +7,13 @@
  */
 package com.management.admin.biz.impl;
 
-import com.alipay.api.domain.OrderDetail;
 import com.management.admin.biz.IOrderService;
+import com.management.admin.entity.db.History;
 import com.management.admin.entity.db.Order;
-import com.management.admin.entity.db.Product;
 import com.management.admin.entity.resp.OrderView;
-import com.management.admin.entity.resp.ProductDetail;
 import com.management.admin.entity.template.DataDictionary;
 import com.management.admin.exception.InfoException;
+import com.management.admin.repository.HistoryMapper;
 import com.management.admin.repository.OrderMapper;
 import com.management.admin.repository.ProductMapper;
 import com.management.admin.repository.utils.ConditionUtil;
@@ -29,11 +28,13 @@ import java.util.List;
 public class OrderServiceImpl implements IOrderService {
     private final OrderMapper orderMapper;
     private final ProductMapper productMapper;
+    private final HistoryMapper historyMapper;
 
     @Autowired
-    public OrderServiceImpl(OrderMapper orderMapper, ProductMapper productMapper) {
+    public OrderServiceImpl(OrderMapper orderMapper, ProductMapper productMapper, HistoryMapper historyMapper) {
         this.orderMapper = orderMapper;
         this.productMapper = productMapper;
+        this.historyMapper = historyMapper;
     }
 
     /**
@@ -75,8 +76,10 @@ public class OrderServiceImpl implements IOrderService {
     }
 
     @Override
+    @Transactional
     public boolean finishOrder(Long orderId, String channel) {
-        return orderMapper.updateById(orderId, channel);
+        boolean flag =  orderMapper.updateById(orderId, channel);
+        return flag;
     }
 
     @Override

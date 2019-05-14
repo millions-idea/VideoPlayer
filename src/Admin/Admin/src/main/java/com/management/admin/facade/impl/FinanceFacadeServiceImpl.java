@@ -272,6 +272,7 @@ public class FinanceFacadeServiceImpl implements IFinanceFacadeService {
         if(parentUser != null){
             extractUserBonusComputed(order.getAmount(), user, parentUser);
         }
+
         return true;
     }
 

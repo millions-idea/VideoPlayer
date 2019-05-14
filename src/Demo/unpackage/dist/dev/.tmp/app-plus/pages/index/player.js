@@ -115,6 +115,9 @@
 
 
 
+
+
+
 var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var _default =
 
 {
@@ -145,8 +148,10 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
   computed: _objectSpread({},
   (0, _vuex.mapState)(['hasLogin', 'profile']), {
     getTitle: function getTitle() {
-      if (this.title.length > 15) {
+      if (this.title != null && this.title.length > 15) {
         return this.title.substr(0, 14) + "...";
+      } else {
+        return "正在查询中";
       }
       return this.title;
     } }),
@@ -169,7 +174,7 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
         productId: this.videoId }).
 
       then(function (res) {
-        console.log(res, " at pages\\index\\player.vue:162");
+        console.log(res, " at pages\\index\\player.vue:167");
         if (_this.common.Response.isFaild(res.data)) {
           uni.showToast({
             title: '播放失败',
@@ -205,16 +210,16 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
       then(function (res) {
         uni.hideLoading();
         if (_this2.common.Response.isFaild(res.data)) {
-          uni.showToast({
-            title: '查询失败',
-            icon: 'none' });
+          /* uni.showToast({
+                                                       	title: '查询失败',
+                                                       	icon: 'none'
+                                                       });
+                                                       		setTimeout(() => {
+                                                       	uni.navigateBack({
+                                                       		delta: 1
+                                                       	});
+                                                       }, 2000); */
 
-
-          setTimeout(function () {
-            uni.navigateBack({
-              delta: 1 });
-
-          }, 2000);
         } else if (_this2.common.Response.isException(res.data)) {
           uni.showToast({
             title: res.data.msg,

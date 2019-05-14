@@ -26,8 +26,6 @@
 //
 //
 //
-//
-//
 var _default =
 
 {
@@ -46,7 +44,7 @@ var _default =
   },
   created: function created() {
     this.imgList.forEach(function (img) {
-      console.log(img, " at components\\jing-swiper\\jing-swiper.vue:39");
+      console.log(img, " at components\\jing-swiper\\jing-swiper.vue:37");
     });
   },
   computed: {
@@ -58,11 +56,8 @@ var _default =
     handleChange: function handleChange(event) {
       this.currentIndex = event.detail.current;
     },
-    onClick: function onClick(index, item) {
-      this.$emit('click', {
-        index: index,
-        item: item });
-
+    openBrowser: function openBrowser(item) {
+      this.$emit('click', item);
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["default"]))
 

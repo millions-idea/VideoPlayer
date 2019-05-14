@@ -10,7 +10,7 @@
 			<!-- #endif -->
 
 			<view class="header">
-				<jingSwiper @click="onSwiperClick" :imgList="imgList" :interval="5000" :duration="1000"></jingSwiper>
+				<jingSwiper @click="onClick" :imgList="imgList" :interval="5000" :duration="1000"></jingSwiper>
 				<view class="blank-line-10"></view>
 			</view>
 
@@ -43,11 +43,6 @@
 					</view>
 				</navigator>
 			</view>
-			<view v-if="dataList.length <= 0" class="">
-				<view class="empty-list">
-					<cmd-result-page></cmd-result-page>
-				</view>
-			</view>
 		</view>
 		<graceLoading v-if="dataList.length > 0" :loadingType="loadingType"></graceLoading>
 	</view>
@@ -60,195 +55,195 @@ var page = 0,
 import { mapState, mapActions } from 'vuex';
 import jingSwiper from '@/components/jing-swiper/jing-swiper.vue';
 import graceLoading from '@/graceUI/components/graceLoading.vue';
-import stackEmpty from '@/components/stack-empty/stack-empty.vue';
-import cmdResultPage from "@/components/cmd-result-page/cmd-result-page.vue";
 
 export default {
 	components: {
-		jingSwiper,
-		graceLoading,
-		stackEmpty,
-		cmdResultPage
-	},
-	data() {
-		return {
-			loading: false,
-			loadingType: 0,
-			isEnd: false,
-			dataList: [],
-			cid: 0,
-			maxPage: 1000,
-			empty: true,
+        jingSwiper,
+        graceLoading
+    },
+    data() {
+        return {
+            loading: false,
+            loadingType: 0,
+            isEnd: false,
+            dataList: [],
+            cid: 0,
+            maxPage: 1000,
+            empty: true,
 
-			imgList: [
-				{
-					img: 'https://stack-1251694474.cos.ap-guangzhou.myqcloud.com/aishi/banner1.png',
-					desc: ''
-				},
-				{
-					img: 'https://stack-1251694474.cos.ap-guangzhou.myqcloud.com/aishi/banner2.png',
-					desc: ''
-				},
-				{
-					img: 'https://stack-1251694474.cos.ap-guangzhou.myqcloud.com/aishi/banner3.png',
-					desc: ''
-				}
-			]
-		};
-	},
-	onLoad() {
-		_self = this;
-		page = 0;
+            imgList: [{
+                img: 'https://stack-1251694474.cos.ap-guangzhou.myqcloud.com/aishi/banner1.png',
+                desc: ''
+            }, {
+                img: 'https://stack-1251694474.cos.ap-guangzhou.myqcloud.com/aishi/banner2.png',
+                desc: ''
+            }, {
+                img: 'https://stack-1251694474.cos.ap-guangzhou.myqcloud.com/aishi/banner3.png',
+                desc: ''
+            }]
+        };
+    },
+    onLoad() {
+        _self = this;
+        page = 0;
+
+        if (_self.session.getValue("token") != null && _self.session.getValue("token").length > 5) {
+            _self.session.setValue('token', _self.session.getValue("token"));
+            _self.login();
+        }
 		
-		
-		if(_self.session.getValue("token") != null && _self.session.getValue("token").length > 5){
-			_self.session.setValue('token', res.data.msg);
-			_self.login();
-		}
-	},
-	onShow() {
 		uni.startPullDownRefresh();
+    },
+    
+	onShow() {
+    
 	},
-	computed: {
-		...mapState(['hasLogin', 'profile'])
-	},
-	onPullDownRefresh() {
-		//监听下拉刷新动作
-		console.log('onPullDownRefresh');
-		// 这里获取数据
-		this.getBanner();
-		this.getProfile();
-		this.getList();
-	},
-	//上拉加载更多
-	onReachBottom: function() {
-		this.getList();
-	},
-	onBackPress: function() {
-		this.loadingType = 0;
-		this.isEnd = false;
-		page = 0;
-	},
-	methods: {
-		...mapActions(['setProfile', 'authOpenWindow', 'login', 'sysLogout']),
+    computed: {
+        ...mapState(['hasLogin', 'profile'])
+    },
+    onPullDownRefresh() {
+        //监听下拉刷新动作
+        console.log('onPullDownRefresh');
+        // 这里获取数据
+        this.getBanner();
+        this.getProfile();
+        this.getList();
+    },
+    //上拉加载更多
+    onReachBottom: function () {
+        this.getList();
+    },
+    onBackPress: function () {
+        this.loadingType = 0;
+        this.isEnd = false;
+        page = 0;
+    },
+    methods: {
+        ...mapActions(['setProfile', 'authOpenWindow', 'login', 'sysLogout']),
 
-		getBanner() {
-			let bannerList = this.session.getValue('homeBanner');
-			if (bannerList != null && JSON.stringify(bannerList).length > 5) {
-				this.imgList = bannerList;
-			}
-			this.$api.get('api/bootstrap/getBannerList', {}).then(res => {
-				if (!this.common.Response.isFaild(res.data) && !this.common.Response.isException(res.data)) {
-					this.imgList = res.data.data;
-					this.session.setValue('homeBanner', this.imgList);
-				}
-			});
-		},
+            getBanner() {
+                let bannerList = this.session.getValue('homeBanner');
+                if (bannerList != null && JSON.stringify(bannerList).length > 5) {
+                    this.imgList = bannerList;
+                }
+                this.$api.get('api/bootstrap/getBannerList', {}).then(res => {
+                    if (!this.common.Response.isFaild(res.data) && !this.common.Response.isException(res.data)) {
+                        this.imgList = res.data.data;
+                        this.session.setValue('homeBanner', this.imgList);
+                    }
+                });
+            },
 
-		getList() {
-			//最后一页判断
-			if (page > this.maxPage) {
-				this.isEnd = true;
-				this.loadingType = 2;
-				uni.stopPullDownRefresh();
-				return;
-			}
-			this.loadingType = 1;
-			//模拟api请求延迟关闭 Loading
-			let _self = this;
-			this.$api
-				.get('api/home/getNewProductLimit', {
-					page: page
-				})
-				.then(res => {
-					uni.stopPullDownRefresh();
+            getList() {
+                //最后一页判断
+                if (page > this.maxPage) {
+                    this.isEnd = true;
+                    this.loadingType = 2;
+                    uni.stopPullDownRefresh();
+                    return;
+                }
+                this.loadingType = 1;
+                //模拟api请求延迟关闭 Loading
+                let _self = this;
+                this.$api
+                    .get('api/home/getNewProductLimit', {
+                        page: page
+                    })
+                    .then(res => {
+                        uni.stopPullDownRefresh();
 
-					_self.loadingType = 3;
+                        _self.loadingType = 3;
 
-					if (res.data.code == 200) {
-						_self.maxPage = res.data.count;
+                        if (res.data.code == 200) {
+                            _self.maxPage = res.data.count;
 
-						if (res.data.data == null || res.data.data.length == 0) {
-							_self.loadingType = 3;
-							uni.showToast({
-								title: "没有最近更新的视频哦",
-								icon : "none"
-							})
-						}
+                            if (res.data.data == null || res.data.data.length == 0) {
+                                _self.loadingType = 3;
+                                uni.showToast({
+                                    title: "没有最近更新的视频哦",
+                                    icon: "none"
+                                })
+                            }
 
-						res.data.data.forEach(item => {
-							item.amount = item.amount.toFixed(2);
-							item.showCount = item.showCount > 9999 ? (item.showCount / 10000).toFixed(1) + '万' : item.showCount;
-						});
+                            res.data.data.forEach(item => {
+                                item.amount = item.amount.toFixed(2);
+                                item.showCount = item.showCount > 9999 ? (item.showCount / 10000).toFixed(1) + '万' : item.showCount;
+                            });
 
-						_self.dataList = _self.dataList.concat(res.data.data);
-						_self.loadingType = 0;
-						page++;
-					}
-				});
-		},
-		getProfile() {
-			this.session.clearSession();
-			this.session.clearState();
-			let session = this.session.getSession();
-			if (session == null) {
-				console.log('加载用户信息');
-				let _self = this;
-				this.$api
-					.post('api/user/getProfile', {})
-					.then(res => {
-						if (_self.common.Response.isFaild(res.data)) {
-							return;
-						} else if (_self.common.Response.isException(res.data)) {
-							if (res.data.msg == '请先登录') return;
-							uni.showToast({
-								title: res.data.msg,
-								icon: 'none'
-							});
-							return;
-						}
+                            _self.dataList = _self.dataList.concat(res.data.data);
+                            _self.loadingType = 0;
+                            page++;
+                        }
+                    });
+            },
+     
+			getProfile() {
+                this.session.clearSession();
+                this.session.clearState();
+                let session = this.session.getSession();
+                if (session == null) {
+                    console.log('加载用户信息');
+                    let _self = this;
+                    this.$api
+                        .post('api/user/getProfile', {})
+                        .then(res => {
+                            if (_self.common.Response.isFaild(res.data)) {
+                                return;
+                            } else if (_self.common.Response.isException(res.data)) {
+                                if (res.data.msg == '请先登录') return;
+                                uni.showToast({
+                                    title: res.data.msg,
+                                    icon: 'none'
+                                });
+                                return;
+                            }
 
-						_self.session.setSession(res.data.msg);
-						_self.login();
-						_self.setProfile(res.data.msg);
-						return;
-					})
-					.catch(err => {
-						return;
-					});
-			} else {
-				console.log('更新用户信息');
-				_self.setProfile(session);
-			}
-		},
-		onSwiperClick(item) {
-			//判断是否内部链接还是外部链接
-			if (item.desc.indexOf('http') != -1) {
-				this.common.window.toNew('generics-webview/generics-webview', {
-					url: item.desc
-				});
-			} else {
-				if (this.hasLogin) {
-					this.common.window.toNew('index/player', {
-						videoId: item.desc
-					});
-				} else {
-					this.common.window.toNew('user/bootstrap/login', null);
-				}
-			}
-		},
-		onPlay(item) {
-			if (this.hasLogin) {
-				this.common.window.toNew('index/player', {
-					videoId: item.productId,
-					title: item.productName,
-					poster: item.image
-				});
-			} else {
-				this.common.window.toNew('user/bootstrap/login', null);
-			}
-		}
-	}
+                            _self.session.setSession(res.data.msg);
+                            _self.login();
+                            _self.setProfile(res.data.msg);
+                            return;
+                        })
+                        .catch(err => {
+                            return;
+                        });
+                } else {
+                    console.log('更新用户信息');
+                    _self.setProfile(session);
+                }
+            },
+     
+		
+			onClick(e) {
+                //判断是否内部链接还是外部链接
+				console.log(JSON.stringify(e));
+                if (e.desc != null && e.desc.indexOf('http') != -1) {
+                    this.common.window.toNew('generics-webview/generics-webview', {
+                        url: e.desc
+                    });
+                } else {
+					if (this.hasLogin) {
+                        this.common.window.toNew('index/player', {
+                            videoId: e.desc
+                        });
+                    } else {
+                        this.common.window.toNew('user/bootstrap/login', null);
+                    }
+                }
+            },
+     
+		
+			onPlay(item) {
+                if (this.hasLogin) {
+                    this.common.window.toNew('index/player', {
+                        videoId: item.productId,
+                        title: item.productName,
+                        poster: item.image
+                    });
+                } else {
+                    this.common.window.toNew('user/bootstrap/login', null);
+                }
+            }
+    }
 };
 </script>
 

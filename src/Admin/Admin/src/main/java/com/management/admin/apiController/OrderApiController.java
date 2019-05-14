@@ -7,9 +7,11 @@
  */
 package com.management.admin.apiController;
 
+import com.alibaba.fastjson.JSON;
 import com.alipay.api.AlipayApiException;
 import com.alipay.api.internal.util.AlipaySignature;
 import com.management.admin.biz.IOrderService;
+import com.management.admin.entity.db.History;
 import com.management.admin.entity.db.Order;
 import com.management.admin.entity.param.BizBody;
 import com.management.admin.entity.param.OrderParam;
@@ -20,6 +22,7 @@ import com.management.admin.entity.template.JsonResult;
 import com.management.admin.entity.template.SessionModel;
 import com.management.admin.exception.InfoException;
 import com.management.admin.facade.IFinanceFacadeService;
+import com.management.admin.utils.Base64Util;
 import com.management.admin.utils.IdWorker;
 import com.management.admin.utils.JsonUtil;
 import com.management.admin.utils.alipay.AliPayUtil;
@@ -53,16 +56,11 @@ public class OrderApiController {
      * @throws Exception
      */
     @GetMapping("/getRechargeOrderInfo")
-    public String getRechargeOrderInfo(HttpServletRequest request, OrderParam orderParam) throws Exception {
+    public JsonResult getRechargeOrderInfo(HttpServletRequest request, OrderParam orderParam) throws Exception {
         SessionModel session = SessionUtil.getSession(request);
-        BizBody bizBody = new BizBody();
-        bizBody.setChannel("recharge");
-        bizBody.setUserId(session.getUserId());
-        String params = AliPayUtil.getAppPaymentParams(IdWorker.getFlowIdWorkerInstance().nextId()
-                , JsonUtil.getJsonNotEscape(bizBody)
-                , "金币"
-                , Double.valueOf(orderParam.getAmount()));
-        return params;
+        orderParam.setSubject("recharge");
+        orderParam.setOutTradeNo(IdWorker.getFlowIdWorkerInstance().nextId() + "");
+        return new JsonResult().successful(orderParam);
     }
 
     @GetMapping("/notifyOrder")
@@ -128,37 +126,38 @@ public class OrderApiController {
             params.put(name, valueStr);
         }
         try {
-            boolean flag = AlipaySignature.rsaCheckV1(params, AliPayUtil.ALIPAY_PUBLIC_KEY, AliPayUtil.CHARSET,"RSA2");
-           if(flag){
-               String trade_order_id = params.get("trade_order_id");//支付宝交易号
-               Double totalAmount = Double.valueOf(params.get("total_amount"));//本次交易支付的订单金额，单位为人民币（分）
-               String transaction_id = params.get("transaction_id");
-               String plugins = params.get("plugins");
-               String hash = params.get("hash");
-               String body = params.get("body");
+            String trade_order_id = params.get("trade_order_id");//商户订单号
+            Double totalAmount = Double.valueOf(params.get("total_fee"));//本次交易支付的订单金额，单位为人民币（分）
+            String transaction_id = params.get("transaction_id");//交易号
+            String plugins = params.get("plugins");
+            String hash = params.get("hash");
+            String body = new String(Base64Util.decode(params.get("body").toString()));
 
-                if(body != null){
-                    BizBody model = JsonUtil.getModel(body, BizBody.class);
-                    //充值金币
-                    if (model.getChannel().equalsIgnoreCase("recharge")){
-                        try{
-                            financeFacadeService.recharge(trade_order_id, Long.valueOf(transaction_id), model.getUserId(), Double.valueOf(totalAmount)
-                                    , "finance.pays.channel.alipay");
-                        }catch (Exception e){
-                            logger.error("alipay_notify_exception_recharge_" + e);
-                        }
-                    }else if(model.getChannel().equalsIgnoreCase("order")){
-                        //订单消费
-                        try {
-                            financeFacadeService.payment(model.getUserId(), Long.valueOf(transaction_id), "alipay");
-                        }catch (Exception e){
-                            logger.error("alipay_notify_exception_payment_" + e);
-                        }
+            if(body != null){
+                BizBody model = JsonUtil.getModel(body, BizBody.class);
+                //充值金币
+                if (model.getChannel().equalsIgnoreCase("recharge")){
+                    try{
+                        financeFacadeService.recharge(transaction_id, Long.valueOf(trade_order_id), model.getUserId(), Double.valueOf(totalAmount)
+                                , "finance.pays.channel.alipay");
+                    }catch (Exception e){
+                        logger.error("alipay_notify_exception_recharge_" + e);
+                    }
+                }else if(model.getChannel().equalsIgnoreCase("order")){
+                    //订单消费
+                    try {
+                        financeFacadeService.payment(model.getUserId(), Long.valueOf(trade_order_id), "alipay");
+
+                    }catch (Exception e){
+                        logger.error("alipay_notify_exception_payment_" + e);
+                        return "fail";
                     }
                 }
-               return "success";
-           }
+            }
+            return "success";
         } catch (AlipayApiException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return null;
@@ -168,20 +167,52 @@ public class OrderApiController {
     public String huPayment(HttpServletRequest request, OrderParam orderParam) throws Exception {
         SessionModel session = SessionUtil.getSession(request);
         BizBody bizBody = new BizBody();
-        bizBody.setChannel("order");
+        if(orderParam.getSubject() != null && orderParam.getSubject().equals("recharge")){
+            bizBody.setChannel("recharge");
+        }else{
+            bizBody.setChannel("order");
+        }
         bizBody.setUserId(session.getUserId());
+
         Order order = orderService.getOrder(Long.valueOf(orderParam.getOutTradeNo()));
-        if(order == null) throw new InfoException("订单不存在");
+        if(orderParam.getSubject() != null && !orderParam.getSubject().equals("recharge")){
+            if(order == null) throw new InfoException("订单不存在");
 
-        HuPayParams params = new HuPayParams();
-        params.setTitle("购买商品-" + order.getProductName());
-        params.setExt(bizBody);
-        params.setAmount(Double.valueOf(order.getAmount()));
-        params.setTradeOrderId(orderParam.getOutTradeNo());
+            HuPayParams params = new HuPayParams();
+            params.setTitle("购买商品-" + order.getProductName());
+            params.setExt(bizBody);
+            params.setAmount(Double.valueOf(order.getAmount()));
+            params.setTradeOrderId(orderParam.getOutTradeNo());
 
-        String url = HuPayUtil.payment(params.getTradeOrderId(), params.getTitle(), params.getAmount(), JsonUtil.getJsonNotEscape(params.getExt()));
+            String url = HuPayUtil.payment(params.getTradeOrderId(), params.getTitle(), params.getAmount(), JsonUtil.getJsonNotEscape(params.getExt()));
 
-        return url;
+            return url;
+        }else{
+
+            HuPayParams params = new HuPayParams();
+            params.setTitle("在线充值");
+            params.setExt(bizBody);
+            params.setAmount(Double.valueOf(orderParam.getAmount()));
+            params.setTradeOrderId(orderParam.getOutTradeNo());
+
+            String url = HuPayUtil.payment(params.getTradeOrderId(), params.getTitle(), params.getAmount(), JsonUtil.getJsonNotEscape(params.getExt()));
+
+            return url;
+        }
+
     }
 
+
+    /**
+     * 查询订单状态, 交易成功返回success
+     * @param orderId
+     * @return
+     */
+    @GetMapping("/getStatus")
+    public JsonResult getStatus(String orderId){
+        if(orderId.isEmpty()) return new JsonResult().failing("请填写订单号");
+        Order order = orderService.getOrder(Long.valueOf(orderId));
+        if(order == null) return new JsonResult().failing("订单不存在");
+        return new JsonResult().successful(order.getStatus().equals(2) ? "success" : "faild");
+    }
 }

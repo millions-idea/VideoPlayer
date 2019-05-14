@@ -66,7 +66,7 @@ export default {
 			
 			//下订单
 			_self.$api
-				.get('api/order/buy', {
+				.get('api/order/getRechargeOrderInfo', {
 					id: 0,
 					channel: 'alipay',
 					amount: _self.changeValue
@@ -102,10 +102,10 @@ export default {
 							setTimeout(() => {
 								uni.navigateBack({
 									delta: 1
-								});
+	  							});
 							}, 1000);
 						}
-						uni.showToast({
+				                                                                                                                                  		uni.showToast({
 							icon: 'none',
 							title: _res.data.msg
 						});
@@ -121,7 +121,8 @@ export default {
 					this.$api
 						.get('api/order/huPayment', {
 							amount: _self.changeValue,
-							outTradeNo: _res.data.msg
+							outTradeNo: _res.data.msg.outTradeNo,
+							subject: _res.data.msg.subject
 						})
 						.then(res => {
 							uni.hideLoading();

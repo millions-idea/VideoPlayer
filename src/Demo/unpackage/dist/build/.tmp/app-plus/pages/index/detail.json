@@ -16,6 +16,7 @@
   "usingComponents": {
     "grace-loading": "/graceUI/components/graceLoading",
     "stack-empty": "/components/stack-empty/stack-empty",
-    "mht-loader": "/components/mht-loader/mht-loader"
+    "mht-loader": "/components/mht-loader/mht-loader",
+    "cmd-result-page": "/components/cmd-result-page/cmd-result-page"
   }
 }

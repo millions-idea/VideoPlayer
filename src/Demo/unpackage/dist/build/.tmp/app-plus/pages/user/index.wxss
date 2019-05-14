@@ -3588,7 +3588,7 @@ uni-tabbar .uni-tabbar__icon {
   font-family: "PingFangSC-Light";
 }
 .green {
-  color: #0EA295 !important;
+  color: #0ea295 !important;
   margin-right: 15rpx;
 }
 .first-grace-common-mt {
@@ -3608,7 +3608,7 @@ uni-tabbar .uni-tabbar__icon {
   border-radius: 80rpx;
   position: relative;
   top: 8rpx;
-  background-color: #FE3D3D;
+  background-color: #fe3d3d;
 }
 .pop-container {
   height: 400px;

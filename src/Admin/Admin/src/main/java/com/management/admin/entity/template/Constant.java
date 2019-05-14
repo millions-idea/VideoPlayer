@@ -79,8 +79,8 @@ public interface Constant {
      */
     Integer HotUserId = 1;
 
-    String WebUrl = "http://stack-app.natapp1.cc/";//"http://stack-app.natapp1.cc/"
-    String AppUrl = "http://wxpay.natapp1.cc/";//"http://stack-app.natapp1.cc/"
+    String WebUrl = "http://hpay.natapp1.cc/";//"http://stack-app.natapp1.cc/"
+    String AppUrl = "http://hpay.natapp1.cc/";//"http://stack-app.natapp1.cc/"
 
     /**
      * 系统默认头像

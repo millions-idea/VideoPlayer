@@ -1,29 +1,29 @@
-.grace-list .items .title .foot.data-v-703c0413 {
+.grace-list .items .title .foot.data-v-0835bf0f {
   float: none !important;
   margin-left: 100rpx;
   font-size: 13px !important;
   color: #000000;
 }
-.grace-list .items .title.data-v-703c0413 {
+.grace-list .items .title.data-v-0835bf0f {
   margin-left: 0px;
   color: #9a9a9a !important;
   font-size: 14px;
   border-bottom: 1px solid #f3f3f3 !important;
 }
-.black.data-v-703c0413 {
+.black.data-v-0835bf0f {
   color: #000000 !important;
 }
-.gray.data-v-703c0413 {
+.gray.data-v-0835bf0f {
   color: #9a9a9a !important;
 }
-.green.data-v-703c0413 {
+.green.data-v-0835bf0f {
   color: #0ea295 !important;
 }
-.grace-list .items .title .head.data-v-703c0413 {
+.grace-list .items .title .head.data-v-0835bf0f {
   width: 90rpx;
   float: left;
 }
-.icon-qrcode.data-v-703c0413 {
+.icon-qrcode.data-v-0835bf0f {
   font-size: 19px;
   font-style: normal;
   height: 56px;
@@ -36,20 +36,20 @@
   top: 0;
   color: #b2b2b6;
 }
-.avatar-upload.data-v-703c0413 {
+.avatar-upload.data-v-0835bf0f {
   height: 150rpx;
   overflow: hidden;
   line-height: 150rpx;
 }
-.avatar-upload .title.data-v-703c0413 {
+.avatar-upload .title.data-v-0835bf0f {
   height: 80rpx;
   line-height: 80rpx;
   float: right;
 }
-.avatar-upload .foot.data-v-703c0413 {
+.avatar-upload .foot.data-v-0835bf0f {
   margin-left: 90rpx !important;
 }
-.avatar.data-v-703c0413 {
+.avatar.data-v-0835bf0f {
   width: 120rpx;
   height: 120rpx;
   border-radius: 120rpx;

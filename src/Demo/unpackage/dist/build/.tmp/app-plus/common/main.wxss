@@ -961,6 +961,6 @@ uni-tabbar .uni-tabbar__icon {
   font-family: "Roboto";
 }
 page {
-  background-color: #fff;
+  background-color: #f5f5f5;
 }
 

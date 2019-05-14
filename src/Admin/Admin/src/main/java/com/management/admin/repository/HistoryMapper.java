@@ -22,6 +22,6 @@ public interface HistoryMapper extends MyMapper<History> {
             "VALUES(#{productId}, #{productName}, #{amount}, #{image}, #{categoryId}, NOW(), #{userId}, #{showCount})")
     int insertHistory(ProductDetail product);
 
-    @Select("SELECT * FROM tb_historys WHERE user_id = #{userId} AND product_id = #{productId} LIMIT 1")
+    @Select("SELECT * FROM tb_historys WHERE user_id = #{userId} AND product_id = #{productId} ORDER BY add_date DESC LIMIT 1")
     History selectByUserProduct(@Param("userId") Long finalUserId,@Param("productId") Long productId);
 }

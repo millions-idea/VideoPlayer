@@ -1,9 +1,11 @@
 {
+  "navigationBarTitleText": "首页",
   "enablePullDownRefresh": true,
-  "titleNView": false,
+  "titleNView": {
+    "type": "transparent"
+  },
   "usingComponents": {
     "jing-swiper": "/components/jing-swiper/jing-swiper",
-    "grace-loading": "/graceUI/components/graceLoading",
-    "stack-empty": "/components/stack-empty/stack-empty"
+    "grace-loading": "/graceUI/components/graceLoading"
   }
 }

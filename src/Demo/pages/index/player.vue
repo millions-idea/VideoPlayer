@@ -2,20 +2,21 @@
 	<view class="frame">
 		<view class="container">
 			<video
-				v-if="data.videoUrl != null && data.videoUrl.length > 10 && !data.watchOne"
+				v-if="data.videoUrl != null && data.videoUrl.length > 10 && data.buy"
 				id="myVideo"
 				class="player"
-				:poster="poster"
+				:poster="data.image"
 				:src="data.videoUrl"
 				@play="onPlay"
 				@error="videoErrorCallback"
 				enable-danmu
 				controls
 			></video>
-			<image class="poster" v-if="data.videoUrl == null || data.videoUrl.length == 0 || data.watchOne" :src="data.image"></image>
+			<image class="poster" v-else :src="data.image"></image>
 		</view>
 
 		<view class="group">
+			<view class="blank-line-10"></view>
 			<view class="blank-line-20"></view>
 			<view class="item-line title">
 				<text>{{getTitle}}</text>
@@ -50,7 +51,9 @@
 				</view>
 			</view>
 
-			<view class="download"><image src="../../static/user/play_bg_3.png"></image></view>
+			<view class="download" @click="downloadApp()" >
+				<text class="download-title">下载亚博APP，体验即可免费观看</text> 
+			</view>
 			<view class="blank-line-20"></view>
 		</view>
 
@@ -135,8 +138,10 @@ export default {
 	computed: {
 		...mapState(['hasLogin', 'profile']),
 		getTitle(){ 
-			if(this.title.length > 15){
+			if(this.title != null  &&  this.title.length > 15){
 				return this.title.substr(0, 14) + "...";
+			}else{
+				return "正在查询中";
 			}
 			return this.title;
 		}
@@ -152,7 +157,6 @@ export default {
 					icon: 'none'
 				});
 			}
-
 			// 确认播放
 			this.$api
 				.get('api/product/player', {
@@ -195,7 +199,7 @@ export default {
 				.then(res => {
 					uni.hideLoading();
 					if (this.common.Response.isFaild(res.data)) {
-						uni.showToast({
+						/* uni.showToast({
 							title: '查询失败',
 							icon: 'none'
 						});
@@ -204,7 +208,7 @@ export default {
 							uni.navigateBack({
 								delta: 1
 							});
-						}, 2000);
+						}, 2000); */
 					} else if (this.common.Response.isException(res.data)) {
 						uni.showToast({
 							title: res.data.msg,
@@ -282,6 +286,11 @@ export default {
 				title: item.productName,
 				poster: item.image
 			});
+		},
+		downloadApp(){
+			this.common.window.toNew('generics-webview/generics-webview', {
+				url: this.profile.yaboAppUrl
+			});
 		}
 	}
 };
@@ -296,6 +305,7 @@ page{
 }
 
 .container {
+	width: 100%;
 	display: flex;
 	min-height: 500upx;
 	background-color: #000;
@@ -382,23 +392,33 @@ page{
 	color: #ffe1c4 !important;
 }
 
+
+.download .download-title{
+	position: relative;
+	display: block;
+	z-index: 10;
+	color: #fffc9c;
+	font-size: 19px;
+	font-weight: bold;
+	font-family: @common-font-zh-bold;
+	top: 18px;
+    width: 100%;
+	text-align: center;
+}
+
+
 .shopping-right-item {
 	margin-right: 40upx;
 }
 
 .download {
+	display: block;
 	background-color: #ff000;
-	display: flex;
 	width: 95%;
-	min-height: 100px;
+	min-height: 60px;
 	margin: 0 auto;
-	justify-content: space-between;
-}
-
-.download image {
-	width: 100%;
-	height: 100px;
-	overflow: hidden;
+	background-image: url(../../static/user/download_button.png);
+	border-radius: 5px;
 }
 
 .desc {

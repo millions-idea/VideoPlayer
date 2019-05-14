@@ -62,9 +62,6 @@
 
 
 
-
-
-
 var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;} //
 //
 //
@@ -115,12 +112,8 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
 //
 //
 //
-//
-//
-//
-var page = 0,_self;var jingSwiper = function jingSwiper() {return __webpack_require__.e(/*! import() | components/jing-swiper/jing-swiper */ "components/jing-swiper/jing-swiper").then(__webpack_require__.bind(null, /*! @/components/jing-swiper/jing-swiper.vue */ "F:\\repository\\VideoPlayer\\src\\Demo\\components\\jing-swiper\\jing-swiper.vue"));};var graceLoading = function graceLoading() {return __webpack_require__.e(/*! import() | graceUI/components/graceLoading */ "graceUI/components/graceLoading").then(__webpack_require__.bind(null, /*! @/graceUI/components/graceLoading.vue */ "F:\\repository\\VideoPlayer\\src\\Demo\\graceUI\\components\\graceLoading.vue"));};var stackEmpty = function stackEmpty() {return __webpack_require__.e(/*! import() | components/stack-empty/stack-empty */ "components/stack-empty/stack-empty").then(__webpack_require__.bind(null, /*! @/components/stack-empty/stack-empty.vue */ "F:\\repository\\VideoPlayer\\src\\Demo\\components\\stack-empty\\stack-empty.vue"));};var _default = { components: { jingSwiper: jingSwiper, graceLoading: graceLoading, stackEmpty: stackEmpty }, data: function data() {return { loading: false, loadingType: 0, isEnd: false, dataList: [], cid: 0, maxPage: 1000, empty: true, imgList: [{ img: 'https://stack-1251694474.cos.ap-guangzhou.myqcloud.com/aishi/banner1.png', desc: '' }, { img: 'https://stack-1251694474.cos.ap-guangzhou.myqcloud.com/aishi/banner2.png', desc: '' }, { img: 'https://stack-1251694474.cos.ap-guangzhou.myqcloud.com/aishi/banner3.png', desc: '' }] };}, onLoad: function onLoad() {_self = this;page = 0;if (_self.session.getValue("token") != null && _self.session.getValue("token").length > 5) {_self.session.setValue('token', res.data.msg);_self.login();}}, onShow: function onShow() {uni.startPullDownRefresh();}, computed: _objectSpread({}, (0, _vuex.mapState)(['hasLogin', 'profile'])), onPullDownRefresh: function onPullDownRefresh() {
-    //监听下拉刷新动作
-    console.log('onPullDownRefresh', " at pages\\index\\index.vue:113");
+var page = 0,_self;var jingSwiper = function jingSwiper() {return __webpack_require__.e(/*! import() | components/jing-swiper/jing-swiper */ "components/jing-swiper/jing-swiper").then(__webpack_require__.bind(null, /*! @/components/jing-swiper/jing-swiper.vue */ "F:\\repository\\VideoPlayer\\src\\Demo\\components\\jing-swiper\\jing-swiper.vue"));};var graceLoading = function graceLoading() {return __webpack_require__.e(/*! import() | graceUI/components/graceLoading */ "graceUI/components/graceLoading").then(__webpack_require__.bind(null, /*! @/graceUI/components/graceLoading.vue */ "F:\\repository\\VideoPlayer\\src\\Demo\\graceUI\\components\\graceLoading.vue"));};var _default = { components: { jingSwiper: jingSwiper, graceLoading: graceLoading }, data: function data() {return { loading: false, loadingType: 0, isEnd: false, dataList: [], cid: 0, maxPage: 1000, empty: true, imgList: [{ img: 'https://stack-1251694474.cos.ap-guangzhou.myqcloud.com/aishi/banner1.png', desc: '' }, { img: 'https://stack-1251694474.cos.ap-guangzhou.myqcloud.com/aishi/banner2.png', desc: '' }, { img: 'https://stack-1251694474.cos.ap-guangzhou.myqcloud.com/aishi/banner3.png', desc: '' }] };}, onLoad: function onLoad() {_self = this;page = 0;if (_self.session.getValue("token") != null && _self.session.getValue("token").length > 5) {_self.session.setValue('token', _self.session.getValue("token"));_self.login();}uni.startPullDownRefresh();}, onShow: function onShow() {}, computed: _objectSpread({}, (0, _vuex.mapState)(['hasLogin', 'profile'])), onPullDownRefresh: function onPullDownRefresh() {//监听下拉刷新动作
+    console.log('onPullDownRefresh', " at pages\\index\\index.vue:106");
     // 这里获取数据
     this.getBanner();
     this.getProfile();
@@ -193,12 +186,13 @@ var page = 0,_self;var jingSwiper = function jingSwiper() {return __webpack_requ
         }
       });
     },
+
     getProfile: function getProfile() {
       this.session.clearSession();
       this.session.clearState();
       var session = this.session.getSession();
       if (session == null) {
-        console.log('加载用户信息', " at pages\\index\\index.vue:191");
+        console.log('加载用户信息', " at pages\\index\\index.vue:185");
         var _self2 = this;
         this.$api.
         post('api/user/getProfile', {}).
@@ -223,26 +217,31 @@ var page = 0,_self;var jingSwiper = function jingSwiper() {return __webpack_requ
           return;
         });
       } else {
-        console.log('更新用户信息', " at pages\\index\\index.vue:216");
+        console.log('更新用户信息', " at pages\\index\\index.vue:210");
         _self.setProfile(session);
       }
     },
-    onSwiperClick: function onSwiperClick(item) {
+
+
+    onClick: function onClick(e) {
       //判断是否内部链接还是外部链接
-      if (item.desc.indexOf('http') != -1) {
+      console.log(JSON.stringify(e), " at pages\\index\\index.vue:218");
+      if (e.desc != null && e.desc.indexOf('http') != -1) {
         this.common.window.toNew('generics-webview/generics-webview', {
-          url: item.desc });
+          url: e.desc });
 
       } else {
         if (this.hasLogin) {
           this.common.window.toNew('index/player', {
-            videoId: item.desc });
+            videoId: e.desc });
 
         } else {
           this.common.window.toNew('user/bootstrap/login', null);
         }
       }
     },
+
+
     onPlay: function onPlay(item) {
       if (this.hasLogin) {
         this.common.window.toNew('index/player', {

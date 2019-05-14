@@ -11,9 +11,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.aliyuncs.utils.HttpsUtils;
 import com.management.admin.entity.param.BizBody;
 import com.management.admin.entity.template.Constant;
-import com.management.admin.utils.AmountUtil;
-import com.management.admin.utils.MD5Util;
-import com.management.admin.utils.StringUtil;
+import com.management.admin.utils.*;
 import com.management.admin.utils.wxOpen.WxApiUtil;
 import com.management.admin.utils.wxOpen.WxSignUtil;
 import com.utility.http.HttpUtil;
@@ -41,7 +39,7 @@ public class HuPayUtil {
             sortParams.put("total_fee", amount + "");
             sortParams.put("title", title);
             sortParams.put("time", new Date().getTime()/1000+"");
-            sortParams.put("notify_url", Constant.WebUrl +"api/order/notify?body=" + ext);//URLEncoder.encode(Constant.WebUrl +"api/order/notify?body=" + ext, "UTF-8")
+            sortParams.put("notify_url", Constant.WebUrl +"api/order/notify?body=" + Base64Util.encode(ext.getBytes()));//URLEncoder.encode(Constant.WebUrl +"api/order/notify?body=" + ext, "UTF-8")
             sortParams.put("return_url", Constant.AppUrl +"#/");
             sortParams.put("nonce_str", MD5Util.md5(UUID.randomUUID().toString()));
             sortParams.put("modal", "full");
