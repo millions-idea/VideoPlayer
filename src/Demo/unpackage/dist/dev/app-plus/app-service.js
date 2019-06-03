@@ -966,7 +966,7 @@ __WXML_GLOBAL__.debuginfo_set.$gwx=debugInfo;
 }
 var nv_require=function(){var nnm={};var nom={};return function(n){return function(){if(!nnm[n]) return undefined;try{if(!nom[n])nom[n]=nnm[n]();return nom[n];}catch(e){e.message=e.message.replace(/nv_/g,'');var tmp = e.stack.substring(0,e.stack.lastIndexOf(n));e.stack = tmp.substring(0,tmp.lastIndexOf('\n'));e.stack = e.stack.replace(/\snv_/g,' ');e.stack = $gstack(e.stack);e.stack += '\n    at ' + n.substring(2);throw e;}
 }}}()
-var x=['./components/cmd-result-page/cmd-result-page.wxml','./components/jing-swiper/jing-swiper.wxml','./components/lazy-image-user.wxml','./components/mehaotian-search/mehaotian-search.wxml','./components/mht-loader/mht-loader.wxml','./components/stack-empty/stack-empty.wxml','./components/uni-grid/uni-grid.user.wxml','./components/uni-icon/uni-icon.wxml','./components/uni-nav-bar/uni-nav-bar.wxml','./components/uni-notice-bar/uni-notice-bar.wxml','./components/uni-status-bar/uni-status-bar.wxml','./graceUI/components/graceLoading.wxml','./graceUI/components/graceSafeyNumberKeyboard.wxml','./pages/generics-form/generics-form.wxml','./pages/generics-sms/generics-sms.wxml','./pages/generics-webview/generics-webview.wxml','./pages/index/category.wxml','./pages/index/detail.wxml','./pages/index/index.wxml','./pages/index/player.wxml','./pages/payment/payment.wxml','./pages/user/bill.wxml','./pages/user/bootstrap/bind.wxml','./pages/user/bootstrap/find.wxml','./pages/user/bootstrap/login.wxml','./pages/user/bootstrap/register.wxml','./pages/user/collect.wxml','./pages/user/finance.wxml','./pages/user/history.wxml','./pages/user/index.wxml','./pages/user/order.wxml','./pages/user/payment.wxml','./pages/user/profile.wxml','./pages/user/recharge.wxml','./pages/user/shopping.wxml','./pages/user/team.wxml','./pages/user/withdraw.wxml'];d_[x[0]]={}
+var x=['./components/cmd-result-page/cmd-result-page.wxml','./components/jing-swiper/jing-swiper.wxml','./components/lazy-image-user.wxml','./components/mehaotian-search/mehaotian-search.wxml','./components/mht-loader/mht-loader.wxml','./components/stack-empty/stack-empty.wxml','./components/uni-grid/uni-grid.user.wxml','./components/uni-icon/uni-icon.wxml','./components/uni-nav-bar/uni-nav-bar.wxml','./components/uni-notice-bar/uni-notice-bar.wxml','./components/uni-status-bar/uni-status-bar.wxml','./graceUI/components/graceLoading.wxml','./graceUI/components/graceSafeyNumberKeyboard.wxml','./pages/generics-form/generics-form.wxml','./pages/generics-sms/generics-sms.wxml','./pages/generics-webview/generics-webview.wxml','./pages/index/category.wxml','./pages/index/detail.wxml','./pages/index/index.wxml','./pages/index/player.wxml','./pages/payment/hpay.wxml','./pages/payment/payment.wxml','./pages/user/bill.wxml','./pages/user/bootstrap/bind.wxml','./pages/user/bootstrap/find.wxml','./pages/user/bootstrap/login.wxml','./pages/user/bootstrap/register.wxml','./pages/user/collect.wxml','./pages/user/finance.wxml','./pages/user/history.wxml','./pages/user/index.wxml','./pages/user/order.wxml','./pages/user/payment.wxml','./pages/user/profile.wxml','./pages/user/recharge.wxml','./pages/user/shopping.wxml','./pages/user/team.wxml','./pages/user/withdraw.wxml'];d_[x[0]]={}
 var m0=function(e,s,r,gg){
 return r
 }
@@ -1292,104 +1292,104 @@ return r
 e_[x[20]]={f:m20,j:[],i:[],ti:[],ic:[]}
 d_[x[21]]={}
 var m21=function(e,s,r,gg){
-cs.push("./pages/user/bill.wxml:view:1:1")
-var h1B=_m('view',['bind:__l',81,'class',1],[],e,s,gg)
-cs.push("./pages/user/bill.wxml:uni-nav-bar:1:184")
-var c3B=_m('uni-nav-bar',['bind:clickLeft',83,'class',1,'color',2,'data-event-opts',3,'leftIcon',4],[],e,s,gg)
-cs.pop()
-_(h1B,c3B)
-var o2B=_v()
-_(h1B,o2B)
-if(_o(88,e,s,gg)){o2B.wxVkey=1
-cs.push("./pages/user/bill.wxml:block:1:348")
-cs.push("./pages/user/bill.wxml:swiper:1:783")
-var o4B=_m('swiper',['bindchange',89,'class',1,'current',2,'data-event-opts',3,'style',4],[],e,s,gg)
-var l5B=_v()
-_(o4B,l5B)
-cs.push("./pages/user/bill.wxml:block:1:995")
-var a6B=function(e8B,t7B,b9B,gg){
-cs.push("./pages/user/bill.wxml:swiper-item:1:1087")
-var xAC=_n('swiper-item')
-_r(xAC,'class',98,e8B,t7B,gg)
-var oBC=_v()
-_(xAC,oBC)
-if(_o(99,e8B,t7B,gg)){oBC.wxVkey=1
-cs.push("./pages/user/bill.wxml:block:1:1124")
-cs.push("./pages/user/bill.wxml:stack-empty:1:1162")
-var fCC=_m('stack-empty',['class',100,'height',1,'label',2],[],e8B,t7B,gg)
-cs.pop()
-_(oBC,fCC)
-cs.pop()
-}
-else{oBC.wxVkey=2
-cs.push("./pages/user/bill.wxml:block:1:1255")
-var cDC=_v()
-_(oBC,cDC)
-if(_o(103,e8B,t7B,gg)){cDC.wxVkey=1
-cs.push("./pages/user/bill.wxml:block:1:1270")
-cs.push("./pages/user/bill.wxml:stack-empty:1:1331")
-var hEC=_m('stack-empty',['class',104,'height',1,'label',2],[],e8B,t7B,gg)
-cs.pop()
-_(cDC,hEC)
-cs.pop()
-}
-else{cDC.wxVkey=2
-cs.push("./pages/user/bill.wxml:block:1:1430")
-var oFC=_v()
-_(cDC,oFC)
-if(_o(107,e8B,t7B,gg)){oFC.wxVkey=1
-cs.push("./pages/user/bill.wxml:block:1:1445")
-cs.push("./pages/user/bill.wxml:stack-empty:1:1506")
-var cGC=_m('stack-empty',['class',108,'height',1,'label',2],[],e8B,t7B,gg)
-cs.pop()
-_(oFC,cGC)
-cs.pop()
-}
-else{oFC.wxVkey=2
-cs.push("./pages/user/bill.wxml:block:1:1605")
-cs.push("./pages/user/bill.wxml:scroll-view:1:1620")
-var oHC=_m('scroll-view',['bindscrolltolower',111,'class',1,'data-event-opts',2,'data-scindex',3,'scrollY',4],[],e8B,t7B,gg)
-cs.push("./pages/user/bill.wxml:grace-loading:1:2726")
-var lIC=_m('grace-loading',['class',116,'loadingType',1],[],e8B,t7B,gg)
-cs.pop()
-_(oHC,lIC)
-cs.pop()
-_(oFC,oHC)
-cs.pop()
-}
-oFC.wxXCkey=1
-oFC.wxXCkey=3
-oFC.wxXCkey=3
-cs.pop()
-}
-cDC.wxXCkey=1
-cDC.wxXCkey=3
-cDC.wxXCkey=3
-cs.pop()
-}
-oBC.wxXCkey=1
-oBC.wxXCkey=3
-oBC.wxXCkey=3
-cs.pop()
-_(b9B,xAC)
-return b9B
-}
-l5B.wxXCkey=4
-_2(96,a6B,e,s,gg,l5B,'list','listIndex','listIndex')
-cs.pop()
-cs.pop()
-_(o2B,o4B)
-cs.pop()
-}
-o2B.wxXCkey=1
-o2B.wxXCkey=3
-cs.pop()
-_(r,h1B)
 return r
 }
 e_[x[21]]={f:m21,j:[],i:[],ti:[],ic:[]}
 d_[x[22]]={}
 var m22=function(e,s,r,gg){
+cs.push("./pages/user/bill.wxml:view:1:1")
+var o2B=_m('view',['bind:__l',81,'class',1],[],e,s,gg)
+cs.push("./pages/user/bill.wxml:uni-nav-bar:1:184")
+var o4B=_m('uni-nav-bar',['bind:clickLeft',83,'class',1,'color',2,'data-event-opts',3,'leftIcon',4],[],e,s,gg)
+cs.pop()
+_(o2B,o4B)
+var c3B=_v()
+_(o2B,c3B)
+if(_o(88,e,s,gg)){c3B.wxVkey=1
+cs.push("./pages/user/bill.wxml:block:1:348")
+cs.push("./pages/user/bill.wxml:swiper:1:783")
+var l5B=_m('swiper',['bindchange',89,'class',1,'current',2,'data-event-opts',3,'style',4],[],e,s,gg)
+var a6B=_v()
+_(l5B,a6B)
+cs.push("./pages/user/bill.wxml:block:1:995")
+var t7B=function(b9B,e8B,o0B,gg){
+cs.push("./pages/user/bill.wxml:swiper-item:1:1087")
+var oBC=_n('swiper-item')
+_r(oBC,'class',98,b9B,e8B,gg)
+var fCC=_v()
+_(oBC,fCC)
+if(_o(99,b9B,e8B,gg)){fCC.wxVkey=1
+cs.push("./pages/user/bill.wxml:block:1:1124")
+cs.push("./pages/user/bill.wxml:stack-empty:1:1162")
+var cDC=_m('stack-empty',['class',100,'height',1,'label',2],[],b9B,e8B,gg)
+cs.pop()
+_(fCC,cDC)
+cs.pop()
+}
+else{fCC.wxVkey=2
+cs.push("./pages/user/bill.wxml:block:1:1255")
+var hEC=_v()
+_(fCC,hEC)
+if(_o(103,b9B,e8B,gg)){hEC.wxVkey=1
+cs.push("./pages/user/bill.wxml:block:1:1270")
+cs.push("./pages/user/bill.wxml:stack-empty:1:1331")
+var oFC=_m('stack-empty',['class',104,'height',1,'label',2],[],b9B,e8B,gg)
+cs.pop()
+_(hEC,oFC)
+cs.pop()
+}
+else{hEC.wxVkey=2
+cs.push("./pages/user/bill.wxml:block:1:1430")
+var cGC=_v()
+_(hEC,cGC)
+if(_o(107,b9B,e8B,gg)){cGC.wxVkey=1
+cs.push("./pages/user/bill.wxml:block:1:1445")
+cs.push("./pages/user/bill.wxml:stack-empty:1:1506")
+var oHC=_m('stack-empty',['class',108,'height',1,'label',2],[],b9B,e8B,gg)
+cs.pop()
+_(cGC,oHC)
+cs.pop()
+}
+else{cGC.wxVkey=2
+cs.push("./pages/user/bill.wxml:block:1:1605")
+cs.push("./pages/user/bill.wxml:scroll-view:1:1620")
+var lIC=_m('scroll-view',['bindscrolltolower',111,'class',1,'data-event-opts',2,'data-scindex',3,'scrollY',4],[],b9B,e8B,gg)
+cs.push("./pages/user/bill.wxml:grace-loading:1:2726")
+var aJC=_m('grace-loading',['class',116,'loadingType',1],[],b9B,e8B,gg)
+cs.pop()
+_(lIC,aJC)
+cs.pop()
+_(cGC,lIC)
+cs.pop()
+}
+cGC.wxXCkey=1
+cGC.wxXCkey=3
+cGC.wxXCkey=3
+cs.pop()
+}
+hEC.wxXCkey=1
+hEC.wxXCkey=3
+hEC.wxXCkey=3
+cs.pop()
+}
+fCC.wxXCkey=1
+fCC.wxXCkey=3
+fCC.wxXCkey=3
+cs.pop()
+_(o0B,oBC)
+return o0B
+}
+a6B.wxXCkey=4
+_2(96,t7B,e,s,gg,a6B,'list','listIndex','listIndex')
+cs.pop()
+cs.pop()
+_(c3B,l5B)
+cs.pop()
+}
+c3B.wxXCkey=1
+c3B.wxXCkey=3
+cs.pop()
+_(r,o2B)
 return r
 }
 e_[x[22]]={f:m22,j:[],i:[],ti:[],ic:[]}
@@ -1410,258 +1410,258 @@ return r
 e_[x[25]]={f:m25,j:[],i:[],ti:[],ic:[]}
 d_[x[26]]={}
 var m26=function(e,s,r,gg){
-cs.push("./pages/user/collect.wxml:view:1:1")
-var xOC=_m('view',['bind:__l',118,'class',1],[],e,s,gg)
-var oPC=_v()
-_(xOC,oPC)
-if(_o(120,e,s,gg)){oPC.wxVkey=1
-cs.push("./pages/user/collect.wxml:block:1:46")
-cs.push("./pages/user/collect.wxml:mht-loader:1:103")
-var cRC=_m('mht-loader',['class',121,'loadingType',1,'showImage',2],[],e,s,gg)
-cs.pop()
-_(oPC,cRC)
-cs.pop()
-}
-else{oPC.wxVkey=2
-cs.push("./pages/user/collect.wxml:block:1:211")
-var hSC=_v()
-_(oPC,hSC)
-if(_o(124,e,s,gg)){hSC.wxVkey=1
-cs.push("./pages/user/collect.wxml:block:1:1169")
-cs.push("./pages/user/collect.wxml:cmd-result-page:1:1283")
-var oTC=_n('cmd-result-page')
-_r(oTC,'class',125,e,s,gg)
-cs.pop()
-_(hSC,oTC)
-cs.pop()
-}
-hSC.wxXCkey=1
-hSC.wxXCkey=3
-cs.pop()
-}
-var fQC=_v()
-_(xOC,fQC)
-if(_o(126,e,s,gg)){fQC.wxVkey=1
-cs.push("./pages/user/collect.wxml:block:1:1379")
-cs.push("./pages/user/collect.wxml:grace-loading:1:1416")
-var cUC=_m('grace-loading',['class',127,'loadingType',1],[],e,s,gg)
-cs.pop()
-_(fQC,cUC)
-cs.pop()
-}
-oPC.wxXCkey=1
-oPC.wxXCkey=3
-oPC.wxXCkey=3
-fQC.wxXCkey=1
-fQC.wxXCkey=3
-cs.pop()
-_(r,xOC)
 return r
 }
 e_[x[26]]={f:m26,j:[],i:[],ti:[],ic:[]}
 d_[x[27]]={}
 var m27=function(e,s,r,gg){
+cs.push("./pages/user/collect.wxml:view:1:1")
+var oPC=_m('view',['bind:__l',118,'class',1],[],e,s,gg)
+var fQC=_v()
+_(oPC,fQC)
+if(_o(120,e,s,gg)){fQC.wxVkey=1
+cs.push("./pages/user/collect.wxml:block:1:46")
+cs.push("./pages/user/collect.wxml:mht-loader:1:103")
+var hSC=_m('mht-loader',['class',121,'loadingType',1,'showImage',2],[],e,s,gg)
+cs.pop()
+_(fQC,hSC)
+cs.pop()
+}
+else{fQC.wxVkey=2
+cs.push("./pages/user/collect.wxml:block:1:211")
+var oTC=_v()
+_(fQC,oTC)
+if(_o(124,e,s,gg)){oTC.wxVkey=1
+cs.push("./pages/user/collect.wxml:block:1:1169")
+cs.push("./pages/user/collect.wxml:cmd-result-page:1:1283")
+var cUC=_n('cmd-result-page')
+_r(cUC,'class',125,e,s,gg)
+cs.pop()
+_(oTC,cUC)
+cs.pop()
+}
+oTC.wxXCkey=1
+oTC.wxXCkey=3
+cs.pop()
+}
+var cRC=_v()
+_(oPC,cRC)
+if(_o(126,e,s,gg)){cRC.wxVkey=1
+cs.push("./pages/user/collect.wxml:block:1:1379")
+cs.push("./pages/user/collect.wxml:grace-loading:1:1416")
+var oVC=_m('grace-loading',['class',127,'loadingType',1],[],e,s,gg)
+cs.pop()
+_(cRC,oVC)
+cs.pop()
+}
+fQC.wxXCkey=1
+fQC.wxXCkey=3
+fQC.wxXCkey=3
+cRC.wxXCkey=1
+cRC.wxXCkey=3
+cs.pop()
+_(r,oPC)
 return r
 }
 e_[x[27]]={f:m27,j:[],i:[],ti:[],ic:[]}
 d_[x[28]]={}
 var m28=function(e,s,r,gg){
-cs.push("./pages/user/history.wxml:view:1:1")
-var aXC=_m('view',['bind:__l',129,'class',1],[],e,s,gg)
-var tYC=_v()
-_(aXC,tYC)
-if(_o(131,e,s,gg)){tYC.wxVkey=1
-cs.push("./pages/user/history.wxml:block:1:46")
-cs.push("./pages/user/history.wxml:mht-loader:1:103")
-var b1C=_m('mht-loader',['class',132,'loadingType',1,'showImage',2],[],e,s,gg)
-cs.pop()
-_(tYC,b1C)
-cs.pop()
-}
-else{tYC.wxVkey=2
-cs.push("./pages/user/history.wxml:block:1:211")
-var o2C=_v()
-_(tYC,o2C)
-if(_o(135,e,s,gg)){o2C.wxVkey=1
-cs.push("./pages/user/history.wxml:block:1:1169")
-cs.push("./pages/user/history.wxml:cmd-result-page:1:1283")
-var x3C=_n('cmd-result-page')
-_r(x3C,'class',136,e,s,gg)
-cs.pop()
-_(o2C,x3C)
-cs.pop()
-}
-o2C.wxXCkey=1
-o2C.wxXCkey=3
-cs.pop()
-}
-var eZC=_v()
-_(aXC,eZC)
-if(_o(137,e,s,gg)){eZC.wxVkey=1
-cs.push("./pages/user/history.wxml:block:1:1379")
-cs.push("./pages/user/history.wxml:grace-loading:1:1416")
-var o4C=_m('grace-loading',['class',138,'loadingType',1],[],e,s,gg)
-cs.pop()
-_(eZC,o4C)
-cs.pop()
-}
-tYC.wxXCkey=1
-tYC.wxXCkey=3
-tYC.wxXCkey=3
-eZC.wxXCkey=1
-eZC.wxXCkey=3
-cs.pop()
-_(r,aXC)
 return r
 }
 e_[x[28]]={f:m28,j:[],i:[],ti:[],ic:[]}
 d_[x[29]]={}
 var m29=function(e,s,r,gg){
-cs.push("./pages/user/index.wxml:view:1:1")
-var c6C=_n('view')
-_r(c6C,'bind:__l',140,e,s,gg)
-cs.push("./pages/user/index.wxml:view:1:199")
-var h7C=_m('view',['bindtap',141,'class',1,'data-event-opts',2],[],e,s,gg)
-cs.push("./pages/user/index.wxml:lazy-image:1:333")
-var o8C=_m('lazy-image',['class',144,'placeholdSrc',1,'realSrc',2],[],e,s,gg)
+cs.push("./pages/user/history.wxml:view:1:1")
+var tYC=_m('view',['bind:__l',129,'class',1],[],e,s,gg)
+var eZC=_v()
+_(tYC,eZC)
+if(_o(131,e,s,gg)){eZC.wxVkey=1
+cs.push("./pages/user/history.wxml:block:1:46")
+cs.push("./pages/user/history.wxml:mht-loader:1:103")
+var o2C=_m('mht-loader',['class',132,'loadingType',1,'showImage',2],[],e,s,gg)
 cs.pop()
-_(h7C,o8C)
+_(eZC,o2C)
 cs.pop()
-_(c6C,h7C)
-cs.push("./pages/user/index.wxml:uni-grid:1:2013")
-var c9C=_m('uni-grid',['bind:click',147,'columnNum',1,'data',2,'data-event-opts',3,'showBorder',4],[],e,s,gg)
+}
+else{eZC.wxVkey=2
+cs.push("./pages/user/history.wxml:block:1:211")
+var x3C=_v()
+_(eZC,x3C)
+if(_o(135,e,s,gg)){x3C.wxVkey=1
+cs.push("./pages/user/history.wxml:block:1:1169")
+cs.push("./pages/user/history.wxml:cmd-result-page:1:1283")
+var o4C=_n('cmd-result-page')
+_r(o4C,'class',136,e,s,gg)
 cs.pop()
-_(c6C,c9C)
+_(x3C,o4C)
 cs.pop()
-_(r,c6C)
+}
+x3C.wxXCkey=1
+x3C.wxXCkey=3
+cs.pop()
+}
+var b1C=_v()
+_(tYC,b1C)
+if(_o(137,e,s,gg)){b1C.wxVkey=1
+cs.push("./pages/user/history.wxml:block:1:1379")
+cs.push("./pages/user/history.wxml:grace-loading:1:1416")
+var f5C=_m('grace-loading',['class',138,'loadingType',1],[],e,s,gg)
+cs.pop()
+_(b1C,f5C)
+cs.pop()
+}
+eZC.wxXCkey=1
+eZC.wxXCkey=3
+eZC.wxXCkey=3
+b1C.wxXCkey=1
+b1C.wxXCkey=3
+cs.pop()
+_(r,tYC)
 return r
 }
 e_[x[29]]={f:m29,j:[],i:[],ti:[],ic:[]}
 d_[x[30]]={}
 var m30=function(e,s,r,gg){
-cs.push("./pages/user/order.wxml:view:1:1")
-var lAD=_m('view',['bind:__l',152,'class',1],[],e,s,gg)
-cs.push("./pages/user/order.wxml:uni-nav-bar:1:184")
-var tCD=_m('uni-nav-bar',['bind:clickLeft',154,'class',1,'color',2,'data-event-opts',3,'leftIcon',4],[],e,s,gg)
+cs.push("./pages/user/index.wxml:view:1:1")
+var h7C=_n('view')
+_r(h7C,'bind:__l',140,e,s,gg)
+cs.push("./pages/user/index.wxml:view:1:199")
+var o8C=_m('view',['bindtap',141,'class',1,'data-event-opts',2],[],e,s,gg)
+cs.push("./pages/user/index.wxml:lazy-image:1:333")
+var c9C=_m('lazy-image',['class',144,'placeholdSrc',1,'realSrc',2],[],e,s,gg)
 cs.pop()
-_(lAD,tCD)
-var aBD=_v()
-_(lAD,aBD)
-if(_o(159,e,s,gg)){aBD.wxVkey=1
-cs.push("./pages/user/order.wxml:block:1:348")
-cs.push("./pages/user/order.wxml:swiper:1:783")
-var eDD=_m('swiper',['bindchange',160,'class',1,'current',2,'data-event-opts',3,'style',4],[],e,s,gg)
-var bED=_v()
-_(eDD,bED)
-cs.push("./pages/user/order.wxml:block:1:995")
-var oFD=function(oHD,xGD,fID,gg){
-cs.push("./pages/user/order.wxml:swiper-item:1:1087")
-var hKD=_n('swiper-item')
-_r(hKD,'class',169,oHD,xGD,gg)
-var oLD=_v()
-_(hKD,oLD)
-if(_o(170,oHD,xGD,gg)){oLD.wxVkey=1
-cs.push("./pages/user/order.wxml:block:1:1124")
-cs.push("./pages/user/order.wxml:stack-empty:1:1185")
-var cMD=_m('stack-empty',['class',171,'height',1,'label',2],[],oHD,xGD,gg)
+_(o8C,c9C)
 cs.pop()
-_(oLD,cMD)
+_(h7C,o8C)
+cs.push("./pages/user/index.wxml:uni-grid:1:2013")
+var o0C=_m('uni-grid',['bind:click',147,'columnNum',1,'data',2,'data-event-opts',3,'showBorder',4],[],e,s,gg)
 cs.pop()
-}
-else{oLD.wxVkey=2
-cs.push("./pages/user/order.wxml:block:1:1278")
-var oND=_v()
-_(oLD,oND)
-if(_o(174,oHD,xGD,gg)){oND.wxVkey=1
-cs.push("./pages/user/order.wxml:block:1:1293")
-cs.push("./pages/user/order.wxml:stack-empty:1:1354")
-var lOD=_m('stack-empty',['class',175,'height',1,'label',2],[],oHD,xGD,gg)
+_(h7C,o0C)
 cs.pop()
-_(oND,lOD)
-cs.pop()
-}
-else{oND.wxVkey=2
-cs.push("./pages/user/order.wxml:block:1:1459")
-var aPD=_v()
-_(oND,aPD)
-if(_o(178,oHD,xGD,gg)){aPD.wxVkey=1
-cs.push("./pages/user/order.wxml:block:1:1474")
-cs.push("./pages/user/order.wxml:stack-empty:1:1535")
-var tQD=_m('stack-empty',['class',179,'height',1,'label',2],[],oHD,xGD,gg)
-cs.pop()
-_(aPD,tQD)
-cs.pop()
-}
-else{aPD.wxVkey=2
-cs.push("./pages/user/order.wxml:block:1:1640")
-cs.push("./pages/user/order.wxml:scroll-view:1:1655")
-var eRD=_m('scroll-view',['bindscrolltolower',182,'class',1,'data-event-opts',2,'data-scindex',3,'scrollY',4],[],oHD,xGD,gg)
-cs.push("./pages/user/order.wxml:grace-loading:1:3520")
-var bSD=_m('grace-loading',['class',187,'loadingType',1],[],oHD,xGD,gg)
-cs.pop()
-_(eRD,bSD)
-cs.pop()
-_(aPD,eRD)
-cs.pop()
-}
-aPD.wxXCkey=1
-aPD.wxXCkey=3
-aPD.wxXCkey=3
-cs.pop()
-}
-oND.wxXCkey=1
-oND.wxXCkey=3
-oND.wxXCkey=3
-cs.pop()
-}
-oLD.wxXCkey=1
-oLD.wxXCkey=3
-oLD.wxXCkey=3
-cs.pop()
-_(fID,hKD)
-return fID
-}
-bED.wxXCkey=4
-_2(167,oFD,e,s,gg,bED,'list','listIndex','listIndex')
-cs.pop()
-cs.pop()
-_(aBD,eDD)
-cs.pop()
-}
-aBD.wxXCkey=1
-aBD.wxXCkey=3
-cs.pop()
-_(r,lAD)
+_(r,h7C)
 return r
 }
 e_[x[30]]={f:m30,j:[],i:[],ti:[],ic:[]}
 d_[x[31]]={}
 var m31=function(e,s,r,gg){
-cs.push("./pages/user/payment.wxml:view:1:1")
-var xUD=_m('view',['bind:__l',189,'class',1],[],e,s,gg)
-var oVD=_v()
-_(xUD,oVD)
-if(_o(191,e,s,gg)){oVD.wxVkey=1
-cs.push("./pages/user/payment.wxml:block:1:83")
-cs.push("./pages/user/payment.wxml:uni-notice-bar:1:129")
-var fWD=_m('uni-notice-bar',['class',192,'showIcon',1,'single',2,'text',3],[],e,s,gg)
+cs.push("./pages/user/order.wxml:view:1:1")
+var aBD=_m('view',['bind:__l',152,'class',1],[],e,s,gg)
+cs.push("./pages/user/order.wxml:uni-nav-bar:1:184")
+var eDD=_m('uni-nav-bar',['bind:clickLeft',154,'class',1,'color',2,'data-event-opts',3,'leftIcon',4],[],e,s,gg)
 cs.pop()
-_(oVD,fWD)
+_(aBD,eDD)
+var tCD=_v()
+_(aBD,tCD)
+if(_o(159,e,s,gg)){tCD.wxVkey=1
+cs.push("./pages/user/order.wxml:block:1:348")
+cs.push("./pages/user/order.wxml:swiper:1:783")
+var bED=_m('swiper',['bindchange',160,'class',1,'current',2,'data-event-opts',3,'style',4],[],e,s,gg)
+var oFD=_v()
+_(bED,oFD)
+cs.push("./pages/user/order.wxml:block:1:995")
+var xGD=function(fID,oHD,cJD,gg){
+cs.push("./pages/user/order.wxml:swiper-item:1:1087")
+var oLD=_n('swiper-item')
+_r(oLD,'class',169,fID,oHD,gg)
+var cMD=_v()
+_(oLD,cMD)
+if(_o(170,fID,oHD,gg)){cMD.wxVkey=1
+cs.push("./pages/user/order.wxml:block:1:1124")
+cs.push("./pages/user/order.wxml:stack-empty:1:1185")
+var oND=_m('stack-empty',['class',171,'height',1,'label',2],[],fID,oHD,gg)
+cs.pop()
+_(cMD,oND)
 cs.pop()
 }
-cs.push("./pages/user/payment.wxml:grace-safey-number-keyboard:1:3741")
-var cXD=_m('grace-safey-number-keyboard',['bind:keyboardDelete',196,'bind:keyboardDone',1,'bind:keyboardInput',2,'class',3,'data-event-opts',4,'show',5],[],e,s,gg)
+else{cMD.wxVkey=2
+cs.push("./pages/user/order.wxml:block:1:1278")
+var lOD=_v()
+_(cMD,lOD)
+if(_o(174,fID,oHD,gg)){lOD.wxVkey=1
+cs.push("./pages/user/order.wxml:block:1:1293")
+cs.push("./pages/user/order.wxml:stack-empty:1:1354")
+var aPD=_m('stack-empty',['class',175,'height',1,'label',2],[],fID,oHD,gg)
 cs.pop()
-_(xUD,cXD)
-oVD.wxXCkey=1
-oVD.wxXCkey=3
+_(lOD,aPD)
 cs.pop()
-_(r,xUD)
+}
+else{lOD.wxVkey=2
+cs.push("./pages/user/order.wxml:block:1:1459")
+var tQD=_v()
+_(lOD,tQD)
+if(_o(178,fID,oHD,gg)){tQD.wxVkey=1
+cs.push("./pages/user/order.wxml:block:1:1474")
+cs.push("./pages/user/order.wxml:stack-empty:1:1535")
+var eRD=_m('stack-empty',['class',179,'height',1,'label',2],[],fID,oHD,gg)
+cs.pop()
+_(tQD,eRD)
+cs.pop()
+}
+else{tQD.wxVkey=2
+cs.push("./pages/user/order.wxml:block:1:1640")
+cs.push("./pages/user/order.wxml:scroll-view:1:1655")
+var bSD=_m('scroll-view',['bindscrolltolower',182,'class',1,'data-event-opts',2,'data-scindex',3,'scrollY',4],[],fID,oHD,gg)
+cs.push("./pages/user/order.wxml:grace-loading:1:3520")
+var oTD=_m('grace-loading',['class',187,'loadingType',1],[],fID,oHD,gg)
+cs.pop()
+_(bSD,oTD)
+cs.pop()
+_(tQD,bSD)
+cs.pop()
+}
+tQD.wxXCkey=1
+tQD.wxXCkey=3
+tQD.wxXCkey=3
+cs.pop()
+}
+lOD.wxXCkey=1
+lOD.wxXCkey=3
+lOD.wxXCkey=3
+cs.pop()
+}
+cMD.wxXCkey=1
+cMD.wxXCkey=3
+cMD.wxXCkey=3
+cs.pop()
+_(cJD,oLD)
+return cJD
+}
+oFD.wxXCkey=4
+_2(167,xGD,e,s,gg,oFD,'list','listIndex','listIndex')
+cs.pop()
+cs.pop()
+_(tCD,bED)
+cs.pop()
+}
+tCD.wxXCkey=1
+tCD.wxXCkey=3
+cs.pop()
+_(r,aBD)
 return r
 }
 e_[x[31]]={f:m31,j:[],i:[],ti:[],ic:[]}
 d_[x[32]]={}
 var m32=function(e,s,r,gg){
+cs.push("./pages/user/payment.wxml:view:1:1")
+var oVD=_m('view',['bind:__l',189,'class',1],[],e,s,gg)
+var fWD=_v()
+_(oVD,fWD)
+if(_o(191,e,s,gg)){fWD.wxVkey=1
+cs.push("./pages/user/payment.wxml:block:1:83")
+cs.push("./pages/user/payment.wxml:uni-notice-bar:1:129")
+var cXD=_m('uni-notice-bar',['class',192,'showIcon',1,'single',2,'text',3],[],e,s,gg)
+cs.pop()
+_(fWD,cXD)
+cs.pop()
+}
+cs.push("./pages/user/payment.wxml:grace-safey-number-keyboard:1:3741")
+var hYD=_m('grace-safey-number-keyboard',['bind:keyboardDelete',196,'bind:keyboardDone',1,'bind:keyboardInput',2,'class',3,'data-event-opts',4,'show',5],[],e,s,gg)
+cs.pop()
+_(oVD,hYD)
+fWD.wxXCkey=1
+fWD.wxXCkey=3
+cs.pop()
+_(r,oVD)
 return r
 }
 e_[x[32]]={f:m32,j:[],i:[],ti:[],ic:[]}
@@ -1672,124 +1672,129 @@ return r
 e_[x[33]]={f:m33,j:[],i:[],ti:[],ic:[]}
 d_[x[34]]={}
 var m34=function(e,s,r,gg){
-cs.push("./pages/user/shopping.wxml:view:1:1")
-var o2D=_m('view',['bind:__l',202,'class',1],[],e,s,gg)
-var l3D=_v()
-_(o2D,l3D)
-if(_o(204,e,s,gg)){l3D.wxVkey=1
-cs.push("./pages/user/shopping.wxml:block:1:46")
-cs.push("./pages/user/shopping.wxml:mht-loader:1:103")
-var t5D=_m('mht-loader',['class',205,'loadingType',1,'showImage',2],[],e,s,gg)
-cs.pop()
-_(l3D,t5D)
-cs.pop()
-}
-else{l3D.wxVkey=2
-cs.push("./pages/user/shopping.wxml:block:1:211")
-var e6D=_v()
-_(l3D,e6D)
-if(_o(208,e,s,gg)){e6D.wxVkey=1
-cs.push("./pages/user/shopping.wxml:block:1:1176")
-cs.push("./pages/user/shopping.wxml:cmd-result-page:1:1290")
-var b7D=_n('cmd-result-page')
-_r(b7D,'class',209,e,s,gg)
-cs.pop()
-_(e6D,b7D)
-cs.pop()
-}
-e6D.wxXCkey=1
-e6D.wxXCkey=3
-cs.pop()
-}
-var a4D=_v()
-_(o2D,a4D)
-if(_o(210,e,s,gg)){a4D.wxVkey=1
-cs.push("./pages/user/shopping.wxml:block:1:1386")
-cs.push("./pages/user/shopping.wxml:grace-loading:1:1423")
-var o8D=_m('grace-loading',['class',211,'loadingType',1],[],e,s,gg)
-cs.pop()
-_(a4D,o8D)
-cs.pop()
-}
-l3D.wxXCkey=1
-l3D.wxXCkey=3
-l3D.wxXCkey=3
-a4D.wxXCkey=1
-a4D.wxXCkey=3
-cs.pop()
-_(r,o2D)
 return r
 }
 e_[x[34]]={f:m34,j:[],i:[],ti:[],ic:[]}
 d_[x[35]]={}
 var m35=function(e,s,r,gg){
-cs.push("./pages/user/team.wxml:view:1:1")
-var o0D=_m('view',['bind:__l',213,'class',1],[],e,s,gg)
-cs.push("./pages/user/team.wxml:m-search:1:46")
-var cBE=_m('m-search',['bind:search',215,'class',1,'data-event-opts',2,'placeholder',3,'show',4],[],e,s,gg)
+cs.push("./pages/user/shopping.wxml:view:1:1")
+var l3D=_m('view',['bind:__l',202,'class',1],[],e,s,gg)
+var a4D=_v()
+_(l3D,a4D)
+if(_o(204,e,s,gg)){a4D.wxVkey=1
+cs.push("./pages/user/shopping.wxml:block:1:46")
+cs.push("./pages/user/shopping.wxml:mht-loader:1:103")
+var e6D=_m('mht-loader',['class',205,'loadingType',1,'showImage',2],[],e,s,gg)
 cs.pop()
-_(o0D,cBE)
-var fAE=_v()
-_(o0D,fAE)
-if(_o(220,e,s,gg)){fAE.wxVkey=1
-cs.push("./pages/user/team.wxml:block:1:1094")
-cs.push("./pages/user/team.wxml:swiper:1:1165")
-var hCE=_m('swiper',['bindchange',221,'class',1,'current',2,'data-event-opts',3,'style',4],[],e,s,gg)
-var oDE=_v()
-_(hCE,oDE)
-cs.push("./pages/user/team.wxml:block:1:1377")
-var cEE=function(lGE,oFE,aHE,gg){
-cs.push("./pages/user/team.wxml:swiper-item:1:1469")
-var eJE=_n('swiper-item')
-_r(eJE,'class',230,lGE,oFE,gg)
-var bKE=_v()
-_(eJE,bKE)
-if(_o(231,lGE,oFE,gg)){bKE.wxVkey=1
-cs.push("./pages/user/team.wxml:block:1:1506")
-cs.push("./pages/user/team.wxml:stack-empty:1:1567")
-var oLE=_m('stack-empty',['class',232,'height',1,'label',2],[],lGE,oFE,gg)
-cs.pop()
-_(bKE,oLE)
+_(a4D,e6D)
 cs.pop()
 }
-else{bKE.wxVkey=2
-cs.push("./pages/user/team.wxml:block:1:1660")
-cs.push("./pages/user/team.wxml:scroll-view:1:1675")
-var xME=_m('scroll-view',['bindscrolltolower',235,'class',1,'data-event-opts',2,'data-scindex',3,'scrollY',4],[],lGE,oFE,gg)
-cs.push("./pages/user/team.wxml:grace-loading:1:2575")
-var oNE=_m('grace-loading',['class',240,'loadingType',1],[],lGE,oFE,gg)
+else{a4D.wxVkey=2
+cs.push("./pages/user/shopping.wxml:block:1:211")
+var b7D=_v()
+_(a4D,b7D)
+if(_o(208,e,s,gg)){b7D.wxVkey=1
+cs.push("./pages/user/shopping.wxml:block:1:1176")
+cs.push("./pages/user/shopping.wxml:cmd-result-page:1:1290")
+var o8D=_n('cmd-result-page')
+_r(o8D,'class',209,e,s,gg)
 cs.pop()
-_(xME,oNE)
-cs.pop()
-_(bKE,xME)
-cs.pop()
-}
-bKE.wxXCkey=1
-bKE.wxXCkey=3
-bKE.wxXCkey=3
-cs.pop()
-_(aHE,eJE)
-return aHE
-}
-oDE.wxXCkey=4
-_2(228,cEE,e,s,gg,oDE,'list','listIndex','listIndex')
-cs.pop()
-cs.pop()
-_(fAE,hCE)
+_(b7D,o8D)
 cs.pop()
 }
-fAE.wxXCkey=1
-fAE.wxXCkey=3
+b7D.wxXCkey=1
+b7D.wxXCkey=3
 cs.pop()
-_(r,o0D)
+}
+var t5D=_v()
+_(l3D,t5D)
+if(_o(210,e,s,gg)){t5D.wxVkey=1
+cs.push("./pages/user/shopping.wxml:block:1:1386")
+cs.push("./pages/user/shopping.wxml:grace-loading:1:1423")
+var x9D=_m('grace-loading',['class',211,'loadingType',1],[],e,s,gg)
+cs.pop()
+_(t5D,x9D)
+cs.pop()
+}
+a4D.wxXCkey=1
+a4D.wxXCkey=3
+a4D.wxXCkey=3
+t5D.wxXCkey=1
+t5D.wxXCkey=3
+cs.pop()
+_(r,l3D)
 return r
 }
 e_[x[35]]={f:m35,j:[],i:[],ti:[],ic:[]}
 d_[x[36]]={}
 var m36=function(e,s,r,gg){
+cs.push("./pages/user/team.wxml:view:1:1")
+var fAE=_m('view',['bind:__l',213,'class',1],[],e,s,gg)
+cs.push("./pages/user/team.wxml:m-search:1:46")
+var hCE=_m('m-search',['bind:search',215,'class',1,'data-event-opts',2,'placeholder',3,'show',4],[],e,s,gg)
+cs.pop()
+_(fAE,hCE)
+var cBE=_v()
+_(fAE,cBE)
+if(_o(220,e,s,gg)){cBE.wxVkey=1
+cs.push("./pages/user/team.wxml:block:1:1094")
+cs.push("./pages/user/team.wxml:swiper:1:1165")
+var oDE=_m('swiper',['bindchange',221,'class',1,'current',2,'data-event-opts',3,'style',4],[],e,s,gg)
+var cEE=_v()
+_(oDE,cEE)
+cs.push("./pages/user/team.wxml:block:1:1377")
+var oFE=function(aHE,lGE,tIE,gg){
+cs.push("./pages/user/team.wxml:swiper-item:1:1469")
+var bKE=_n('swiper-item')
+_r(bKE,'class',230,aHE,lGE,gg)
+var oLE=_v()
+_(bKE,oLE)
+if(_o(231,aHE,lGE,gg)){oLE.wxVkey=1
+cs.push("./pages/user/team.wxml:block:1:1506")
+cs.push("./pages/user/team.wxml:stack-empty:1:1567")
+var xME=_m('stack-empty',['class',232,'height',1,'label',2],[],aHE,lGE,gg)
+cs.pop()
+_(oLE,xME)
+cs.pop()
+}
+else{oLE.wxVkey=2
+cs.push("./pages/user/team.wxml:block:1:1660")
+cs.push("./pages/user/team.wxml:scroll-view:1:1675")
+var oNE=_m('scroll-view',['bindscrolltolower',235,'class',1,'data-event-opts',2,'data-scindex',3,'scrollY',4],[],aHE,lGE,gg)
+cs.push("./pages/user/team.wxml:grace-loading:1:2575")
+var fOE=_m('grace-loading',['class',240,'loadingType',1],[],aHE,lGE,gg)
+cs.pop()
+_(oNE,fOE)
+cs.pop()
+_(oLE,oNE)
+cs.pop()
+}
+oLE.wxXCkey=1
+oLE.wxXCkey=3
+oLE.wxXCkey=3
+cs.pop()
+_(tIE,bKE)
+return tIE
+}
+cEE.wxXCkey=4
+_2(228,oFE,e,s,gg,cEE,'list','listIndex','listIndex')
+cs.pop()
+cs.pop()
+_(cBE,oDE)
+cs.pop()
+}
+cBE.wxXCkey=1
+cBE.wxXCkey=3
+cs.pop()
+_(r,fAE)
 return r
 }
 e_[x[36]]={f:m36,j:[],i:[],ti:[],ic:[]}
+d_[x[37]]={}
+var m37=function(e,s,r,gg){
+return r
+}
+e_[x[37]]={f:m37,j:[],i:[],ti:[],ic:[]}
 if(path&&e_[path]){
 return function(env,dd,global){$gwxc=0;var root={"tag":"wx-page"};root.children=[]
 var main=e_[path].f
@@ -1809,7 +1814,7 @@ return root;
 
 
 
-__wxAppCode__['app.json']={"pages":["pages/index/index","pages/user/index","pages/user/profile","pages/user/bootstrap/login","pages/user/bootstrap/register","pages/user/bootstrap/find","pages/user/bootstrap/bind","pages/user/order","pages/payment/payment","pages/user/payment","pages/user/recharge","pages/user/withdraw","pages/user/history","pages/user/collect","pages/user/shopping","pages/user/finance","pages/generics-form/generics-form","pages/generics-sms/generics-sms","pages/generics-webview/generics-webview","pages/index/player","pages/user/team","pages/user/bill","pages/index/category","pages/index/detail"],"subPackages":[],"window":{"navigationBarTextStyle":"black","navigationBarTitleText":"爱视","navigationBarBackgroundColor":"#F8F8F8","backgroundColor":"#F8F8F8"},"tabBar":{"color":"#9D9D9D","selectedColor":"#F83A2E","backgroundColor":"#FEFEFE","borderStyle":"black","list":[{"pagePath":"pages/index/index","iconPath":"static/tabbar/home.png","selectedIconPath":"static/tabbar/home_active.png","text":"首页"},{"pagePath":"pages/index/category","iconPath":"static/tabbar/fenlei.png","selectedIconPath":"static/tabbar/fenlei_active.png","text":"分类"},{"pagePath":"pages/user/index","iconPath":"static/tabbar/wode.png","selectedIconPath":"static/tabbar/wode_active.png","text":"我的"}]},"networkTimeout":{"request":60000,"connectSocket":60000,"uploadFile":60000,"downloadFile":60000},"splashscreen":{"alwaysShowBeforeRender":true,"autoclose":false},"appname":"Demo","compilerVersion":"1.9.4","usingComponents":{}};
+__wxAppCode__['app.json']={"pages":["pages/index/index","pages/user/index","pages/user/profile","pages/user/bootstrap/login","pages/user/bootstrap/register","pages/user/bootstrap/find","pages/user/bootstrap/bind","pages/user/order","pages/payment/payment","pages/user/payment","pages/user/recharge","pages/user/withdraw","pages/user/history","pages/user/collect","pages/user/shopping","pages/user/finance","pages/generics-form/generics-form","pages/generics-sms/generics-sms","pages/generics-webview/generics-webview","pages/index/player","pages/user/team","pages/user/bill","pages/index/category","pages/index/detail","pages/payment/hpay"],"subPackages":[],"window":{"navigationBarTextStyle":"black","navigationBarTitleText":"爱视","navigationBarBackgroundColor":"#F8F8F8","backgroundColor":"#F8F8F8"},"tabBar":{"color":"#9D9D9D","selectedColor":"#F83A2E","backgroundColor":"#FEFEFE","borderStyle":"black","list":[{"pagePath":"pages/index/index","iconPath":"static/tabbar/home.png","selectedIconPath":"static/tabbar/home_active.png","text":"首页"},{"pagePath":"pages/index/category","iconPath":"static/tabbar/fenlei.png","selectedIconPath":"static/tabbar/fenlei_active.png","text":"分类"},{"pagePath":"pages/user/index","iconPath":"static/tabbar/wode.png","selectedIconPath":"static/tabbar/wode_active.png","text":"我的"}]},"networkTimeout":{"request":60000,"connectSocket":60000,"uploadFile":60000,"downloadFile":60000},"splashscreen":{"alwaysShowBeforeRender":true,"autoclose":false},"appname":"Demo","compilerVersion":"1.9.4","usingComponents":{}};
 __wxAppCode__['app.wxml']=$gwx('./app.wxml');
 
 __wxAppCode__['components/cmd-result-page/cmd-result-page.json']={"usingComponents":{},"component":true};
@@ -1871,6 +1876,9 @@ __wxAppCode__['pages/index/index.wxml']=$gwx('./pages/index/index.wxml');
 
 __wxAppCode__['pages/index/player.json']={"navigationBarTitleText":"视频加载中","enablePullDownRefresh":true,"titleNView":{"type":"transparent"},"usingComponents":{}};
 __wxAppCode__['pages/index/player.wxml']=$gwx('./pages/index/player.wxml');
+
+__wxAppCode__['pages/payment/hpay.json']={"usingComponents":{}};
+__wxAppCode__['pages/payment/hpay.wxml']=$gwx('./pages/payment/hpay.wxml');
 
 __wxAppCode__['pages/payment/payment.json']={"navigationBarTitleText":"收银台","usingComponents":{}};
 __wxAppCode__['pages/payment/payment.wxml']=$gwx('./pages/payment/payment.wxml');
@@ -10814,6 +10822,23 @@ createPage(_player.default);
 
 /***/ }),
 
+/***/ "F:\\repository\\VideoPlayer\\src\\Demo\\main.js?{\"page\":\"pages%2Fpayment%2Fhpay\"}":
+/*!************************************************************************************!*\
+  !*** F:/repository/VideoPlayer/src/Demo/main.js?{"page":"pages%2Fpayment%2Fhpay"} ***!
+  \************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "F:\\repository\\VideoPlayer\\src\\Demo\\pages.json");
+
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
+var _hpay = _interopRequireDefault(__webpack_require__(/*! ./pages/payment/hpay.vue */ "F:\\repository\\VideoPlayer\\src\\Demo\\pages\\payment\\hpay.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+createPage(_hpay.default);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
+
+/***/ }),
+
 /***/ "F:\\repository\\VideoPlayer\\src\\Demo\\main.js?{\"page\":\"pages%2Fpayment%2Fpayment\"}":
 /*!***************************************************************************************!*\
   !*** F:/repository/VideoPlayer/src/Demo/main.js?{"page":"pages%2Fpayment%2Fpayment"} ***!
@@ -17644,36 +17669,7 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
 
     },
     useAlipay: function useAlipay() {
-      /* this.appEvents.$off(
-                                     	'onInputPaymentPasswordWithAlipay',
-                                     	this.onInputPaymentPasswordWithAlipay
-                                     );
-                                     this.appEvents.$on(
-                                     	'onInputPaymentPasswordWithAlipay',
-                                     	this.onInputPaymentPasswordWithAlipay
-                                     );
-                                     this.common.window.toNew('user/index/payment', {
-                                     	formName: 'payment',
-                                     	title: '输入支付密码',
-                                     	callback: 'onInputPaymentPasswordWithAlipay'
-                                     }); */
       this.onInputPaymentPasswordWithAlipay();
-    },
-    useWechat: function useWechat() {
-      /* this.appEvents.$off(
-                                     	'onInputPaymentPasswordWithWechat',
-                                     	this.onInputPaymentPasswordWithWechat
-                                     );
-                                     this.appEvents.$on(
-                                     	'onInputPaymentPasswordWithWechat',
-                                     	this.onInputPaymentPasswordWithWechat
-                                     );
-                                     this.common.window.toNew('user/index/payment', {
-                                     	formName: 'payment',
-                                     	title: '输入支付密码',
-                                     	callback: 'onInputPaymentPasswordWithWechat'
-                                     }); */
-      this.onInputPaymentPasswordWithWechat();
     },
     onInputPaymentPassword: function onInputPaymentPassword(data) {
       uni.showLoading({
@@ -17883,11 +17879,12 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
           outTradeNo: _res.data.msg }).
 
         then(function (res) {
-          console.log("虎皮椒DATA: " + JSON.stringify(res), " at pages\\payment\\payment.vue:342");
+          console.log("虎皮椒DATA: " + JSON.stringify(res), " at pages\\payment\\payment.vue:313");
           uni.hideLoading();
-          _this.common.window.toNew('generics-webview/generics-webview', {
+          _this.common.window.toNew('payment/hpay', {
             url: res.data,
-            title: '手机支付' });
+            title: '手机支付',
+            orderId: _res.data.msg });
 
         });
       });
@@ -17974,7 +17971,7 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
               },
               function (payResult) {
                 if (payResult.err_msg == 'get_brand_wcpay_request:ok') {
-                  console.log('支付成功', " at pages\\payment\\payment.vue:433");
+                  console.log('支付成功', " at pages\\payment\\payment.vue:405");
                   //支付成功后跳转的页面
                   uni.showToast({
                     icon: 'none',
@@ -17986,7 +17983,7 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
 
                   }, 3000);
                 } else if (payResult.err_msg == 'get_brand_wcpay_request:cancel') {
-                  console.log('支付取消', " at pages\\payment\\payment.vue:445");
+                  console.log('支付取消', " at pages\\payment\\payment.vue:417");
                   uni.showToast({
                     icon: 'none',
                     title: '支付中途取消' });
@@ -17997,7 +17994,7 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
 
                   }, 1000);
                 } else if (payResult.err_msg == 'get_brand_wcpay_request:fail') {
-                  console.log('支付失败', " at pages\\payment\\payment.vue:456");
+                  console.log('支付失败', " at pages\\payment\\payment.vue:428");
                   //WeixinJSBridge.call('closeWindow');
 
                   _self.session.setValue('recharge_wxpay_error', JSON.stringify(err));
@@ -21353,14 +21350,13 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
           icon: 'none' });
 
       }
-
       // 确认播放
       this.$api.
       get('api/product/player', {
         productId: this.videoId }).
 
       then(function (res) {
-        console.log(res, " at pages\\index\\player.vue:167");
+        console.log(res, " at pages\\index\\player.vue:166");
         if (_this.common.Response.isFaild(res.data)) {
           uni.showToast({
             title: '播放失败',
@@ -21482,6 +21478,11 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
         videoId: item.productId,
         title: item.productName,
         poster: item.image });
+
+    },
+    downloadApp: function downloadApp() {
+      this.common.window.toNew('generics-webview/generics-webview', {
+        url: this.profile.yaboAppUrl });
 
     } }) };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["default"]))
@@ -23176,6 +23177,204 @@ __webpack_require__.r(__webpack_exports__);
 },[["F:\\repository\\VideoPlayer\\src\\Demo\\main.js?{\"page\":\"pages%2Findex%2Fdetail\"}","common/runtime","common/vendor"]]]);
 });
 require('pages/index/detail.js');
+__wxRoute = 'pages/payment/hpay';__wxRouteBegin = true;__wxAppCurrentFile__ = 'pages/payment/hpay.js';
+
+define('pages/payment/hpay.js',function(require, module, exports, window, document, frames, self, location, navigator, localStorage, history, Caches, screen, alert, confirm, prompt, fetch, XMLHttpRequest, WebSocket, webkit, WeixinJSCore, Reporter, print, WeixinJSBridge){
+(global["webpackJsonp"] = global["webpackJsonp"] || []).push([["pages/payment/hpay"],{
+
+/***/ "./node_modules/babel-loader/lib/index.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/vue-loader/lib/index.js?!F:\\repository\\VideoPlayer\\src\\Demo\\pages\\payment\\hpay.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/vue-loader/lib??vue-loader-options!F:/repository/VideoPlayer/src/Demo/pages/payment/hpay.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+//
+//
+//
+//
+//
+
+var pollCounter = 0;var _default =
+
+{
+  onLoad: function onLoad(option) {
+    this.src = option.url == null ? '' : option.url;
+    this.orderId = option.orderId == null ? "" : option.orderId;
+    uni.setNavigationBarTitle({
+      title: option.title == null ? '请稍后' : option.title });
+
+    //启动订单状态轮询线程
+    startStatusPolling();
+  },
+  data: function data() {
+    return {
+      src: '',
+      webviewStyles: {
+        progress: {
+          color: '#0F8DE8' } },
+
+
+      orderId: "" };
+
+  },
+  methods: {
+    /**
+              * 订单状态轮询
+              */
+    startStatusPolling: function startStatusPolling() {var _this = this;
+      var timer = setTimeout(function () {
+        pollCounter++;
+        if (pollCounter > 300) {
+          pollCounter == 0;
+          timer = null;
+          return;
+        }
+
+        _this.$api.get("api/order/getStatus", {
+          orderId: _this.orderId }).
+        then(function (res) {
+          if (_this.common.Response.isFaild(res)) {
+            uni.showToast({
+              title: '查询订单状态失败',
+              icon: "none" });
+
+            pollCounter = pollCounter + 10;
+            return;
+          } else if (_this.common.Response.isException(res)) {
+            uni.showToast({
+              title: res.data.msg,
+              icon: "none" });
+
+            setTimeout(function () {
+              uni.navigateBack({
+                delta: 2 });
+
+            }, 1000);
+            return;
+          }
+
+          if (res.data.msg == "success") {
+            uni.showToast({
+              title: '支付成功，正在准备跳转……',
+              icon: "success",
+              duration: 3000 });
+
+            setTimeout(function () {
+              uni.navigateBack({
+                delta: 2 });
+
+            }, 1000);
+          }
+
+        });
+
+      }, 1000);
+    } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["default"]))
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/vue-loader/lib/index.js?!F:\\repository\\VideoPlayer\\src\\Demo\\pages\\payment\\hpay.vue?vue&type=template&id=a5a1e64c&":
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--17-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/vue-loader/lib??vue-loader-options!F:/repository/VideoPlayer/src/Demo/pages/payment/hpay.vue?vue&type=template&id=a5a1e64c& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "F:\\repository\\VideoPlayer\\src\\Demo\\pages\\payment\\hpay.vue":
+/*!*****************************************************************!*\
+  !*** F:/repository/VideoPlayer/src/Demo/pages/payment/hpay.vue ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _hpay_vue_vue_type_template_id_a5a1e64c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hpay.vue?vue&type=template&id=a5a1e64c& */ "F:\\repository\\VideoPlayer\\src\\Demo\\pages\\payment\\hpay.vue?vue&type=template&id=a5a1e64c&");
+/* harmony import */ var _hpay_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./hpay.vue?vue&type=script&lang=js& */ "F:\\repository\\VideoPlayer\\src\\Demo\\pages\\payment\\hpay.vue?vue&type=script&lang=js&");
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _hpay_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _hpay_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _E_apps_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_E_apps_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _hpay_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _hpay_vue_vue_type_template_id_a5a1e64c___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _hpay_vue_vue_type_template_id_a5a1e64c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "F:/repository/VideoPlayer/src/Demo/pages/payment/hpay.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "F:\\repository\\VideoPlayer\\src\\Demo\\pages\\payment\\hpay.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************!*\
+  !*** F:/repository/VideoPlayer/src/Demo/pages/payment/hpay.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _E_apps_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_E_apps_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_E_apps_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_E_apps_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_hpay_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/vue-loader/lib??vue-loader-options!./hpay.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/vue-loader/lib/index.js?!F:\\repository\\VideoPlayer\\src\\Demo\\pages\\payment\\hpay.vue?vue&type=script&lang=js&");
+/* harmony import */ var _E_apps_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_E_apps_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_E_apps_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_E_apps_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_hpay_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_E_apps_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_E_apps_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_E_apps_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_E_apps_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_hpay_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _E_apps_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_E_apps_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_E_apps_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_E_apps_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_hpay_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _E_apps_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_E_apps_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_E_apps_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_E_apps_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_hpay_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_E_apps_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_E_apps_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_E_apps_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_E_apps_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_hpay_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "F:\\repository\\VideoPlayer\\src\\Demo\\pages\\payment\\hpay.vue?vue&type=template&id=a5a1e64c&":
+/*!************************************************************************************************!*\
+  !*** F:/repository/VideoPlayer/src/Demo/pages/payment/hpay.vue?vue&type=template&id=a5a1e64c& ***!
+  \************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _E_apps_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_E_apps_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_17_0_E_apps_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_template_js_E_apps_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_hpay_vue_vue_type_template_id_a5a1e64c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--17-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/vue-loader/lib??vue-loader-options!./hpay.vue?vue&type=template&id=a5a1e64c& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/vue-loader/lib/index.js?!F:\\repository\\VideoPlayer\\src\\Demo\\pages\\payment\\hpay.vue?vue&type=template&id=a5a1e64c&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _E_apps_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_E_apps_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_17_0_E_apps_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_template_js_E_apps_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_hpay_vue_vue_type_template_id_a5a1e64c___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _E_apps_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_E_apps_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_17_0_E_apps_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_template_js_E_apps_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_hpay_vue_vue_type_template_id_a5a1e64c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ })
+
+},[["F:\\repository\\VideoPlayer\\src\\Demo\\main.js?{\"page\":\"pages%2Fpayment%2Fhpay\"}","common/runtime","common/vendor"]]]);
+});
+require('pages/payment/hpay.js');
 ;(function(global) {
     __uni_launch_ready(function() {
         var entryPagePath = __wxConfig.entryPagePath.replace('.html', '')

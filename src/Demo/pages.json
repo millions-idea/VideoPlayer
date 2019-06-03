@@ -205,7 +205,7 @@
             }
         }
         ,{
-            "path" : "pages/payment/hupijiao/hupijiao",
+            "path" : "pages/payment/hpay",
             "style" : {}
         }
     ],

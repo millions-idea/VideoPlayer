@@ -1,5 +1,5 @@
-export const devUrl = "http://stack-app.natapp1.cc/";
-export const prodUrl = "http://stack-app.natapp1.cc/";
+export const devUrl = "http://hpay.natapp1.cc/";
+export const prodUrl = "http://hpay.natapp1.cc/";
 
 export default{
 	getUrl(){

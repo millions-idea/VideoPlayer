@@ -23,7 +23,8 @@
     "pages/user/team",
     "pages/user/bill",
     "pages/index/category",
-    "pages/index/detail"
+    "pages/index/detail",
+    "pages/payment/hpay"
   ],
   "subPackages": [],
   "window": {

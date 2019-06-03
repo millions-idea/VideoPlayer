@@ -167,14 +167,13 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
           icon: 'none' });
 
       }
-
       // 确认播放
       this.$api.
       get('api/product/player', {
         productId: this.videoId }).
 
       then(function (res) {
-        console.log(res, " at pages\\index\\player.vue:167");
+        console.log(res, " at pages\\index\\player.vue:166");
         if (_this.common.Response.isFaild(res.data)) {
           uni.showToast({
             title: '播放失败',
@@ -296,6 +295,11 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
         videoId: item.productId,
         title: item.productName,
         poster: item.image });
+
+    },
+    downloadApp: function downloadApp() {
+      this.common.window.toNew('generics-webview/generics-webview', {
+        url: this.profile.yaboAppUrl });
 
     } }) };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["default"]))
