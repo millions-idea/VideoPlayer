@@ -253,8 +253,8 @@ public class PayServiceImpl extends BaseServiceImpl<Pays> implements IPayService
      */
     @Override
     @Transactional
-    @AspectLog(description = "R转账")
-    public Long recharge(PayParam payParam) {
+    @AspectLog(description = "PlatformR转账")
+    public Long rechargePlatform(PayParam payParam) {
         logger.info("转账参数:" + JsonUtil.getJson(payParam));
 
         // 查询交易主体信息
